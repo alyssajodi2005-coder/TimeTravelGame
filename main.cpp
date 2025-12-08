@@ -2,9 +2,10 @@
 using namespace std;
 
 //include all header files here:
-#include "headers/decades.h"
-#include "headers/player.h"
-#include "headers/timeMachine.h"
+
+#include "decades.h"
+#include "player.h"
+#include "timeMachine.h"
 
 void ShowIntro() {
     cout << "* HOW TO PLAY *" << endl;
@@ -25,6 +26,7 @@ void ShowIntro() {
 int main() {
     //all main variables here:
     string userName;
+    int level = 1;
     
     
     //game welcome
@@ -39,8 +41,11 @@ int main() {
     getline(cin, userName);
     ShowIntro();
 
-    cout << "ready to go";
     Player userCharacter(userName);
+    
+    Decades currentdecade(level);
+    currentdecade.showDecadeIntro();
+    level++;
 
 
 
