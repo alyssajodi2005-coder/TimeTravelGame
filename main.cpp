@@ -1,14 +1,13 @@
 #include <iostream>
 using namespace std;
-#include <chrono>
-#include <thread>
-#include <stdlib.h>
-#include <unistd.h>
+
+
 //include all header files here:
 
 #include "decades.h"
 #include "player.h"
 #include "timeMachine.h"
+#include "typewrite.h"
 
 void ShowIntro() {
     cout << "* HOW TO PLAY *" << endl;
@@ -25,12 +24,7 @@ void ShowIntro() {
         cin >> startkey;
     }
 }
-void typewrite(const string &text) {
-    for (int i = 0; i < text.size(); ++i) {
-        cout << text.at(i);
-        usleep(20000);
-    }
-}
+
 
 int main() {
     //all main variables here:
@@ -50,12 +44,21 @@ int main() {
     ShowIntro();
     typewrite(".....................\n"); //loading effect
 
-    Player userCharacter(userName); //
+    Player userCharacter(userName); // create player object initailize playe
+    TimeMachine timeMachine; // create time machine object initialize time machine
+    Decades currentdecade(level); // create decades object inital decade
 
 
-    Decades currentdecade(level);
+    //Decade:2020s
     currentdecade.showDecadeIntro();
-    level++;
+    timeMachine.TimeTravel(); // Time travel effect
+
+    //Decade:2010s
+    currentdecade.nextDecade();
+    currentdecade.showDecadeIntro();
+
+
+    
 
 
 

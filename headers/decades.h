@@ -15,6 +15,7 @@ class Decades {
     public:
         Decades(int user_level);
         void showDecadeIntro();
+        void nextDecade();
         void challenge();
         void minigame();
 };
