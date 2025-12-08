@@ -36,6 +36,13 @@ void Decades::showDecadeIntro(){
         cout << "The air is filled with excitement as entrepreneurs pitch their ideas and investors listen intently." << endl;
     }
 }
+void Decades::challenge() {
+    cout << "Time for a challenge in level " << level << "!" << endl;
+}
+
+void Decades::minigame() {
+    cout << "Welcome to the minigame for level " << level << "!" << endl;
+}
 
 
 
