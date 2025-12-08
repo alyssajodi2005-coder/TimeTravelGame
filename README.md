@@ -30,10 +30,10 @@ cd "/c/Users/flawl/OneDrive/Documents/code-projects/TimeTravelGame"
  g++ -Iheaders main.cpp source/decades.cpp source/player.cpp source/timeMachine.cpp -o game
 ./game
 
-
-git config pull.rebase true //overide
+//overide
+git config pull.rebase true 
 git add .
-git commit -m "Merged parent's changes"
+git commit -m "changes"
 git push
 
 //merge
