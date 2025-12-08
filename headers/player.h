@@ -70,21 +70,23 @@ class Player{
     // Add decade to decades visited
     void add_decade_visited(int decade);
 
-    // bool funtions 
+    // bool funtions and logic checks and other utilities
 
     // Check if player has enough time battery
     bool has_enough_battery(int required);
     // Check if player has a specific item in inventory
     bool has_item(string item);
-    // chek if player has the specific amount of money
+    // check if player has the specific amount of money
     bool has_enough_money(double amount);
+    // Travel to a specific decade
+    void travel_to_decade(int target_decade);
 
 
 
 
 
     // Print Functions
-    
+
     // Display player's information
     void GetInfo();
 
