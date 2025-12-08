@@ -51,16 +51,33 @@ class Player{
 
     // Set current year
     void set_year(int new_year);
-    // Set time battery level
-    void set_time_battery(int new_time_battery);
-    // Set player's score
-    void set_score(int new_score);
-    // Set player's money
-    void set_money(double new_money);
+    // drain time battery level
+    void drain_battery(int amount);
+    // charge time battery level
+    void charge_battery(int amount);
+    // add to player's score
+    void add_score(int amount);
+    // subtract from player's score
+    void subtract_score(int amount);
+    // Spend player's money
+    void spend_money(double amount);
+    // add money to player's total
+    void add_money(double amount);
     // Add item to inventory
-    void add_to_inventory(string item);
+    void add_to_inventory(const string& item);
+    // Remove item from inventory
+    void remove_from_inventory(const string& item);
     // Add decade to decades visited
     void add_decade_visited(int decade);
+
+    // bool funtions 
+
+    // Check if player has enough time battery
+    bool has_enough_battery(int required);
+    // Check if player has a specific item in inventory
+    bool has_item(string item);
+    // chek if player has the specific amount of money
+    bool has_enough_money(double amount);
 
 };
 #endif // PLAYER_H
