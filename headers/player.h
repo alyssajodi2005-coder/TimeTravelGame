@@ -79,5 +79,14 @@ class Player{
     // chek if player has the specific amount of money
     bool has_enough_money(double amount);
 
+
+
+
+
+    // Print Functions
+    
+    // Display player's information
+    void GetInfo();
+
 };
 #endif // PLAYER_H
