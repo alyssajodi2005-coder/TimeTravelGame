@@ -37,14 +37,5 @@ void Decades::showDecadeIntro(){
     }
 }
 
-void Decades::challenge() {
-    
-}
-void minigame() {
-    cout << "Welcome to the 2020s!" << endl;
-    cout << "Challenges: " << endl;
-    cout << "1. Navigate a global pandemic." << endl;
-    cout << "2. Adapt to remote work and virtual socializing." << endl;
-    cout << "3. Embrace new technologies and digital trends." << endl;
-}
+
 
