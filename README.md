@@ -36,7 +36,8 @@ git add .
 git commit -m "Merged parent's changes"
 git push
 
-bashgit config pull.rebase false //merge
+//merge
+git config pull.rebase false 
 git pull
 git add .
 git commit -m "Merged parent's changes"
