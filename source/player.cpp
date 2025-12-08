@@ -44,9 +44,46 @@ vector<string> Player::get_inventory() {
 vector<int> Player::get_decades_visited() {
     return decades_visited;
 }
+
+
 // Setter methods
 
-
+// Set current year
+void Player::set_year(int new_year) {
+    year = new_year;
+}
+// drain time battery level
+void Player::drain_battery(int amount) {
+    time_battery -= amount;
+    if (time_battery < 0){
+        time_battery = 0;
+    }
+}
+// charge time battery level
+void Player::charge_battery(int amount ) {
+    time_battery += amount;
+    if (time_battery > 100){
+        time_battery = 100;
+    }
+}
+// add to player's score
+void Player::add_score(int amount) {
+    score += amount;
+}
+// subtract from player's score
+void Player::subtract_score(int amount) {
+    score -= amount;
+    if (score < 0){
+        score = 0;
+    }
+}
+// Spend player's money
+void Player::spend_money(double amount) {
+    money -= amount;
+    if (money < 0){
+        money = 0;
+    }
+}
 
 
 
