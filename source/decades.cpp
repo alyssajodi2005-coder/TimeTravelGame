@@ -12,7 +12,7 @@ Decades::Decades(int user_level){
 void Decades::showDecadeIntro(){
     if (level == 1) {
         typewrite(".....................\n"); //loading effect
-        typewrite("DECADE 2020'S --> The Present Day\n");
+        typewrite("📚DECADE 2020'S --> The Present Day\n");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
         typewrite("---------------------------------------\n");
         typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");

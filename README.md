@@ -55,3 +55,18 @@ git stash pop
 
 #check if the contents are up to date
 cat headers/name.h
+
+# 1 Make sure you are on the main branch
+git checkout main
+
+# 2 Check the status of your repo
+git status
+
+# 3 Stage all changes (or pick files individually)
+git add .
+
+# 4 Commit your changes with a message
+git commit -m "Describe your changes here"
+
+# 5 Push your local changes to GitHub, overwriting remote
+git push origin main --force
