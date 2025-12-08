@@ -1,11 +1,10 @@
+
 #ifndef PLAYER_H
 #define PLAYER_H
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
-
-
 class Player{
     // Private member variables 
 
@@ -25,8 +24,22 @@ class Player{
     vector<string> inventory;
 
 
-    public: 
-        
+    public:         
     Player(const string& user_name);
 };
 #endif // PLAYER_H
+
+^T
+grep -n "<<<" headers/player.h source/player.cpp
+grep -n "===" headers/player.h source/player.cpp
+grep -n ">>>" headers/player.h source/player.cpp
+^X
+^X
+^X
+
+
+
+
+
+
+
