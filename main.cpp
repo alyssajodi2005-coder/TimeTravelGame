@@ -1,7 +1,55 @@
 #include <iostream>
 using namespace std;
 
+//include all header files here:
+#include "headers/decades.h"
+#include "headers/player.h"
+#include "headers/timeMachine.h"
+
+void ShowIntro() {
+    cout << "* HOW TO PLAY *" << endl;
+    cout << "1. You will be placed different decades." << endl;
+    cout << "2. Each decade gives you choices and challenges." << endl;
+    cout << "3. Pick the best options and win minigames to survive and earn points." << endl;
+    cout << "4. Choices affect your final score." << endl;
+    //finish expalin points, money, food, etc
+    
+    //prompt user to begin game
+    char startkey = '\0';
+    while (startkey != 'y') {
+    cout << "Type y to begin: ";
+    cin >> startkey;
+}
+}
+
 int main() {
-    cout << "Your C++ setup works!" << endl;
+    //all main variables here:
+    string userName;
+    
+    
+    //game welcome
+    cout << "-------------------------------------" << endl;    
+    cout << "        Welcome to *GameName*        " << endl;
+    cout << "-------------------------------------" << endl;  
+    cout << "     Make choices, solve puzzles     " << endl;
+    cout << "          and explore decades        " << endl;
+    
+
+    cout << "Enter username: ";
+    getline(cin, userName);
+    ShowIntro();
+
+    cout << "ready to go";
+    Player userCharacter(userName);
+
+
+
+
+
+
+
+
+
+
     return 0;
 }
