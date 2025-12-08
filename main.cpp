@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
-
+#include <chrono>
+#include <thread>
+#include <stdlib.h>
+#include <unistd.h>
 //include all header files here:
 
 #include "decades.h"
@@ -18,9 +21,15 @@ void ShowIntro() {
     //prompt user to begin game
     char startkey = '\0';
     while (startkey != 'y') {
-    cout << "Type y to begin: ";
-    cin >> startkey;
+        cout << "Type y to begin: ";
+        cin >> startkey;
+    }
 }
+void typewrite(const string &text) {
+    for (int i = 0; i < text.size(); ++i) {
+        cout << text.at(i);
+        usleep(20000);
+    }
 }
 
 int main() {
@@ -29,20 +38,21 @@ int main() {
     int level = 1;
     
     
-    //game welcome
-    cout << "-------------------------------------" << endl;    
-    cout << "        Welcome to *GameName*        " << endl;
-    cout << "-------------------------------------" << endl;  
-    cout << "     Make choices, solve puzzles     " << endl;
-    cout << "          and explore decades        " << endl;
-    
+    //game welcome message
+    cout << "-------------------------------------" << endl;
+    typewrite("        Welcome to *GameName*        \n");
+    cout << "-------------------------------------" << endl;
+    typewrite("     Make choices, solve puzzles     \n");
+    typewrite("          and explore decades        \n");
 
     cout << "Enter username: ";
     getline(cin, userName);
     ShowIntro();
+    typewrite(".....................\n"); //loading effect
 
-    Player userCharacter(userName);
-    
+    Player userCharacter(userName); //
+
+
     Decades currentdecade(level);
     currentdecade.showDecadeIntro();
     level++;

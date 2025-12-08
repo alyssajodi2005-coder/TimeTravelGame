@@ -28,5 +28,11 @@ class Player{
     public: 
         
     Player(const string& user_name);
+    void GetInfo();
+    void UpdateBattery(int amount);
+    void TravelToDecade(int decade);
+    void AddToInventory(const string& item);
+    void UpdateScore(int points);
+    void UpdateMoney(double amount);
 };
 #endif // PLAYER_H

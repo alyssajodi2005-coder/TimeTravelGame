@@ -42,3 +42,15 @@ git pull
 git add .
 git commit -m "Merged parent's changes"
 git push
+
+# Optional: save local changes
+git stash
+
+# Pull latest updates
+git pull origin main  # or your branch name
+
+# Optional: reapply stashed changes
+git stash pop
+
+#check if the contents are up to date
+cat headers/name.h
