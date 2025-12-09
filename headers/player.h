@@ -41,7 +41,7 @@ class Player{
     // Get player's score
     int get_score();
     // Get player's money
-    double get_money();
+    double get_money() ;
     // Get player's inventory
     vector<string> get_inventory();
     // Get decades visited

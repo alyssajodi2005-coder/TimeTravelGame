@@ -1,6 +1,7 @@
 #include <iostream>
 #include "../headers/player.h"
 #include <vector>
+#include <string>
 using namespace std;
 #include "../headers/typewrite.h"
 
@@ -33,15 +34,15 @@ int Player::get_score() {
     return score;
 }
 // Get player's money
-double Player::get_money() {
+double Player::get_money()  {
     return money;
 }
 // Get player's inventory
-vector<string> Player::get_inventory() {
+vector<string> Player::get_inventory()  {
     return inventory;
 }
 // Get decades visited
-vector<int> Player::get_decades_visited() {
+vector<int> Player::get_decades_visited()  {
     return decades_visited;
 }
 
@@ -84,6 +85,10 @@ void Player::spend_money(double amount) {
         money = 0;
     }
 }
+// add money to player's total
+void Player::add_money(double amount) {
+    money += amount;
+}
 
 
 
@@ -91,11 +96,12 @@ void Player::spend_money(double amount) {
 void Player::GetInfo(){
     cout << "Player Name: " << get_name() << " || Current Year: " << get_year() << " || Time Battery: " << get_time_battery() << "%" << endl;
     cout << "Score: " << get_score() << endl;
-    cout << "Money: $" << get_money()    << endl;
-    cout << "Inventory: " << ;
-    for (int i = 0l i < get_inventory(),size(); i++){
-        cout << get_inventory()[i];
-        if (i < get_inventory().size() - 1){
+    cout << "Money: $" << get_money() << endl;
+    cout << "Inventory: " ;
+    vector<string> items = get_inventory();
+    for (int i = 0 ; i < items.size(); i++){
+        cout << items[i];
+        if (i < items.size() - 1){
             cout << ", ";
         }
     }
