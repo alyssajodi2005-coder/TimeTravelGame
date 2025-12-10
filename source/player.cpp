@@ -89,6 +89,20 @@ void Player::spend_money(double amount) {
 void Player::add_money(double amount) {
     money += amount;
 }
+// Add item to inventory
+void Player::add_to_inventory(const string &item) {
+    inventory.push_back(item);
+}
+// Remove item from inventory
+void Player::remove_from_inventory(const string &item) {
+    vector<string> items = inventory;
+    for (int i = 0; i < items.size(); i++) {
+        if (items[i] == item) {
+            inventory.erase(inventory.begin() + i);
+            break;
+        }
+    }
+}
 
 
 
