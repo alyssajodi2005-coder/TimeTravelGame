@@ -46,7 +46,7 @@ int main() {
     ShowIntro();
     typewrite(".....................\n"); //loading effect
 
-    Player userCharacter(userName); // create player object initailize playe
+    Player userCharacter(userName); // create player object initailize player
     TimeMachine timeMachine; // create time machine object initialize time machine
     Decades currentdecade(level); // create decades object inital decade
 
@@ -58,8 +58,11 @@ int main() {
     currentdecade.minigame(); // decade minigame
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
+    userCharacter.add_decade_visited(2020); // add decade to decades visited
+    userCharacter.travel_to_decade(2010); // set player year to 2010
 
     //Lv.2 Decade:2010s
+    userCharacter.add_decade_visited(2010); // add decade to decades visited
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(); // decade challenge

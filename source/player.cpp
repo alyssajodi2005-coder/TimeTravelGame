@@ -95,7 +95,6 @@ void Player::add_to_inventory(const string &item) {
 }
 // Remove item from inventory
 void Player::remove_from_inventory(const string &item) {
-    vector<string> items = inventory;
     for (int i = 0; i < items.size(); i++) {
         if (items[i] == item) {
             inventory.erase(inventory.begin() + i);
@@ -103,19 +102,52 @@ void Player::remove_from_inventory(const string &item) {
         }
     }
 }
+// Add decade to decades visited
+void Player::add_decade_visited(int decade) {
+    decades_visited.push_back(decade);
+}
+
+// bool functions and logic checks and other utilities
+
+// Check if player has enough time battery
+bool Player::has_enough_battery(int required) {
+    return time_battery >= required;
+}
+// Check if player has a specific item in inventory
+bool Player::has_item(string const &item) {
+    if (items.size() == 0){
+        return false;
+    }
+    // I learned about range-based for loops because i wanted to find a better way to loop through vectors,
+    // so I looked it up and got this: https://stackoverflow.com/questions/22269435/how-to-iterate-through-a-list-of-objects-in-c
+    for (auto const& i :inventory){
+        if (i == item){
+            return true;
+        }
+    }
+    return false;
+}
+// check if player has the specific amount of money
+bool Player::has_enough_money(double amount) {
+    return money >= amount;
+}
+// Travel to a specific decade
+void Player::travel_to_decade(int target_decade) {
+    year = target_decade;
+}
 
 
+// Print Functions
 
 // Display player's information
 void Player::GetInfo(){
-    cout << "Player Name: " << get_name() << " || Current Year: " << get_year() << " || Time Battery: " << get_time_battery() << "%" << endl;
-    cout << "Score: " << get_score() << endl;
-    cout << "Money: $" << get_money() << endl;
+    cout << "Player Name: " << name << " || Current Year: " << year << " || Time Battery: " << time_battery << "%" << endl;
+    cout << "Score: " << score () << endl;
+    cout << "Money: $" << money << endl;
     cout << "Inventory: " ;
-    vector<string> items = get_inventory();
-    for (int i = 0 ; i < items.size(); i++){
-        cout << items[i];
-        if (i < items.size() - 1){
+    for (int i = 0 ; i < inventory.size(); i++){
+        cout << inventory[i];
+        if (i < inventory.size() - 1){
             cout << ", ";
         }
     }
