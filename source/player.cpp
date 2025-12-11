@@ -12,6 +12,7 @@ Player::Player(const string &user_name){
     year = 2024; // Starting year
     score = 0;
     money = 50.0; // Starting money
+    decades_visited.push_back(2020);
 }
 
 // Getter methods
@@ -20,7 +21,6 @@ Player::Player(const string &user_name){
 string Player::get_name() const {
     return name;
 }
-
 // Get current year
 int Player::get_year() {
     return year;
@@ -95,16 +95,12 @@ void Player::add_to_inventory(const string &item) {
 }
 // Remove item from inventory
 void Player::remove_from_inventory(const string &item) {
-    for (int i = 0; i < items.size(); i++) {
-        if (items[i] == item) {
+    for (int i = 0; i < inventory.size(); i++) {
+        if (inventory[i] == item) {
             inventory.erase(inventory.begin() + i);
             break;
         }
     }
-}
-// Add decade to decades visited
-void Player::add_decade_visited(int decade) {
-    decades_visited.push_back(decade);
 }
 
 // bool functions and logic checks and other utilities
@@ -134,22 +130,52 @@ bool Player::has_enough_money(double amount) {
 // Travel to a specific decade
 void Player::travel_to_decade(int target_decade) {
     year = target_decade;
+    decades_visited.push_back(target_decade);
 }
 
-
 // Print Functions
+
+// Print inventory
+void Player::print_inventory(){
+    cout << "Inventory Items: ";
+    if (inventory.size() == 0){
+        cout << "None";
+    }
+    else {
+        for (size_t i = 0 ; i < inventory.size(); i++){
+            cout << inventory[i];
+            if (i < inventory.size() - 1){
+                cout << ", ";
+            }
+        }
+    }
+    cout << endl;
+}
+// Print decades visited
+void Player::print_decades_visited(){
+    cout << "Decades Visited: ";
+    if (decades_visited.size() == 0){
+        cout << "None";
+    }
+    else {
+        for (size_t i = 0 ; i < decades_visited.size(); i++){
+            cout << decades_visited[i];
+            if (i < decades_visited.size() - 1){
+                cout << ", ";
+            }
+        }
+    }
+    cout << endl;
+}
 
 // Display player's information
 void Player::GetInfo(){
     cout << "Player Name: " << name << " || Current Year: " << year << " || Time Battery: " << time_battery << "%" << endl;
-    cout << "Score: " << score () << endl;
+    cout << "Score: " << score << endl;
     cout << "Money: $" << money << endl;
-    cout << "Inventory: " ;
-    for (int i = 0 ; i < inventory.size(); i++){
-        cout << inventory[i];
-        if (i < inventory.size() - 1){
-            cout << ", ";
-        }
-    }
-    cout << endl;
+    cout << "Decades Visited: " ;
+    print_decades_visited();
+    cout << "Inventory: ";
+    print_inventory();
+
 }

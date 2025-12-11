@@ -81,14 +81,14 @@ class Player{
     // Travel to a specific decade
     void travel_to_decade(int target_decade);
 
-
-
-
-
     // Print Functions
 
     // Display player's information
     void GetInfo();
+    // Print inventory
+    void print_inventory();
+    // Print decades visited
+    void print_decades_visited();
 
 };
 #endif // PLAYER_H
