@@ -21,21 +21,123 @@ void Decades::showDecadeIntro(){
         typewrite("You must navigate the complexities of this decade,\n");
         typewrite("making choices to test your knowledge and skills.\n");
         typewrite("Navigate carefully, and see how your decisions ripple through time.\n");
+        // challenge 1: social media dilemma
 
     }
     if (level == 2) {
-        cout << "DECADE 2010's --> Internet Boom" << endl;
-        cout << "Date: June 10, 2015 || Time: 3:15 PM || Location: Silicon Valley, CA" << endl;
-        cout << "---------------------------------------" << endl;
-        cout << "You find yourself in a bustling tech hub, surrounded by the latest gadgets and innovations." << endl;
-        cout << "The air is filled with excitement as entrepreneurs pitch their ideas and investors listen intently." << endl;
+        typewrite("DECADE 2010's --> Internet Boom\n");
+        typewrite("Date: June 10, 2015 || Time: 3:15 PM || Location: Cupertino, CA\n");
+        typewrite("---------------------------------------\n");
+        typewrite("You find yourself in a busy tech company building, surrounded by the latest gadgets and innovations.\n");
+        typewrite("The air is filled with excitement as entrepreneurs pitch their ideas and investors listen intently.\n");
+        typewrite("Social media platforms are booming, connecting people worldwide and changing how information is spread.\n");
+        typewrite("Success in the tech world requires innovation, adaptability, and ethical decision-making.\n");
+        typewrite("A large group or young programmers walk out of a meeting room looking frustrated.\n");
+        typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"Hey ready to pitch, we're up\".\n");
+        // challenge 1: impromptu pitch presentation
     }
+    if (level == 3) {
+        typewrite("DECADE 2000's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 4) {
+        typewrite("DECADE 1990's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 5) {
+       typewrite("DECADE 1980's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 6) {
+        typewrite("DECADE 1970's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 7) {
+        typewrite("DECADE 1960's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 8) {
+        typewrite("DECADE 1950's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 9) {
+        typewrite("DECADE 1940's ");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 10) {
+        typewrite("DECADE 1930's -->");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 11) {
+        typewrite("DECADE 1920's -->");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        // Add decade introduction narrative here
+    }
+    if (level == 12) {
+        typewrite("DECADE 2020's -->");
+        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("---------------------------------------\n");
+        //Winning level
+        // Add decade introduction narrative here
+    }
+
 }
 void Decades::nextDecade() {
     level++;
 }
 void Decades::challenge() {
-    cout << "Time for a challenge in level " << level << "!" << endl;
+    char multiple_choice;
+    string user_input;
+
+
+    if (level == 1) {
+        typewrite("Challenge : Social Media Dilemma\n");
+        cout << "You come across a controversial post on social media that could impact public opinion." << endl;
+        cout << "Do you:" << endl;
+        cout << "A) Share the post without verifying its accuracy." << endl;
+        cout << "B) Research the information before sharing it." << endl;
+        cout << "C) Ignore the post entirely." << endl;
+        cin >> multiple_choice;
+        if (multiple_choice == 'A' || multiple_choice == 'a') {
+            typewrite("You shared unverified information, leading to misinformation spreading rapidly.\n");
+            typewrite("This decision negatively impacts your reputation and credibility.\n");
+        } else if (multiple_choice == 'B' || multiple_choice == 'b') {
+            typewrite("You took the time to research and verify the information before sharing it.\n");
+            typewrite("Your responsible approach earns you respect and trust from your peers.\n");
+        } else if (multiple_choice == 'C' || multiple_choice == 'c') {
+            typewrite("By ignoring the post, you avoided contributing to misinformation.\n");
+            typewrite("However, you missed an opportunity to educate others on the importance of fact-checking.\n");
+        } else {
+            typewrite("Invalid choice. Please select A, B, or C next time.\n");
+        }
+        // Further challenge logic can be implemented here
+    }
+    if (level == 2) {
+        typewrite("Challenge : Impromptu Pitch Presentation\n");
+        cout << "You have been asked to present a new app idea to potential investors with only 5 minutes to prepare." << endl;
+        cout << "Do you:" << endl;
+        cout << "A) Focus on the technical features of the app." << endl;
+        cout << "B) Highlight the market potential and user benefits." << endl;
+        cout << "C) Wing it and hope for the best." << endl;
+        // Further challenge logic can be implemented here
+    }
 }
 
 void Decades::minigame() {

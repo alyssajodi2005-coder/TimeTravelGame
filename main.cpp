@@ -16,7 +16,7 @@ void ShowIntro() {
     cout << "2. Each decade gives you choices and challenges." << endl;
     cout << "3. Pick the best options and win minigames to survive and earn points." << endl;
     cout << "4. Choices affect your final score." << endl;
-    //finish expalin points, money, food, etc
+    //finish explain points, money, food, etc
     
     //prompt user to begin game
     char startkey = '\0';
@@ -51,13 +51,65 @@ int main() {
     Decades currentdecade(level); // create decades object inital decade
 
 
-    //Decade:2020s
-    currentdecade.showDecadeIntro();
+    //Lv.1 Decade:2020s
     timeMachine.TimeTravel(); // Time travel effect
+    currentdecade.showDecadeIntro(); // show decade intro
+    currentdecade.challenge(); // decade challenge
+    currentdecade.minigame(); // decade minigame
+    timeMachine.TimeTravel(); // Time travel effect
+    currentdecade.nextDecade(); // advance to next decade
 
-    //Decade:2010s
+    //Lv.2 Decade:2010s
+    timeMachine.TimeTravel(); // Time travel effect
+    currentdecade.showDecadeIntro(); // show decade intro
+    currentdecade.challenge(); // decade challenge
+    currentdecade.minigame(); // decade minigame
+    timeMachine.TimeTravel(); // Time travel effect
+    currentdecade.nextDecade(); // advance to next decade
+
+    /*
+    //Finish remaining decades here:
+
+    //Lv.3 Decade:2000s
+    timeMachine.TimeTravel(); // Time travel effect
+    currentdecade.showDecadeIntro();    
+
+    //lv.4 Decade:1990s
+    currentdecade.nextDecade(); 
+    currentdecade.showDecadeIntro();
+
+    //lv.5 Decade:1980s
+    currentdecade.nextDecade();
+    currentdecade.showDecadeIntro(); 
+
+    //lv.6 Decade:1970s
+    currentdecade.nextDecade(); 
+    currentdecade.showDecadeIntro();
+
+    //lv.7 Decade:1960s
+    currentdecade.nextDecade(); 
+    currentdecade.showDecadeIntro();
+    
+    //lv.8 Decade:1950s
+    currentdecade.nextDecade(); 
+    currentdecade.showDecadeIntro();
+
+    //lv.9 Decade:1940s
     currentdecade.nextDecade();
     currentdecade.showDecadeIntro();
+
+    //lv.10 Decade:1930s
+    currentdecade.nextDecade();
+    currentdecade.showDecadeIntro();
+
+    //lv.11 Decade:1920s
+    currentdecade.nextDecade();
+    currentdecade.showDecadeIntro();
+
+    //lv.12 Decade:2020s (return to future)
+    */
+
+
 
 
     
