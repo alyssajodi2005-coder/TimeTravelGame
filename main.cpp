@@ -17,7 +17,7 @@ void ShowIntro() {
     cout << "3. Pick the best options and win minigames to survive and earn points." << endl;
     cout << "4. Choices affect your final score." << endl;
     //finish explain points, money, food, etc
-    
+
     //prompt user to begin game
     char startkey = '\0';
     while (startkey != 'y') {
@@ -25,6 +25,7 @@ void ShowIntro() {
         cin >> startkey;
     }
 }
+
 
 
 int main() {
@@ -52,15 +53,17 @@ int main() {
 
 
     //Lv.1 Decade:2020s
+    userCharacter.set_year(level); // set player year to current year
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge
     currentdecade.minigame(userCharacter); // decade minigame
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
-    userCharacter.travel_to_decade(2010); // set player year to 2010
+    userCharacter.travel_to_decade(2010); // travel to next decade
 
     //Lv.2 Decade:2010s
+    userCharacter.set_year(level); // set player year to current decade
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge

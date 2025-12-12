@@ -50,8 +50,16 @@ vector<int> Player::get_decades_visited()  {
 // Setter methods
 
 // Set current year
-void Player::set_year(int new_year) {
-    year = new_year;
+void Player::set_year(int level) {
+    vector<int> decade_years = {2020, 2010, 2000, 1990, 1980, 1970, 1960, 1950, 1940, 1930, 1920};
+    // I learned about range-based for loops because i wanted to find a better way to loop through vectors,
+    // so I looked it up and got this: https://stackoverflow.com/questions/22269435/how-to-iterate-through-a-list-of-objects-in-c 
+    for (auto const& yr : decade_years){
+        if (yr == level){
+            year = yr;
+            break;
+        }
+    }
 }
 // drain time battery level
 void Player::drain_battery(int amount) {
@@ -114,8 +122,6 @@ bool Player::has_item(string const &item) {
     if (inventory.size() == 0){
         return false;
     }
-    // I learned about range-based for loops because i wanted to find a better way to loop through vectors,
-    // so I looked it up and got this: https://stackoverflow.com/questions/22269435/how-to-iterate-through-a-list-of-objects-in-c
     for (auto const& i :inventory){
         if (i == item){
             return true;

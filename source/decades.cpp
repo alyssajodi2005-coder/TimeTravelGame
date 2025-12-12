@@ -118,12 +118,15 @@ void Decades::challenge(Player &player) {
         if (multiple_choice == 'A' || multiple_choice == 'a') {
             typewrite("You shared unverified information, leading to misinformation spreading rapidly.\n");
             typewrite("This decision negatively impacts your reputation and credibility.\n");
+            player.subtract_score(10);
         } else if (multiple_choice == 'B' || multiple_choice == 'b') {
             typewrite("You took the time to research and verify the information before sharing it.\n");
             typewrite("Your responsible approach earns you respect and trust from your peers.\n");
+            player.add_score(10);
         } else if (multiple_choice == 'C' || multiple_choice == 'c') {
             typewrite("By ignoring the post, you avoided contributing to misinformation.\n");
             typewrite("However, you missed an opportunity to educate others on the importance of fact-checking.\n");
+            player.add_score(5);
         } else {
             typewrite("Invalid choice. Please select A, B, or C next time.\n");
         }
