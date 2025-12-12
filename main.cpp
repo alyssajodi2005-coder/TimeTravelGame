@@ -54,8 +54,8 @@ int main() {
     //Lv.1 Decade:2020s
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.showDecadeIntro(); // show decade intro
-    currentdecade.challenge(); // decade challenge
-    currentdecade.minigame(); // decade minigame
+    currentdecade.challenge(userCharacter); // decade challenge
+    currentdecade.minigame(userCharacter); // decade minigame
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
     userCharacter.travel_to_decade(2010); // set player year to 2010
@@ -63,8 +63,8 @@ int main() {
     //Lv.2 Decade:2010s
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.showDecadeIntro(); // show decade intro
-    currentdecade.challenge(); // decade challenge
-    currentdecade.minigame(); // decade minigame
+    currentdecade.challenge(userCharacter); // decade challenge
+    currentdecade.minigame(userCharacter); // decade minigame
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
 

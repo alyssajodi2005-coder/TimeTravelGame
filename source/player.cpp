@@ -111,7 +111,7 @@ bool Player::has_enough_battery(int required) {
 }
 // Check if player has a specific item in inventory
 bool Player::has_item(string const &item) {
-    if (items.size() == 0){
+    if (inventory.size() == 0){
         return false;
     }
     // I learned about range-based for loops because i wanted to find a better way to loop through vectors,

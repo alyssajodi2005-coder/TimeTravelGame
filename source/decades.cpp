@@ -102,7 +102,7 @@ void Decades::showDecadeIntro(){
 void Decades::nextDecade() {
     level++;
 }
-void Decades::challenge() {
+void Decades::challenge(Player &player) {
     char multiple_choice;
     string user_input;
 
@@ -140,7 +140,7 @@ void Decades::challenge() {
     }
 }
 
-void Decades::minigame() {
+void Decades::minigame(Player &player) {
     cout << "Welcome to the minigame for level " << level << "!" << endl;
 }
 

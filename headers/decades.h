@@ -16,8 +16,8 @@ class Decades {
         Decades(int user_level);
         void showDecadeIntro();
         void nextDecade();
-        void challenge();
-        void minigame();
+        void challenge(Player &player);
+        void minigame(Player &player);
 };
 
 #endif // DECADES_H
