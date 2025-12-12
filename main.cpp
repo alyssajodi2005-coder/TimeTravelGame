@@ -26,7 +26,7 @@ void ShowIntro() {
     }
 }
 
-
+void 
 
 int main() {
     SetConsoleOutputCP(CP_UTF8); //allow UTF-8 characters and emojis in console

@@ -28,8 +28,8 @@ void TimeMachine::Recharge(int amount) {
     }
     typewrite("Time Machine recharged. Current energy level: " + to_string(machine_energy_level) + "%\n");
 }
-bool TimeMachine::CanTravel() const {
-    if (machine_energy_level >= 20) {
+bool TimeMachine::CanTravel(Player &player) const {
+    if (machine_energy_level >= 20 && player.get_score() >= 10) {
         return true;
     } else {
         return false;
