@@ -9,6 +9,29 @@ Decades::Decades(int user_level){
     level = user_level;
 }
 
+void Decades::AskDecade() {
+    int input;
+    bool isCorrect = false;
+    typeWrite("You have completed all the minigames and challenges in this decade, which decade would you like to time travel to next?");
+    while (!isCorrect){
+        cin >> input;
+        for (int i = 0; i < years.size(); i++){
+            if (input == years.at(i)){
+                travelDestination = input;
+                isCorrect = true;
+                break;
+            }
+        }
+        if (!isCorrect){
+            typeWrite("Invalid decade, please enter a correct decade.");    
+        }
+    }
+    
+}
+void Decades::getDestination {
+    return travelDestination
+}
+
 void Decades::showDecadeIntro(){
     if (level == 1) {
         typewrite(".....................\n"); //loading effect
@@ -100,7 +123,12 @@ void Decades::showDecadeIntro(){
 
 }
 void Decades::nextDecade() {
-    level++;
+    for (int i = 0; i < years.size(); i++) {
+        if (years.at(i) == travelDest){
+            level = i + 1;
+            break;
+        }  
+    } 
 }
 void Decades::challenge(Player &player) {
     char multiple_choice;
@@ -141,7 +169,7 @@ void Decades::challenge(Player &player) {
         cout << "C) Wing it and hope for the best." << endl;
         // Further challenge logic can be implemented here
         cin >> multiple_choice;
-        
+
     }
 }
 

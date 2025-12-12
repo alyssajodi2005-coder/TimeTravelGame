@@ -8,10 +8,8 @@ using namespace std;
 // Constructor to initialize player with a name
 Player::Player(const string &user_name){
     name = user_name;
-    time_battery = 100; // Initial time battery
     year = 2024; // Starting year
     score = 0;
-    money = 50.0; // Starting money
     decades_visited.push_back(2020);
 }
 
@@ -25,17 +23,9 @@ string Player::get_name() const {
 int Player::get_year() {
     return year;
 }
-// Get time battery level
-int Player::get_time_battery() {
-    return time_battery;
-}
 // Get player's score
 int Player::get_score() {
     return score;
-}
-// Get player's money
-double Player::get_money()  {
-    return money;
 }
 // Get player's inventory
 vector<string> Player::get_inventory()  {
@@ -61,20 +51,6 @@ void Player::set_year(int level) {
         }
     }
 }
-// drain time battery level
-void Player::drain_battery(int amount) {
-    time_battery -= amount;
-    if (time_battery < 0){
-        time_battery = 0;
-    }
-}
-// charge time battery level
-void Player::charge_battery(int amount ) {
-    time_battery += amount;
-    if (time_battery > 100){
-        time_battery = 100;
-    }
-}
 // add to player's score
 void Player::add_score(int amount) {
     score += amount;
@@ -85,17 +61,6 @@ void Player::subtract_score(int amount) {
     if (score < 0){
         score = 0;
     }
-}
-// Spend player's money
-void Player::spend_money(double amount) {
-    money -= amount;
-    if (money < 0){
-        money = 0;
-    }
-}
-// add money to player's total
-void Player::add_money(double amount) {
-    money += amount;
 }
 // Add item to inventory
 void Player::add_to_inventory(const string &item) {
@@ -113,10 +78,6 @@ void Player::remove_from_inventory(const string &item) {
 
 // bool functions and logic checks and other utilities
 
-// Check if player has enough time battery
-bool Player::has_enough_battery(int required) {
-    return time_battery >= required;
-}
 // Check if player has a specific item in inventory
 bool Player::has_item(string const &item) {
     if (inventory.size() == 0){
@@ -134,9 +95,9 @@ bool Player::has_enough_money(double amount) {
     return money >= amount;
 }
 // Travel to a specific decade
-void Player::travel_to_decade(int target_decade) {
-    year = target_decade;
-    decades_visited.push_back(target_decade);
+void Player::travel_to_decade(decades &decade) {
+    year = decade.getDestination();
+    decades_visited.push_back(year);
 }
 
 // Print Functions

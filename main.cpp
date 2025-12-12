@@ -26,7 +26,7 @@ void ShowIntro() {
     }
 }
 
-void 
+
 
 int main() {
     SetConsoleOutputCP(CP_UTF8); //allow UTF-8 characters and emojis in console
@@ -58,9 +58,10 @@ int main() {
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge
     currentdecade.minigame(userCharacter); // decade minigame
+    currentDecade.AskDecade() // ask which decade they'll like to travel to
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
-    userCharacter.travel_to_decade(2010); // travel to next decade
+    userCharacter.travel_to_decade(currentdecade); // travel to next decade
 
     //Lv.2 Decade:2010s
     userCharacter.set_year(level); // set player year to current decade
@@ -68,8 +69,10 @@ int main() {
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge
     currentdecade.minigame(userCharacter); // decade minigame
+    currentDecade.AskDecade(); // ask which decade they'll like to travel to
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
+    userCharacter.travel_to_decade(currentdecade); // travel to next decade
 
     /*
     //Finish remaining decades here:
