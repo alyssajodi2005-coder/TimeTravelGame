@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h> //for UTF-8 console
 using namespace std;
 
 
@@ -29,7 +28,6 @@ void ShowIntro() {
 
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8); //allow UTF-8 characters and emojis in console
     //all main variables here:
     string userName;
     int level = 1;
