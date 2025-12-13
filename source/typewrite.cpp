@@ -8,6 +8,6 @@ using namespace std;
 void typewrite(const string &text) {
     for (int i = 0; i < text.size(); ++i) {
         cout << text.at(i);
-        usleep(200000);
+        usleep(20000);
     }
 }

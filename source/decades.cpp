@@ -14,7 +14,8 @@ Decades::Decades(int user_level){
 void Decades::AskDecade() {
     int input;
     bool isCorrect = false;
-    typeWrite("You have completed all the minigames and challenges in this decade, which decade would you like to time travel to next?");
+    typewrite("You have completed all the minigames and challenges in this decade, which decade would you like to time travel to next?");
+    
     while (!isCorrect){
         cin >> input;
         for (int i = 0; i < years.size(); i++){
@@ -25,13 +26,13 @@ void Decades::AskDecade() {
             }
         }
         if (!isCorrect){
-            typeWrite("Invalid decade, please enter a correct decade.");    
+            typewrite("Invalid decade, please enter a correct decade.");    
         }
     }
     
 }
-void Decades::getDestination {
-    return travelDestination
+int Decades::getDestination() {
+    return travelDestination;
 }
 
 void Decades::showDecadeIntro(){
@@ -39,11 +40,11 @@ void Decades::showDecadeIntro(){
         typewrite(".....................\n"); //loading effect
         typewrite("📚DECADE 2020'S --> The Present Day\n");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
-        typewrite("---------------------------------------\n");
+        cout <<"---------------------------------------\n" << endl;
         typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");
-        typewrite("Your phone buzzes nonstop. Opinions spread faster than facts, and everyone seems connected — yet strangely distant.\n");
+        typewrite("Your phone buzzes nonstop. Opinions spread faster than facts, and everyone seems connected yet distant.\n");
         typewrite("Students rush past you on Campus with headphones in, glued to screens .\n");
-        typewrite("Every choice you make can spread fast — and its impact may reach further than you expect.\n");
+        typewrite("Every choice you make can spread fast and its impact may reach further than you expect.\n");
         typewrite("Navigate carefully, and see how your decisions ripple through time.\n");
         // challenge 1: social media dilemma
 
@@ -51,7 +52,7 @@ void Decades::showDecadeIntro(){
     if (level == 2) {
         typewrite("💻DECADE 2010's --> Internet Boom\n");
         typewrite("Date: June 10, 2015 || Time: 3:15 PM || Location: Cupertino, CA\n");
-        typewrite("---------------------------------------\n");
+        cout <<"---------------------------------------\n" << endl;
         typewrite("You find yourself in a busy tech company building, surrounded by the latest gadgets and innovations.\n");
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
         typewrite("The floor is packed with people, whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
@@ -141,12 +142,13 @@ void Decades::showDecadeIntro(){
 
 }
 void Decades::nextDecade() {
-    for (int i = 0; i < years.size(); i++) {
-        if (years.at(i) == travelDest){
+    level ++;
+    /*for (int i = 0; i < years.size(); i++) {
+        if (years.at(i) == travelDestination){
             level = i + 1;
             break;
         }  
-    } 
+    } */
 }
 void Decades::challenge(Player &player) {
     char multiple_choice;
@@ -179,20 +181,21 @@ void Decades::challenge(Player &player) {
         // add more challenge logic here
     }
     if (level == 2) {
+        string lv2inp1;
+        string lv2inp2;
         typewrite("Challenge : Impromptu Pitch Presentation\n");
         cout << "You must present a new app idea to potential investors." << endl;
         cout << "What type of app is it? (ex. game, productivity, social, etc.): " << endl;
-        getline(cin, user_input);
-        string lv2inp = user_input;
+        cin >> lv2inp1;
         cout << "Who is your target audience? (ex. teenagers, kids, etc.): " << endl;
-        getline(cin, user_input);
+        cin >> lv2inp2;
         typewrite("Investors are eager to hear your pitch. You have limited time to make an impression.\n");
-        typewrite("Hello my name is " + player.get_name() + ", my app focuses on " + lv2inp + " and my app is targeted to " + user_input + ".\n");
+        typewrite("Hello my name is " + player.get_name() + ", I have created a " + lv2inp1 + " app and my app is targeted to " + lv2inp2 + ".\n");
         cout << "Do you:" << endl;
         cout << "A) Focus on the technical features of the app." << endl;
         cout << "B) Highlight the market potential and user benefits." << endl;
         cout << "C) Wing it and hope for the best." << endl;
-        getline(cin, user_input);
+        cin >> multiple_choice;
         if (multiple_choice == 'A' || multiple_choice == 'a') {
             typewrite("Your technical focus impressed the investors, but they were more interested in the app's market potential.\n");
             typewrite("You received some interest but lacked a clear vision for user benefits.\n");

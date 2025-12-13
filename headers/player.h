@@ -5,6 +5,7 @@
 #include <string>
 using namespace std;
 
+class Decades;
 
 class Player{
     // Private member variables 
@@ -58,11 +59,11 @@ class Player{
     // bool funtions and logic checks and other utilities
 
     // Check if player has a specific item in inventory
-    bool has_item(string item);
+    bool has_item(const string &item);
     // check if player has the specific amount of money
     bool has_enough_money(double amount);
     // Travel to a specific decade
-    void travel_to_decade(decades &decade);
+    void travel_to_decade(Decades &decade);
 
     // Print Functions
 

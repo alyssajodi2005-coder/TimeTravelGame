@@ -54,13 +54,13 @@ int main() {
 
     //Lv.1 Decade:2020s
     userCharacter.set_year(level); // set player year to current year
-    timeMachine.TimeTravel(); // Time travel effect
+    timeMachine.TimeTravel(); // Time travel effect, check machine energy
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge
     currentdecade.minigame(userCharacter); // decade minigame
-    currentDecade.AskDecade() // ask which decade they'll like to travel to
-    timeMachine.TimeTravel(); // Time travel effect
-    currentdecade.nextDecade(); // advance to next decade
+    //currentdecade.AskDecade(); // ask which decade they'll like to travel to
+    //timeMachine.TimeTravel(); // Time travel effect
+    currentdecade.nextDecade(); // advance to next decade, inc level
     userCharacter.travel_to_decade(currentdecade); // travel to next decade
 
     //Lv.2 Decade:2010s
@@ -69,17 +69,21 @@ int main() {
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge
     currentdecade.minigame(userCharacter); // decade minigame
-    currentDecade.AskDecade(); // ask which decade they'll like to travel to
-    timeMachine.TimeTravel(); // Time travel effect
+    //currentdecade.AskDecade(); // ask which decade they'll like to travel to
+    //timeMachine.TimeTravel(); // Time travel effect
     currentdecade.nextDecade(); // advance to next decade
     userCharacter.travel_to_decade(currentdecade); // travel to next decade
 
-    /*
-    //Finish remaining decades here:
 
     //Lv.3 Decade:2000s
     timeMachine.TimeTravel(); // Time travel effect
-    currentdecade.showDecadeIntro();    
+    currentdecade.showDecadeIntro();  
+
+
+    
+    /*
+    //Finish remaining decades here:
+  
 
     //lv.4 Decade:1990s
     currentdecade.nextDecade(); 

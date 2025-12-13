@@ -4,6 +4,8 @@
 #include <string>
 using namespace std;
 #include "../headers/typewrite.h"
+#include "../headers/decades.h"
+
 
 // Constructor to initialize player with a name
 Player::Player(const string &user_name){
@@ -32,9 +34,7 @@ vector<string> Player::get_inventory()  {
     return inventory;
 }
 // Get decades visited
-vector<int> Player::get_decades_visited()  {
-    return decades_visited;
-}
+
 
 
 // Setter methods
@@ -90,12 +90,9 @@ bool Player::has_item(string const &item) {
     }
     return false;
 }
-// check if player has the specific amount of money
-bool Player::has_enough_money(double amount) {
-    return money >= amount;
-}
+
 // Travel to a specific decade
-void Player::travel_to_decade(decades &decade) {
+void Player::travel_to_decade(Decades &decade) {
     year = decade.getDestination();
     decades_visited.push_back(year);
 }
@@ -137,9 +134,8 @@ void Player::print_decades_visited(){
 
 // Display player's information
 void Player::GetInfo(){
-    cout << "Player Name: " << name << " || Current Year: " << year << " || Time Battery: " << time_battery << "%" << endl;
+    cout << "Player Name: " << name << " || Current Year: " << year << endl;
     cout << "Score: " << score << endl;
-    cout << "Money: $" << money << endl;
     cout << "Decades Visited: " ;
     print_decades_visited();
     cout << "Inventory: ";

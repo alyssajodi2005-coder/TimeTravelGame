@@ -5,6 +5,8 @@
 #include <string>
 using namespace std;
 // TODO: add TimeMachine declarations
+class Player;
+
 class TimeMachine {
     private:
         int machine_energy_level; // Energy level percentage
