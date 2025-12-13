@@ -27,7 +27,7 @@ Send your edits to GitHub so your partner can see them.
 
 > **Tip:** Always `git pull` before starting work to avoid conflicts.
 cd "/c/Users/flawl/OneDrive/Documents/code-projects/TimeTravelGame"
- g++ -Iheaders main.cpp source/decades.cpp source/player.cpp source/timeMachine.cpp source/typewrite.cpp -o game
+g++ -Iheaders main.cpp source/decades.cpp source/player.cpp source/timeMachine.cpp source/typewrite.cpp -o game
 
 ./game
 

@@ -3,6 +3,8 @@
 #include <vector>
 using namespace std;
 #include "../headers/typewrite.h"
+#include "../headers/player.h"
+
 
 TimeMachine::TimeMachine() {
     machine_energy_level = 100; // Initialize energy level to 100%
