@@ -33,24 +33,10 @@ int Player::get_score() {
 vector<string> Player::get_inventory()  {
     return inventory;
 }
-// Get decades visited
-
 
 
 // Setter methods
 
-// Set current year
-void Player::set_year(int level) {
-    vector<int> decade_years = {2020, 2010, 2000, 1990, 1980, 1970, 1960, 1950, 1940, 1930, 1920};
-    // I learned about range-based for loops because i wanted to find a better way to loop through vectors,
-    // so I looked it up and got this: https://stackoverflow.com/questions/22269435/how-to-iterate-through-a-list-of-objects-in-c 
-    for (auto const& yr : decade_years){
-        if (yr == level){
-            year = yr;
-            break;
-        }
-    }
-}
 // add to player's score
 void Player::add_score(int amount) {
     score += amount;
@@ -68,7 +54,7 @@ void Player::add_to_inventory(const string &item) {
 }
 // Remove item from inventory
 void Player::remove_from_inventory(const string &item) {
-    for (int i = 0; i < inventory.size(); i++) {
+    for (size_t i = 0; i < inventory.size(); i++) {
         if (inventory[i] == item) {
             inventory.erase(inventory.begin() + i);
             break;
@@ -93,8 +79,13 @@ bool Player::has_item(string const &item) {
 
 // Travel to a specific decade
 void Player::travel_to_decade(Decades &decade) {
-    year = decade.getDestination();
-    decades_visited.push_back(year);
+    vector<int> decade_years = {2020, 2010, 2000, 1990, 1980, 1970, 1960, 1950, 1940, 1930, 1920};
+    int level = decade.GetLevel();
+    vector<int> years = decade.GetYears();
+    if (level >= 1 && level <= years.size()) {
+        year = years[level - 1];
+        decades_visited.push_back(decade_years[level - 1]);
+    }
 }
 
 // Print Functions

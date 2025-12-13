@@ -1,13 +1,14 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 
 //include all header files here:
 
-#include "decades.h"
-#include "player.h"
-#include "timeMachine.h"
-#include "typewrite.h"
+#include "headers/decades.h"
+#include "headers/player.h"
+#include "headers/timeMachine.h"
+#include "headers/typewrite.h"
 
 void ShowIntro() {
     cout << "* HOW TO PLAY *" << endl;
@@ -51,7 +52,6 @@ int main() {
 
 
     //Lv.1 Decade:2020s
-    userCharacter.set_year(level); // set player year to current year
     timeMachine.TimeTravel(); // Time travel effect, check machine energy
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge
@@ -62,7 +62,6 @@ int main() {
     userCharacter.travel_to_decade(currentdecade); // travel to next decade
 
     //Lv.2 Decade:2010s
-    userCharacter.set_year(level); // set player year to current decade
     timeMachine.TimeTravel(); // Time travel effect
     currentdecade.showDecadeIntro(); // show decade intro
     currentdecade.challenge(userCharacter); // decade challenge

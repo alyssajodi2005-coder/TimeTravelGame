@@ -10,8 +10,14 @@ using namespace std;
 Decades::Decades(int user_level){
     level = user_level;
 }
+int Decades::GetLevel(){
+    return level;
+}
+vector<int> Decades::GetYears(){
+    return years;
+}
 
-void Decades::AskDecade() {
+/* void Decades::AskDecade() {
     int input;
     bool isCorrect = false;
     typewrite("You have completed all the minigames and challenges in this decade, which decade would you like to time travel to next?");
@@ -30,10 +36,10 @@ void Decades::AskDecade() {
         }
     }
     
-}
-int Decades::getDestination() {
-    return travelDestination;
-}
+} 
+//int Decades::getDestination() {
+   // return travelDestination;
+//} */
 
 void Decades::showDecadeIntro(){
     if (level == 1) {
@@ -63,7 +69,7 @@ void Decades::showDecadeIntro(){
     }
     if (level == 3) {
         typewrite(".....................\n"); //loading effect
-        typewrite("📱DECADE 2000's --> Y2K");
+        typewrite("📱DECADE 2000's --> Y2K\n");
         typewrite("Date: August 15, 2003 || Time: 12:30 PM || Location: Brooklyn, NY\n");
         cout <<"------------------------------------------------------------------------" << endl;
         typewrite("The summer streets of New York City are lively as usual, \n");

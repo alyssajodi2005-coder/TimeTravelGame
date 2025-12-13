@@ -11,18 +11,20 @@ class Decades {
     private:
         int level;
         string description;
-        int travelDestination;
-        vector<int> years = {2020, 2010, 2000, 1990, 1980, 1970, 1960, 1950, 1940, 1930, 1920};
+        /*int travelDestination; */
+        vector<int> years = {2024, 2015, 2003, 1994, 1980, 1970, 1960, 1950, 1940, 1930, 1920};
         vector<string> challenges;
 
     public:
         Decades(int user_level);
-        void AskDecade();
+        int GetLevel();
+        vector <int> GetYears();
+        /* void AskDecade(); */
         void showDecadeIntro();
         void nextDecade();
         void challenge(Player &player);
         void minigame(Player &player);
-        int getDestination();
+        /* int getDestination(); */
 };
 
 #endif // DECADES_H

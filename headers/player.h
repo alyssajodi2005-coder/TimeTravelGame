@@ -38,13 +38,9 @@ class Player{
     int get_score();
     // Get player's inventory
     vector<string> get_inventory();
-    // Get decades visited
-    vector<int> get_decades_visited();
-
+    
     // Setter methods
 
-    // Set current year
-    void set_year(int new_year);
     // add to player's score
     void add_score(int amount);
     // subtract from player's score
@@ -53,15 +49,11 @@ class Player{
     void add_to_inventory(const string& item);
     // Remove item from inventory
     void remove_from_inventory(const string& item);
-    // Add decade to decades visited
-    void add_decade_visited(int decade);
 
     // bool funtions and logic checks and other utilities
 
     // Check if player has a specific item in inventory
     bool has_item(const string &item);
-    // check if player has the specific amount of money
-    bool has_enough_money(double amount);
     // Travel to a specific decade
     void travel_to_decade(Decades &decade);
 

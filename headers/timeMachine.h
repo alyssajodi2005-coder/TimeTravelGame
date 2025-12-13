@@ -15,7 +15,6 @@ class TimeMachine {
         TimeMachine();
         void TimeTravel();
         void Recharge(int amount);
-        bool CanTravel(Player &player) const;
 };
 
 #endif // TIMEMACHINE_H
