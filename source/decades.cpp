@@ -1,4 +1,7 @@
 #include <iostream>
+#include <cstdlib>
+#include <cmath>
+#include <vector>
 using namespace std;
 #include "../headers/decades.h"
 #include "../headers/typewrite.h"
@@ -477,13 +480,19 @@ void Decades::minigame(Player &player) {
         cout << "B) 2015" << endl;
         cout << "C) 2022" << endl;
         char answer;
-        cin >> answer;
-        if (answer == 'B' || answer == 'b') {
-            typewrite("Correct! OpenAI was founded in 2015.\n");
-            player.add_score(10);
-        } else {
-            typewrite("Incorrect. The correct answer is B) 2015.\n");
-            player.subtract_score(5);
+        while (true) {
+            cin >> answer;
+            if (answer == 'B' || answer == 'b') {
+                typewrite("Correct! OpenAI was founded in 2015.\n");
+                player.add_score(10);
+                break;
+            } else if (answer == 'A' || answer == 'a' || answer == 'C' || answer == 'c') {
+                typewrite("Incorrect. The correct answer is B) 2015.\n");
+                player.subtract_score(5);
+                break;
+            } else {
+                typewrite("Invalid choice. Please select A, B, or C.\n");
+            }   
         }
     }
     else if (level == 2) {
@@ -493,13 +502,84 @@ void Decades::minigame(Player &player) {
         cout << "B) 2007" << endl;
         cout << "C) 2009" << endl;
         char answer;
-        cin >> answer;
-        if (answer == 'B' || answer == 'b') {
-            typewrite("Correct! The first iPhone was released in 2007.\n");
-            player.add_score(10);
-        } else {
-            typewrite("Incorrect. The correct answer is B) 2007.\n");
-            player.subtract_score(5);
+        while(true) {
+            cin >> answer;
+            if (answer == 'B' || answer == 'b') {
+                typewrite("Correct! The first iPhone was released in 2007.\n");
+                player.add_score(10);
+                break;
+            } else if (answer == 'A' || answer == 'a' || answer == 'C' || answer == 'c') {
+                typewrite("Incorrect. The correct answer is B) 2007.\n");
+                player.subtract_score(5);
+                break;
+            } else {
+                typewrite("Invalid choice. Please select A, B, or C.\n");
+            }
+        }
+    }
+    else if (level == 3)  {
+        typewrite("Minigame: 2000s Song guessing Game\n");
+        /* Example structure for songs. I learned how to use struct form when i searched
+        up " c++ simpler way to group data together other than a class" and i found out about structs*/
+        struct Song {
+            string title;
+            string artist;
+            int year;
+            string lyric_snippet;
+            string clue1;
+            string clue2;
+            string clue3;
+        };
+        vector<Song> songs = {
+            {"Crazy in Love", "Beyonce", 2003, "Got me looking so crazy right now", "It's a song by Beyonce", "It was a hit in 2003", "It's about being crazy"},
+            {"Hollaback Girl", "Gwen Stefani", 2005, "So that's right, dude, meet me at the bleachers", "It's a song by Gwen Stefani", "It was released in 2004", "The name of the song is repeated into the chorus"},
+            {"In Da Club", "50 Cent", 2003, "Go shorty, it's your birthday", "It's a song by 50 Cent", "It was released in 2003", "It's often played at parties"}
+        };
+        cout << "Guess the song from the following lyric snippet:\n" << endl;
+        srand(static_cast<unsigned int>(time(0)));
+        int random_index = rand() % songs.size();
+        Song selected_song = songs[random_index];
+        while (true) {
+            cout << "\"" << selected_song.lyric_snippet << "\"" << endl;
+            cout << "Enter your guess for the song title: ";
+            string user_guess;
+            cin.ignore();
+            getline(cin, user_guess);
+            if (user_guess == selected_song.title) {
+                typewrite("Correct! You guessed the song title.\n");
+                player.add_score(20);
+                break;
+            } else {
+                typewrite("Incorrect guess. Here is the first clue: " + selected_song.clue1 + "\n");
+                cin >> user_guess;
+                if (user_guess == selected_song.title) {
+                    typewrite("Correct! You guessed the song title.\n");
+                    player.add_score(15);
+                    break;
+                } else {
+                    typewrite("Incorrect guess. Here is the second clue: " + selected_song.clue2 + "\n");
+                    cin >> user_guess;
+                    if (user_guess == selected_song.title) {
+                        typewrite("Correct! You guessed the song title.\n");
+                        player.add_score(10);
+                        break;
+                    }
+                    else {
+                        typewrite("Incorrect guess. Here is the final clue: " + selected_song.clue3 + "\n");
+                        cin >> user_guess;
+                        if (user_guess == selected_song.title) {
+                            typewrite("Correct! You guessed the song title.\n");
+                            player.add_score(5);
+                            break;
+                        } else {
+                            typewrite("Sorry, you've used all your clues. The correct answer was: " + selected_song.title + "\n");
+                            player.subtract_score(5);
+                            break;
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
