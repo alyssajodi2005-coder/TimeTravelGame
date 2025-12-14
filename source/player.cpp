@@ -125,11 +125,5 @@ void Player::print_decades_visited(){
 
 // Display player's information
 void Player::GetInfo(){
-    cout << "Player Name: " << name << " || Current Year: " << year << endl;
-    cout << "Score: " << score << endl;
-    cout << "Decades Visited: " ;
-    print_decades_visited();
-    cout << "Inventory: ";
-    print_inventory();
-
+    cout << "Name: " << name << " || Current Year: " << year << " || Score: " << score << endl;
 }
