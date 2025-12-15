@@ -9,7 +9,12 @@ using namespace std;
 #include "../headers/player.h"
 #include "../headers/timeMachine.h"
 
-
+string lowerCase (string str) {
+    for (size_t i = 0; i < str.length(); i++) {
+        str[i] = tolower(str[i]);
+    }
+    return str;
+}
 
 Decades::Decades(int user_level){
     level = user_level;
@@ -557,7 +562,7 @@ void Decades::minigame(Player &player) {
             cout << "Your guess: ";
             string user_guess;
             getline(cin, user_guess);
-            if ((user_guess) == (selected_song.title)) {
+            if (lowerCase(user_guess) == lowerCase(selected_song.title)) {
                 typewrite("Correct! The song is \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
                 guessed_correctly = true;
                 if (i == 0) {
@@ -622,20 +627,25 @@ void Decades::minigame(Player &player) {
             cout << "Title: " << track.title << ", Artist: " << track.artist << ", Genre: " << track.genre << ", Duration: " << track.duration << " minutes" << endl;
         }
         while (total_duration < minutes_needed) {
+            bool isaSongAdded = false;
             cout << "Enter the title of the song to add to the mix tape (or type 'done' to finish): ";
             string song_title;
             cin.ignore();
             getline(cin, song_title);
-            if (song_title == "done") {
+            if (lowerCase(song_title) == "done") {
                 break; 
             }
             for (const auto &track : tracks) {
-                if (track.title == song_title) {
+                if (lowerCase(track.title) == lowerCase(song_title)) {
                     new_tracks.push_back(song_title);
                     total_duration += track.duration;
                     cout << "Added: " << track.title << " by " << track.artist << endl;
                     break;
+                    isaSongAdded = true;
                 }
+            }
+            if (!isaSongAdded) {
+                typewrite("Song not found. Please try again.\n");
             }
         }
         typewrite("This is the list of the songs that you chose for your coworker\n");
