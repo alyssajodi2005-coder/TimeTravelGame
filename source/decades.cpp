@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <string>
 #include <vector>
 #include <cctype>
 using namespace std;
@@ -622,11 +623,11 @@ void Decades::minigame(Player &player) {
             {"Wannabe", "Spiece Girls", "Pop", 3}
         };
         int total_duration = 0;
-        vector <string> new_tracks;
+        vector <musicTrack> new_tracks;
         for (auto &track : tracks) {
             cout << "Title: " << track.title << ", Artist: " << track.artist << ", Genre: " << track.genre << ", Duration: " << track.duration << " minutes" << endl;
         }
-        while (total_duration < minutes_needed) {
+        while (true) {
             bool isaSongAdded = false;
             cout << "Enter the title of the song to add to the mix tape (or type 'done' to finish): ";
             string song_title;
@@ -635,11 +636,11 @@ void Decades::minigame(Player &player) {
             if (lowerCase(song_title) == "done") {
                 break; 
             }
-            for (const auto &track : tracks) {
-                if (lowerCase(track.title) == lowerCase(song_title)) {
-                    new_tracks.push_back(song_title);
-                    total_duration += track.duration;
-                    cout << "Added: " << track.title << " by " << track.artist << endl;
+            for (size_t i = 0; i < tracks.size(); i++) {
+                if (lowerCase(tracks[i].title) == lowerCase(song_title)) {
+                    new_tracks.push_back(tracks.at(i));
+                    total_duration += tracks.at(i).duration;
+                    cout << "Added: " << tracks.at(i).title << " by " << tracks.at(i).artist << endl;
                     break;
                     isaSongAdded = true;
                 }
@@ -649,13 +650,37 @@ void Decades::minigame(Player &player) {
             }
         }
         typewrite("This is the list of the songs that you chose for your coworker\n");
-        cout << endl;
+        
         for (int i = 0; i < new_tracks.size(); i++) {
-            cout << (i + 1) << ". " << new_tracks.at(i) << endl;
+            cout << (i + 1) << ". " << new_tracks.at(i).title << endl;
         }
         bool isSameMix = false;
+        for (size_t i = 0; i < new_tracks.size(); i++){
+            // learned how to use substr when i searched up "function to create a substring of a string c++" and looked at this https://www.geeksforgeeks.org/cpp/substring-in-cpp/
+            if (new_tracks.at(i).genre == selected_mix.substr(0, selected_mix.find(" "))) {
+                isSameMix = true;
+            } else {
+                isSameMix = false;
+                break;
+            }
+        }
+        if (isSameMix && total_duration < minutes_needed){
+            typewrite("Congrats you created a mix with the correct genre, and did not exceed the amount of minutes needed!\n");
+            player.add_score(20);
+        }
+        else if (isSameMix && total_duration > minutes_needed){
+            typewrite("You created a mix with the correct genre, but you exceeded the time limit.\n");
+            player.add_score(5);
+        }
+        else if (!isSameMix && total_duration < minutes_needed){
+            typewrite("You did not create a mix with the correct genre, but you stayed under the time limit.\n");
+            player.add_score(5);
+        }
+        else {
+            typewrite("You did not create a mix with the correct genre and exceeded the time limit.\n");
+            player.subtract_score(10);
+        }
     }
 }
-
 
 
