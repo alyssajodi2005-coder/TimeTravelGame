@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include <cmath>
+#include <ctime>
 #include <vector>
 using namespace std;
 #include "../headers/decades.h"
@@ -535,52 +535,54 @@ void Decades::minigame(Player &player) {
             {"Hollaback Girl", "Gwen Stefani", 2005, "So that's right, dude, meet me at the bleachers", "It's a song by Gwen Stefani", "It was released in 2004", "The name of the song is repeated into the chorus"},
             {"In Da Club", "50 Cent", 2003, "Go shorty, it's your birthday", "It's a song by 50 Cent", "It was released in 2003", "It's often played at parties"}
         };
-        cout << "Guess the song from the following lyric snippet:\n" << endl;
         srand(static_cast<unsigned int>(time(0)));
         int random_index = rand() % songs.size();
         Song selected_song = songs[random_index];
-        while (true) {
-            cout << "\"" << selected_song.lyric_snippet << "\"" << endl;
-            cout << "Enter your guess for the song title: ";
+        cin.ignore();
+        bool guessed_correctly = false;
+        vector<string> clues = {selected_song.lyric_snippet, selected_song.clue1, selected_song.clue2, selected_song.clue3};
+        for (int i = 0; i < clues.size(); i++) {
+            if (i == 0) {
+                typewrite("Guess the song from the following lyric snippet:\n");
+            }
+            else if (i == 1) {
+                typewrite("Here's your first clue:\n");
+            } else if (i == 2) {
+                typewrite("Here's your second clue:\n");
+            } else if (i == 3) {
+                typewrite("Here's your final clue:\n");
+            }
+            cout << clues[i] << endl;
+            cout << "Your guess: ";
             string user_guess;
-            cin.ignore();
             getline(cin, user_guess);
             if (user_guess == selected_song.title) {
-                typewrite("Correct! You guessed the song title.\n");
-                player.add_score(20);
+                typewrite("Correct! The song is \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
+                guessed_correctly = true;
+                if (i == 0) {
+                    player.add_score(20);
+                } else if (i == 1) {
+                    player.add_score(10);
+                } else if (i == 2) {
+                    player.add_score(5);
+                } else {
+                    player.add_score(3);
+                }
                 break;
             } else {
-                typewrite("Incorrect guess. Here is the first clue: " + selected_song.clue1 + "\n");
-                cin >> user_guess;
-                if (user_guess == selected_song.title) {
-                    typewrite("Correct! You guessed the song title.\n");
-                    player.add_score(15);
-                    break;
-                } else {
-                    typewrite("Incorrect guess. Here is the second clue: " + selected_song.clue2 + "\n");
-                    cin >> user_guess;
-                    if (user_guess == selected_song.title) {
-                        typewrite("Correct! You guessed the song title.\n");
-                        player.add_score(10);
-                        break;
-                    }
-                    else {
-                        typewrite("Incorrect guess. Here is the final clue: " + selected_song.clue3 + "\n");
-                        cin >> user_guess;
-                        if (user_guess == selected_song.title) {
-                            typewrite("Correct! You guessed the song title.\n");
-                            player.add_score(5);
-                            break;
-                        } else {
-                            typewrite("Sorry, you've used all your clues. The correct answer was: " + selected_song.title + "\n");
-                            player.subtract_score(5);
-                            break;
-                        }
-                    }
+                typewrite("Incorrect guess.\n");
+                if (i < clues.size() - 1) {
+                    typewrite("Here's another clue:\n");
                 }
             }
-
         }
+        if (!guessed_correctly) {
+            typewrite("Sorry, you've used all your clues. The correct answer was \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
+            player.subtract_score(5);
+        }
+    }
+    else if (level == 4){
+
     }
 }
 
