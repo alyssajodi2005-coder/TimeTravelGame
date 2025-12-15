@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <cctype>
 using namespace std;
 #include "../headers/decades.h"
 #include "../headers/typewrite.h"
@@ -556,7 +557,7 @@ void Decades::minigame(Player &player) {
             cout << "Your guess: ";
             string user_guess;
             getline(cin, user_guess);
-            if (user_guess == selected_song.title) {
+            if ((user_guess) == (selected_song.title)) {
                 typewrite("Correct! The song is \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
                 guessed_correctly = true;
                 if (i == 0) {
@@ -582,7 +583,67 @@ void Decades::minigame(Player &player) {
         }
     }
     else if (level == 4){
-
+        typewrite("Minigame: 90s Mix Tapes\n");
+        vector<string> mix = {
+            "Rock mix", "Pop mix", "Hip-Hop mix", "R&B mix"
+        };
+        srand(static_cast<unsigned int>(time(0)));
+        string selected_mix = mix[rand() % mix.size()];
+        int minutes_needed = rand() % 20 + 5; // Random duration between 30 and 120 minutes
+        cout << "Your friend asks you to create a " << selected_mix << " mix tape for their road trip." << endl;
+        cout << "You have " << minutes_needed << " minutes to fill the tape." << endl;
+        typewrite("Select songs to add to the mix tape:\n");
+        struct musicTrack {
+            string title;
+            string artist;
+            string genre;
+            int duration; // in minutes
+        };
+        vector<musicTrack> tracks = {
+            {"Wanna Be Startin' Somethin'", "Michael Jackson", "Pop", 6},
+            {"No Scrubs", "TLC", "R&B", 4},
+            {"Enter Sandman", "Metallica", "Rock", 5},
+            {"California Love", "2Pac", "Hip-Hop", 6},
+            {"Baby One More Time", "Britney Spears", "Pop", 4},
+            {"Waterfalls", "TLC", "R&B", 4},
+            {"Livin' on a Prayer", "Bon Jovi", "Rock", 5},
+            {"Gangsta's Paradise", "Coolio", "Hip-Hop", 5},
+            {"California Love", "2Pac", "Hip-Hop", 6},
+            {"Vogue", "Madonna", "Pop", 5},
+            {"Don't Speak", "No Doubt", "Rock", 4},
+            {"Smells like teen spirit", "Nirvana", "Rock", 5},
+            {"Real Love", "Mary J. Blige", "R&B", 5},
+            {"So into You", "Tamia", "R&B", 4},
+            {"Wannabe", "Spiece Girls", "Pop", 3}
+        };
+        int total_duration = 0;
+        vector <string> new_tracks;
+        for (auto &track : tracks) {
+            cout << "Title: " << track.title << ", Artist: " << track.artist << ", Genre: " << track.genre << ", Duration: " << track.duration << " minutes" << endl;
+        }
+        while (total_duration < minutes_needed) {
+            cout << "Enter the title of the song to add to the mix tape (or type 'done' to finish): ";
+            string song_title;
+            cin.ignore();
+            getline(cin, song_title);
+            if (song_title == "done") {
+                break; 
+            }
+            for (const auto &track : tracks) {
+                if (track.title == song_title) {
+                    new_tracks.push_back(song_title);
+                    total_duration += track.duration;
+                    cout << "Added: " << track.title << " by " << track.artist << endl;
+                    break;
+                }
+            }
+        }
+        typewrite("This is the list of the songs that you chose for your coworker\n");
+        cout << endl;
+        for (int i = 0; i < new_tracks.size(); i++) {
+            cout << (i + 1) << ". " << new_tracks.at(i) << endl;
+        }
+        bool isSameMix = false;
     }
 }
 
