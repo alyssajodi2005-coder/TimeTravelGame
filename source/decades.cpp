@@ -58,8 +58,8 @@ void Decades::showDecadeIntro(){
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
         cout <<"---------------------------------------\n" << endl;
         typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");
-        typewrite("Your phone buzzes nonstop. Opinions spread faster than facts, and everyone seems connected yet distant.\n");
-        typewrite("Students rush past you on Campus with headphones in, glued to screens .\n");
+        typewrite("Your phone buzzes nonstop. Online opinions spread faster than facts, and everyone seems connected yet distant.\n");
+        typewrite("Students rush past you on Campus with headphones in, glued to screens.\n");
         typewrite("Every choice you make can spread fast and its impact may reach further than you expect.\n");
         typewrite("Navigate carefully, and see how your decisions ripple through time.\n");
         // challenge 1: social media dilemma
@@ -70,11 +70,12 @@ void Decades::showDecadeIntro(){
         typewrite("💻DECADE 2010's --> Internet Boom\n");
         typewrite("Date: June 10, 2015 || Time: 3:15 PM || Location: Cupertino, CA\n");
         cout <<"---------------------------------------\n" << endl;
-        typewrite("You find yourself in a busy tech company building, surrounded by the latest gadgets and innovations.\n");
+        typewrite("You are in the lobby of a tech company building, surrounded by the latest gadgets and innovations.\n");
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
-        typewrite("The floor is packed with people, whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
-        typewrite("Social media platforms are booming, connecting people worldwide and changing how information is spread.\n");
-        typewrite("A group of young programmers storm out of a meeting, clearly frustrated.\n");
+        typewrite("You head up to a conference floor. The floor is packed with people, loud chatter fills the room,\n");
+        typewrite("whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
+        typewrite("Social media platforms like Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
+        typewrite("A group of young programmers storm out of a meeting, clearly frustrated, one even crying.\n");
         typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"You're up, time to pitch!\"\n");
         // challenge 1: impromptu pitch presentation
     }
@@ -85,10 +86,10 @@ void Decades::showDecadeIntro(){
         cout <<"------------------------------------------------------------------------" << endl;
         typewrite("The summer streets of New York City are lively as usual, \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
-        typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod transformed the way people connect and share information.\n");
+        typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect and share information.\n");
         typewrite("The decade is also refered to as the Y2K era, the name comes from the computer crisis that occurred in the year 2000,\n");
         typewrite("when computer systems misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
-        typewrite("Your first task is to create a playlist on your iPod that will help you navigate the decade.\n");
+        typewrite("Your task is to create a playlist on your iPod that embodies the Y2K era.\n");
         //challenge : Create a Playlist
     }
     if (level == 4) {
@@ -98,9 +99,10 @@ void Decades::showDecadeIntro(){
         cout <<"------------------------------------------------------------------------" << endl;
         typewrite("The 90s are loud, expressive, and unforgettable.\n");
         typewrite("Baggy clothes, flannel shirts, and iconic TV shows define the culture of the decade.\n");
-        typewrite("You're an aspiring musician working and just started your shift at a local record store.\n");
+        typewrite("You're an aspiring musician and just started your shift at a local vinyl record store.\n");
         typewrite("Record stores are starting to face a decline in sales due to the rise of CDs replacing vinyls.\n");
-        typewrite("Shelves are packed, but the customers are few.\n");
+        typewrite("CD's were more portable and provided a superior sound quality compared to vinyl records.\n");
+        typewrite("Inside the store, shelves are packed, but the customers are few.\n");
         typewrite("Nirvana \"Smells like Teen Spirit\" is playing softly in the background.\n");
         //Challenge: Sell Records
     }
@@ -114,23 +116,29 @@ void Decades::showDecadeIntro(){
         typewrite("You walk into a busy arcade, chatter fills the air.\n");
         typewrite("The sound of coins and buttons creates an energetic atmosphere.\n");
         typewrite("Kids and teens are concentrated in games like Donkey Kong, and Space Invaders.\n");
-        typewrite("Your goal is to navigate the arcade, and win as many games as possible.\n");
+        typewrite("Your goal is to navigate the arcade, and win as many games as possible with the limited money you have.\n");
         // Challenge: Arcade Games
 
        
     }
     if (level == 6) {
-        typewrite("DECADE 1970's ");
-        typewrite("Date: November 21, 1975 || Time: 7 AM || Location: \n");
+        typewrite("✌🏾DECADE 1970's --> The Airwaves");
+        typewrite("Date: November 21, 1975 || Time: 7 AM || Location: New Orleans, LA\n");
         typewrite("---------------------------------------\n");
-        typewrite("You step into the vibrant world of the 1970s, eclectic culture, groundbreaking music, and significant social change.\n");
-        typewrite("The streets are alive with the sounds of disco, rock, and funk, while fashion is bold and expressive.\n");
-        // Add decade introduction narrative here
+        typewrite("You step into the vibrant world of the 1970s, groundbreaking music, and significant social change.\n");
+        typewrite("The streets of New Orleans are alive with the sounds of jazz and blues.\n");
+        typewrite("This is the time of individuality, creativity, and self-expression.\n");
+        typewrite("Music and art used to convey messages and emotions that words alone could not.\n");
+        typewrite("In a world without digital platforms, expression travels through sound, movement, and community.\n");
+        typewrite("Radios sit in kitchens, cars, and storefronts shaping culture, influencing opinions, and bringing communities together.\n");
+        
     }
     if (level == 7) {
-        typewrite("DECADE 1960's ");
-        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("DECADE 1960's --> Revolution ");
+        typewrite("Date: July 20, 1969 || Time: 8:17 PM || Location: Washington, D.C. \n");
         typewrite("---------------------------------------\n");
+        typewrite("You find yourself in the midst of the 1960s, a decade defined by massive social change, cultural revolutions, and historic milestones.\n");
+        typewrite("People are advocating for civil rights and social justice, while the space race captures imaginations worldwide.\n");
         // Add decade introduction narrative here
     }
     if (level == 8) {
@@ -182,7 +190,8 @@ void Decades::challenge(Player &player) {
 
     if (level == 1) {
         typewrite("Challenge : Social Media Dilemma\n");
-        cout << "You come across a controversial post on social media that could impact public opinion." << endl;
+        cout << "You come across a controversial post on social media that a few of your mutual friends have shared." << endl;
+        cout << "The topic is very sensitive and could greatly impact public opinion but sheds light on an important global issue." << endl;
         cout << "Do you:" << endl;
         cout << "A) Share the post without verifying its accuracy." << endl;
         cout << "B) Research the information before sharing it." << endl;
@@ -190,55 +199,56 @@ void Decades::challenge(Player &player) {
     while (true) {
         cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
-                typewrite("You shared unverified information, leading to misinformation spreading rapidly.\n");
-                typewrite("This decision negatively impacts your reputation and credibility.\n");
+                typewrite("You shared unverified information, adding to the spread of misinformation.\n");
+                typewrite("This decision negatively impacts your social reputation and credibility.\n");
                 player.subtract_score(10);
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
-                typewrite("You took the time to research and verify the information before sharing it.\n");
-                typewrite("Your responsible approach earns you respect and trust from your peers.\n");
+                typewrite("You took the time to research and verify the information , taking a deeper look into the topic before sharing it.\n");
+                typewrite("Your repost was well received and appreciated by your peers who even asked for more information.\n");
                 player.add_score(10);
                 break;
             } else if (multiple_choice == 'C' || multiple_choice == 'c') {
                 typewrite("By ignoring the post, you avoided contributing to misinformation.\n");
-                typewrite("However, you missed an opportunity to educate others on the importance of fact-checking.\n");
+                typewrite("However, this was a missed opportunity to educate yourself and others on social media credibility and the global issue.\n");
                 player.add_score(5);
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             } 
     }
-    typewrite("While in the library, you intend to be as productive as possible.\n");
+    typewrite("You make your way to the library. While in the library, you intend to be as productive as possible.\n");
     cout << "Enter the name of an app that helps you with school productivity: ";
-    cin.ignore();
+    cin.ignore(); // helps to clear the newline character 
     getline(cin, user_input);
-    typewrite("You get started on studying using " + user_input + " to lock in.\n");
-    typewrite("To avoid doomscrolling you choose to:\n");
+    cout << "You get started on studying using " << user_input << " to lock in." << endl;
+    cout << "To avoid doomscrolling you choose to: " << endl;
     cout << "A) Turn off your cellphone.\n";
-    cout << "B) Set specific time blocks for breaks.\n";
+    cout << "B) Time block your study seesion with small breaks for social media.\n";
     cout << "C) Keep your phone on silent but within reach.\n";
     while (true) {
         cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("Turning off your cellphone helped you stay focused and avoid distractions throughout your study session.\n");
-                typewrite("An hour has passed that feels like minutes due to your intense focus.\n");
                 player.add_score(10);
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
-                typewrite("Setting specific time blocks for breaks allowed you to recharge without falling into the doomscrolling trap.\n");
+                typewrite("Setting specific time blocks for breaks allowed a good balance of productivity and relaxation without doomscrolling.\n");
                 player.add_score(5);
                 break;
             } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-                typewrite("Keeping your phone within reach made it tempting to check it frequently, leading to distractions.\n");
+                typewrite("Keeping your phone within reach made it tempting to check it frequently, leading to distractions and doomscrolling.\n");
                 player.subtract_score(5);
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }   
     }
-    typewrite("As you wrap up your study session, you reflect on the impact of social media on your productivity and mental well-being.\n");
-    typewrite("You realize that mindful usage and setting boundaries are crucial in navigating the digital age.\n");
-    typewrite("You leave the library imagining how different life would be without social media at all.\n");
+    typewrite("As you wrap up your study session, you reflect on the impact of modern technology on people's lives.\n");
+    typewrite("Technology greatly shapes how people spend their time daily, it can help us connect but also distract and distance us from real-world interactions.\n");
+    typewrite("Technology can enhance productivity and keep us focused but also make us lazy and not think for ourselves.\n");
+    typewrite("Navigating the digital age requires mindful usage and setting boundaries.\n");
+    typewrite("As technology advances, it will continue to shape our lives in different ways as it has in the past.\n");
     player.add_to_inventory("Cellphone");
     typewrite(".....................\n"); //loading effect
 
@@ -253,29 +263,26 @@ void Decades::challenge(Player &player) {
         getline(cin, lv2inp1);
         cout << "Who is your target audience? (ex. teens, kids, college students, etc.): " << endl;
         getline(cin, lv2inp2);
-        typewrite("Investors are eager to hear your pitch. You have limited time to make an impression.\n");
-        typewrite("Hello my name is " + player.get_name() + ", I have created a " + lv2inp1 + " app and my app is targeted to " + lv2inp2 + ".\n");
-        cout << "Do you:" << endl;
-        cout << "A) Focus on the technical features of the app." << endl;
-        cout << "B) Highlight the market potential and user benefits." << endl;
-        cout << "C) Wing it and hope for the best." << endl;
+        typewrite("Investors hear tons of ideas everyday, so you need to stand out.\n");
+        typewrite("\"Hello my name is " + player.get_name() + ", I have created a " + lv2inp1 + " app and my app is targeted to " + lv2inp2 + ".\"\n");
+        cout << "To grab their attention, do you:" << endl;
+        cout << "A) Focus on the features and design of the app." << endl;
+        cout << "B) Highlight the market potential, revenue model, and user benefits." << endl;
+        cout << "C) Give a background on yourself and your experience." << endl;
         cin >> multiple_choice;
         if (multiple_choice == 'A' || multiple_choice == 'a') {
-            typewrite("Your technical focus impressed the investors, but they were more interested in the app's market potential.\n");
-            typewrite("You received some interest but lacked a clear vision for user benefits.\n");
-            player.subtract_score(5);
+            typewrite("Your creative features and design impressed the investors, but they wanted to know more about the app's profitability.\n");
+            player.add_score(5);
         } else if (multiple_choice == 'B' || multiple_choice == 'b') {
-            typewrite("You effectively communicated the market potential and user benefits of your app.\n");
-            typewrite("The investors were excited about your vision and saw great potential in your idea.\n");
+            typewrite("The investors were excited about your vision and saw great potential in the market for your app.\n");
             player.add_score(10);
         } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-            typewrite("Your lack of preparation showed, and the investors were not convinced by your pitch.\n");
-            typewrite("You missed a crucial opportunity to make a strong impression.\n");
+            typewrite("The investors were unimpressed and uninterested in your background and experience and wished to hear more about the app itself.\n");
             player.subtract_score(10);
         } else {
             typewrite("Invalid choice. Please select A, B, or C.\n");
         }
-        typewrite("An investor asks \"How much funding do you need?\"\n");
+        typewrite("An investor asks \"How much funding would your app need for startup costs?\"\n");
         double funding;
         cout << "Enter the amount of funding you are requesting: ";
         cin >> funding;
@@ -283,15 +290,19 @@ void Decades::challenge(Player &player) {
             cout << "Invalid input. Please enter a numeric value for funding." << endl;
             cin >> funding;
         }
-        typewrite("The room goes quiet. Investors exchange glances.\n");
-        typewrite("This number could make or break your future.\n");
+        typewrite("The room goes quiet. Investors whisper and exchange glances...This number could make or break your future.\n");
 
         if (funding < 10000) {
             typewrite("The investor appreciates your modest request and sees it as a sign of confidence in your app's potential.\n");
-            player.add_score(5);
+            player.add_score(10);
+            if (multiple_choice == 'B' || multiple_choice == 'b') {
+                typewrite("Combined with your strong pitch, the investor is eager to support your venture.\n");
+                player.add_score(10);
+                player.add_to_inventory("Contract");
+            }
         } else if (funding >= 10000 && funding <= 20000) {
             typewrite("The investor considers your request reasonable and is willing to discuss further.\n");
-            player.add_score(10);
+            player.add_score(5);
         } else {
             typewrite("The investor's jaws dropped and they are taken aback by the high funding request. \n");
             typewrite("An investor says \"Thank you for your honesty, but this amount is too high. Thank you for your time.\"\n");
@@ -304,11 +315,25 @@ void Decades::challenge(Player &player) {
     if (level == 3) {
         vector<string> playlist;
         typewrite("Challenge : Create a 2000s Playlist\n");
-        cout << "What genre of music would you like to include in your playlist? (e.g., Pop, Rock, Hip-Hop): ";
-        string genre;
-        cin >> genre;
-        typewrite("You decide to create a playlist featuring " + genre + " music to help you navigate the decade.\n");
-        typewrite("As you curate your playlist, you consider the popular artists and songs of the era.\n");
+        cout << "Your playlist will be based on: " << endl;
+        cout << "A) Genre" << endl;
+        cout << "B) Artist" << endl;
+        cin >> multiple_choice;
+        if (multiple_choice == 'A' || multiple_choice == 'a') {
+            typewrite("You decide to create a playlist based on a specific genre, capturing the essence of the 2000s music scene.\n");
+            cout << "What genre of music would you like to make your playlist? (e.g., Pop, Rock, Hip-Hop): ";
+            string genre;
+            cin.ignore();
+            getline(cin, genre);
+        } else if (multiple_choice == 'B' || multiple_choice == 'b') {
+            typewrite("You choose to create a playlist centered around a particular artist, showcasing their hits from the 2000s.\n");
+            cout << "Which artist would you like to focus your playlist on? (e.g., Britney Spears, Eminem, Beyonce): ";
+            string artist;
+            cin.ignore();
+            getline(cin, artist);
+        } else {
+            typewrite("Invalid choice. Please select A or B.\n");
+        }
         cout << "How many songs would you like to add to your playlist? ";
         int num_songs;
         cin >> num_songs;
@@ -323,8 +348,7 @@ void Decades::challenge(Player &player) {
         for (int i = 0; i < playlist.size(); i++) {
             cout << i + 1 << ". " << playlist.at(i) << endl;
         }
-        if (num_songs >= 5) {
-            typewrite("Your playlist is well-rounded and captures the essence of the 2000s music scene.\n");
+        if (num_songs >= 3) {
             player.add_score(10);
         } else {
             player.add_score(5);
@@ -351,12 +375,11 @@ void Decades::challenge(Player &player) {
         } else if (multiple_choice == 'C' || multiple_choice == 'c') {
             typewrite("You play some popular music to create a lively atmosphere in the store.\n");
             typewrite("The lady enjoys the music as you see her mouthing along to the lyrics.\n");
-            typewrite("She comes to the counter and asks for your recommendation.\n");
+            typewrite("She comes to the counter and asks for your recommendations.\n");
             player.add_score(5);
         } else {
             typewrite("Invalid choice. Please select A, B, or C.\n");
         }
-        typewrite("As the day goes on, you reflect on the importance of personal interaction in sales.\n");
         typewrite("To make the store experience better for customers you decide to reorganize the records.\n");
         typewrite("Would you like to organize the records by genre or by artist?\n");
         cout << "Enter 'G' for genre or 'A' for artist: ";
@@ -365,10 +388,9 @@ void Decades::challenge(Player &player) {
         if (organize_choice == 'G' || organize_choice == 'g') {
             typewrite("You spend time reorganizing the records by genre, making it easier for customers to find their preferred music style.\n");
             typewrite("This thoughtful arrangement enhances the shopping experience and encourages more sales.\n");
-            player.add_score(5);
+            player.add_score(10);
         } else if (organize_choice == 'A' || organize_choice == 'a') {
             typewrite("You reorganize the records by artist, allowing fans to quickly locate albums from their favorite musicians.\n");
-            typewrite("This personalized touch resonates with customers and boosts sales.\n");
             player.add_score(5);
         } else {
             typewrite("Invalid choice. You decide to leave the records as they are for now.\n");
@@ -471,12 +493,60 @@ void Decades::challenge(Player &player) {
         typewrite(".....................\n"); //loading effect
     }
     if (level == 6) {
-        typewrite("DECADE 1970's ");
-        typewrite("Date: November 21, 1975 || Time: 7 AM || Location: \n");
-        typewrite("---------------------------------------\n");
-        // Add decade introduction narrative here
+        typewrite("Challenge: The Power of the Airwaves\n");
+        typewrite("You work at a local radio station in New Orleans during the vibrant 1970s.\n");
+        typewrite("The station is known for playing hits and highlighting national news.\n");
+        typewrite("You are a new program director, and your goal is to make decisions that will positively impact the community and boost the station's popularity.\n");
+
+        cout << "What change would you put on air?\n";
+        cout << "A) Play local musicians and community voices\n";
+        cout << "B) Play national chart-topping hits\n";
+        cout << "D) Allow listeners to call in\n";
+
+        cin >> multiple_choice;
+
+        if (multiple_choice == 'A' || multiple_choice == 'a') {
+            typewrite("Your decision to highlight local talent and voices connecting deeply with the community.\n");
+            player.add_score(10);
+        } else if (multiple_choice == 'B' || multiple_choice == 'b') {
+            typewrite("While playing national hits attracts some listeners, it fails to create a unique identity for the station.\n");
+            player.subtract_score(5); 
+        } else if (multiple_choice == 'C' || multiple_choice == 'c') {
+            typewrite("Allowing listeners to call in creates an engaging and interactive experience, building a loyal audience.\n");
+            player.add_score(5);
+        } else {
+            typewrite("Invalid choice. Please select A, B, or C.\n");
+        }
+        typewrite("Just before the show ends, breaking news comes in not yet verified.\n");
+
+        cout << "Do you:\n";
+        cout << "A) Broadcast it immediately" << endl;
+        cout << "B) Wait to confirm the facts" << endl;
+        cout << "C) Ignore it and end the show" << endl;
+
+        cin >> multiple_choice;
+
+        if (multiple_choice == 'A' || multiple_choice == 'a') {
+            typewrite("The news spreads fast but some details are wrong, impacting public trust in the station.\n");
+            player.subtract_score(5);
+        }
+        else if (multiple_choice == 'B' || multiple_choice == 'b') {
+            typewrite("You wait for confirmation before sharing strengthens the station's credibility.\n");
+            player.add_score(10);
+        }
+        else if (multiple_choice == 'C' || multiple_choice == 'c') {
+            typewrite("You avoid risk, but miss an opportunity to inform.\n");
+            player.add_score(5);
+        }
+        typewrite("You realize how much power a single voice can have.\n");
+        typewrite("In the 1970s, radio connected neighborhoods, shaped culture, and spread ideas.\n");
+        typewrite("Technology may change — but influence always remains.\n");
+
+        player.add_to_inventory("Portable Radio");
+        typewrite(".....................\n"); //loading effect
     }
 }
+
 
 
 void Decades::minigame(Player &player) {
