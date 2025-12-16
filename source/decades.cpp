@@ -200,7 +200,7 @@ void Decades::challenge(Player &player) {
         cout << "B) Research the information before sharing it." << endl;
         cout << "C) Ignore the post entirely." << endl;
     while (true) {
-        cin >> multiple_choice;
+        std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("You shared unverified information, adding to the spread of misinformation.\n");
                 typewrite("This decision negatively impacts your social reputation and credibility.\n");
@@ -222,15 +222,15 @@ void Decades::challenge(Player &player) {
     }
     typewrite("You make your way to the library. While in the library, you intend to be as productive as possible.\n");
     cout << "Enter the name of an app that helps you with school productivity: ";
-    cin.ignore(); // helps to clear the newline character 
-    getline(cin, user_input);
+    std::cin.ignore(); // helps to clear the newline character 
+    std::getline(std::cin, user_input);
     cout << "You get started on studying using " << user_input << " to lock in." << endl;
     cout << "To avoid doomscrolling you choose to: " << endl;
     cout << "A) Turn off your cellphone.\n";
     cout << "B) Time block your study seesion with small breaks for social media.\n";
     cout << "C) Keep your phone on silent but within reach.\n";
     while (true) {
-        cin >> multiple_choice;
+        std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("Turning off your cellphone helped you stay focused and avoid distractions throughout your study session.\n");
                 player.add_score(10);
@@ -262,10 +262,10 @@ void Decades::challenge(Player &player) {
         typewrite("Challenge : Impromptu Pitch Presentation\n");
         cout << "You must present a new app idea to potential investors." << endl;
         cout << "What type of app is it? (ex. game, productivity, social, etc.): " << endl;
-        cin.ignore();
-        getline(cin, lv2inp1);
+        std::cin.ignore();
+        getline(std::cin, lv2inp1);
         cout << "Who is your target audience? (ex. teens, kids, college students, etc.): " << endl;
-        getline(cin, lv2inp2);
+        getline(std::cin, lv2inp2);
         typewrite("Investors hear tons of ideas everyday, so you need to stand out.\n");
         typewrite("\"Hello my name is " + player.get_name() + ", I have created a " + lv2inp1 + " app and my app is targeted to " + lv2inp2 + ".\"\n");
         cout << "To grab their attention, do you:" << endl;
@@ -274,7 +274,7 @@ void Decades::challenge(Player &player) {
         cout << "C) Give a background on yourself and your experience." << endl;
         
         while (true) {
-            cin >> multiple_choice;
+            std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("Your creative features and design impressed the investors, but they wanted to know more about the app's profitability.\n");
                 player.add_score(5);
@@ -294,7 +294,7 @@ void Decades::challenge(Player &player) {
         typewrite("An investor asks \"How much funding would your app need for startup costs?\"\n");
         double funding;
         cout << "Enter the amount of funding you are requesting: ";
-        cin >> funding;
+        std::cin >> funding;
         typewrite("The room goes quiet. Investors whisper and exchange glances...This number could make or break your future.\n");
         while (true) {
             if (funding < 10000) {
@@ -331,20 +331,20 @@ void Decades::challenge(Player &player) {
         cout << "A) Genre" << endl;
         cout << "B) Artist" << endl;
         while (true) {
-            cin >> multiple_choice;
+            std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("You decide to create a playlist based on a specific genre, capturing the essence of the 2000s music scene.\n");
                 cout << "What genre of music would you like to make your playlist? (e.g., Pop, Rock, Hip-Hop): ";
                 string genre;
-                cin.ignore();
-                getline(cin, genre);
+                std::cin.ignore();
+                std::getline(std::cin, genre);
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
                 typewrite("You choose to create a playlist centered around a particular artist, showcasing their hits from the 2000s.\n");
                 cout << "Which artist would you like to focus your playlist on? (e.g., Britney Spears, Eminem, Beyonce): ";
                 string artist;
-                cin.ignore();
-                getline(cin, artist);
+                std::cin.ignore();
+                std::getline(std::cin, artist);
                 break;
             } else {
                 typewrite("Invalid choice. Please select A or B.\n");
@@ -352,7 +352,7 @@ void Decades::challenge(Player &player) {
         }
         cout << "How many songs would you like to add to your playlist?(1-20) ";
         int num_songs;
-        cin >> num_songs;
+        std::cin >> num_songs;
         while (true) {
             if (num_songs >=1 && num_songs <= 20) {
                 typewrite("Great! Let's start adding songs to your playlist.\n");
@@ -364,8 +364,8 @@ void Decades::challenge(Player &player) {
             for (int i = 0; i < num_songs; i++) {
                 string song;
                 cout << "Enter the name of song " << (i + 1) << ": ";
-                cin.ignore();
-                getline(cin, song);
+                std::cin.ignore();
+                std::getline(std::cin, song);
                 playlist.push_back(song);
             }
         }
@@ -390,7 +390,7 @@ void Decades::challenge(Player &player) {
         cout << "C) Play some popular music to catch her attention." << endl;
         char multiple_choicelv4;
         while (true) {
-            cin >> multiple_choicelv4;
+            std::cin >> multiple_choicelv4;
             if (multiple_choicelv4 == 'A' || multiple_choicelv4 == 'a') {
                 typewrite("You approach the lady with a warm smile and ask if she needs any help finding something.\n");
                 typewrite("She appreciates your friendly approach and ends up buying several records based on your recommendations.\n");
@@ -416,7 +416,7 @@ void Decades::challenge(Player &player) {
         cout << "Enter 'G' for genre or 'A' for artist: ";
         char organize_choice;
         while (true) {
-            cin >> organize_choice;
+            std::cin >> organize_choice;
             if (organize_choice == 'G' || organize_choice == 'g') {
                 typewrite("You spend time reorganizing the records by genre, making it easier for customers to find their preferred music style.\n");
                 typewrite("This thoughtful arrangement enhances the shopping experience and encourages more sales.\n");
@@ -449,7 +449,7 @@ void Decades::challenge(Player &player) {
 
             cout << "Enter the number of the game you want to play: ";
             int game_choice;
-            cin >> game_choice;
+            std::cin >> game_choice;
             if (game_choice == 1 && quarters >= 3) {
                 cout << "|================================================|" << endl;
                 cout << "|    .-.   .-.     .--.                          |" << endl;
@@ -539,7 +539,7 @@ void Decades::challenge(Player &player) {
         cout << "C) Allow listeners to call in\n";
 
         while (true) {
-            cin >> multiple_choice;
+            std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("Your decision to highlight local talent and voices connecting deeply with the community.\n");
                 player.add_score(10);
@@ -561,7 +561,7 @@ void Decades::challenge(Player &player) {
         cout << "C) Ignore it and end the show" << endl;
 
         while (true) {
-            cin >> multiple_choice;
+            std::cin >> multiple_choice;
 
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("The news spreads fast but some details are wrong, impacting public trust in the station.\n");
@@ -603,8 +603,8 @@ void Decades::challenge(Player &player) {
         char multiple_choice;
         string event_choice;
         while (true) {
-            cin.ignore();
-            cin >> multiple_choice;
+            std::cin.ignore();
+            std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 event_choice = "Civil Rights Movement";
                 break;
@@ -720,7 +720,7 @@ void Decades::challenge(Player &player) {
 
         int channel;
         while (true) {
-            cin >> channel;
+            std::cin >> channel;
             if (channel >= 1 && channel <= 10) {
                 typewrite("You tune into channel " + to_string(channel) + " and enjoy the show!\n");
                 player.add_score(5);
@@ -750,7 +750,7 @@ void Decades::minigame(Player &player) {
         cout << "C) 2022" << endl;
         char answer;
         while (true) {
-            cin >> answer;
+            std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! OpenAI was founded in 2015.\n");
                 player.add_score(10);
@@ -772,7 +772,7 @@ void Decades::minigame(Player &player) {
         cout << "C) 2009" << endl;
         char answer;
         while(true) {
-            cin >> answer;
+            std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
                 player.add_score(10);
@@ -783,7 +783,6 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
-                cin.ignore();
             }
         }
     }
@@ -810,6 +809,9 @@ void Decades::minigame(Player &player) {
         Song selected_song = songs[random_index];
         bool guessed_correctly = false;
         vector<string> clues = {selected_song.lyric_snippet, selected_song.clue1, selected_song.clue2, selected_song.clue3};
+
+        std::cin.ignore();
+
         for (int i = 0; i < clues.size(); i++) {
             if (i == 0) {
                 typewrite("Guess the song from the following lyric snippet:\n");
@@ -824,7 +826,7 @@ void Decades::minigame(Player &player) {
             cout << clues[i] << endl;
             cout << "Your guess: ";
             string user_guess;
-            getline(cin, user_guess);
+            std::getline(std::cin, user_guess);
             if (lowerCase(user_guess) == lowerCase(selected_song.title)) {
                 typewrite("Correct! The song is \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
                 guessed_correctly = true;
@@ -885,29 +887,30 @@ void Decades::minigame(Player &player) {
             {"Wannabe", "Spiece Girls", "Pop", 3}
         };
         int total_duration = 0;
+
         vector <musicTrack> new_tracks;
         for (size_t i = 0; i < tracks.size(); i++) {
             const musicTrack& track = tracks.at(i);
             typewrite("Title: " + track.title + ", Artist: " + track.artist + ", Genre: " + track.genre + ", Duration: " + to_string(track.duration) + " minutes\n");
         }
-        bool isaSongAdded = false;
+        std::cin.ignore();
         while (true) {
             typewrite("Enter the title of the song to add to the mix tape (or type 'done' to finish): ");
             string song_title;
-            getline(cin, song_title);
+            std::getline(std::cin, song_title);
             if (lowerCase(song_title) == "done") {
                 break; 
             }
+            bool isaSongAdded = false;
             for (size_t i = 0; i < tracks.size(); i++) {
                 if (lowerCase(tracks[i].title) == lowerCase(song_title)) {
                     new_tracks.push_back(tracks.at(i));
                     total_duration += tracks.at(i).duration;
                     cout << "Added: " << tracks.at(i).title << " by " << tracks.at(i).artist << endl;
-                    break;
                     isaSongAdded = true;
+                    break;
                 }
             }
-            cout << isaSongAdded;
             if (!isaSongAdded) {
                 typewrite("Song not found. Please try again.\n");
             }
@@ -952,7 +955,7 @@ void Decades::minigame(Player &player) {
         cout << "C) Space Invaders" << endl;
         char answer;
         while (true) {
-            cin >> answer;
+            std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! Pac-Man features a yellow character that eats dots and avoids ghosts.\n");
                 player.add_score(10);
@@ -993,8 +996,8 @@ void Decades::minigame(Player &player) {
         /* i learned to use this library because i wanted to time the user in scrambling the words so i 
         searched up "c++ library thaat allows counting time"  and found this page: https://en.cppreference.com/w/cpp/chrono.html */
         const auto start = chrono::steady_clock::now();
-        cin.ignore();
-        getline(cin, userInput);
+        std::cin.ignore();
+        std::getline(std::cin, userInput);
         
         const auto end_time = chrono::steady_clock::now();
         const auto duration = chrono::duration_cast<chrono::seconds> (end_time - start);
