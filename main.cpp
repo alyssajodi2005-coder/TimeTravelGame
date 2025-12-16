@@ -59,59 +59,21 @@ int main() {
 
 
     //Lv.1 Decade:2020s
-    timeMachine.TimeTravel(); // Time travel effect, check machine energy
-    userCharacter.GetInfo(); // show player info
-    userCharacter.print_inventory(); // show starting inventory
-    currentdecade.showDecadeIntro(); // show decade intro
-    currentdecade.challenge(userCharacter); // decade challenge
-    currentdecade.minigame(userCharacter); // decade minigame
-    currentdecade.nextDecade(); // advance to next decade, inc level
-    userCharacter.travel_to_decade(currentdecade); // travel to next decade
+    const int max_level = 12;
+    while (currentdecade.GetLevel() <= max_level) {
+        timeMachine.TimeTravel(); // Time travel effect, check machine energy
+        userCharacter.GetInfo(); // show player info
+        userCharacter.print_inventory(); // show starting inventory
+        currentdecade.showDecadeIntro(); // show decade intro
+        currentdecade.challenge(userCharacter); // decade challenge
+        currentdecade.minigame(userCharacter); // decade minigame
+        if (currentdecade.GetLevel() < max_level){
+            currentdecade.nextDecade(); // advance to next decade, inc level
+            userCharacter.travel_to_decade(currentdecade); // travel to next decade
+        }
+    }
 
-    //Lv.2 Decade:2010s
-    timeMachine.TimeTravel(); // Time travel effect, check machine energy
-    userCharacter.GetInfo(); // show player info
-    userCharacter.print_inventory(); // show inventory
-    currentdecade.showDecadeIntro(); // show decade intro
-    currentdecade.challenge(userCharacter); // decade challenge
-    currentdecade.minigame(userCharacter); // decade minigame
-    currentdecade.nextDecade(); // advance to next decade
-    userCharacter.travel_to_decade(currentdecade); // travel to next decade
-
-
-    //Lv.3 Decade:2000s
-    timeMachine.TimeTravel(); // Time travel effect
-    userCharacter.GetInfo(); // show player info
-    userCharacter.print_inventory(); // show inventory  
-    currentdecade.showDecadeIntro();  
-    currentdecade.challenge(userCharacter); // decade challenge
-    currentdecade.minigame(userCharacter); // decade minigame
-    currentdecade.nextDecade(); // advance to next decade
-    userCharacter.travel_to_decade(currentdecade); // travel to next decade
-
-    //lv.4 Decade:1990s
-    timeMachine.TimeTravel(); // Time travel effect
-    userCharacter.GetInfo(); // show player info
-    userCharacter.print_inventory(); // show inventory
-    currentdecade.showDecadeIntro();
-    currentdecade.challenge(userCharacter); // decade challenge
-    currentdecade.minigame(userCharacter); // decade minigame
-    userCharacter.travel_to_decade(currentdecade); // travel to next decade 
-
-
-    //lv.5 Decade:1980s
-    timeMachine.TimeTravel(); // Time travel effect
-    userCharacter.GetInfo(); // show player info
-    userCharacter.print_inventory(); // show inventory
-    currentdecade.showDecadeIntro();
-    currentdecade.challenge(userCharacter); // decade challenge
-    currentdecade.minigame(userCharacter); // decade minigame
-    userCharacter.travel_to_decade(currentdecade); // travel to next decade 
-
-
-
-
-
+    
 
     
     /*
