@@ -763,7 +763,7 @@ void Decades::minigame(Player &player) {
             }   
         }
     }
-    else if (level == 2) {
+    if (level == 2) {
         typewrite("Minigame: Tech Timeline Quiz\n");
         cout << "Question: What year was the first iPhone released?" << endl;
         cout << "A) 2005" << endl;
@@ -772,6 +772,7 @@ void Decades::minigame(Player &player) {
         char answer;
         while(true) {
             cin >> answer;
+            cin.ignore();
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
                 player.add_score(10);
@@ -782,10 +783,11 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
+                cin.ignore();
             }
         }
     }
-    else if (level == 3)  {
+    if (level == 3)  {
         typewrite("Minigame: 2000s Song guessing Game\n");
         /* Example structure for songs. I learned how to use struct form when i searched
         up " c++ simpler way to group data together other than a class" and i found out about structs*/
@@ -848,7 +850,7 @@ void Decades::minigame(Player &player) {
             player.subtract_score(5);
         }
     }
-    else if (level == 4){
+    if (level == 4){
         typewrite("Minigame: 90s Mix Tapes\n");
         vector<string> mix = {
             "Rock mix", "Pop mix", "Hip-Hop mix", "R&B mix"
@@ -942,7 +944,28 @@ void Decades::minigame(Player &player) {
             player.subtract_score(10);
         }
     }
-    
+    if (level == 5) {
+        typewrite("Minigame: Arcade Trivia\n");
+        cout << "Question: Which classic arcade game features a yellow character that eats dots and avoids ghosts?" << endl;
+        cout << "A) Donkey Kong" << endl;
+        cout << "B) Pac-Man" << endl;
+        cout << "C) Space Invaders" << endl;
+        char answer;
+        while (true) {
+            cin >> answer;
+            if (answer == 'B' || answer == 'b') {
+                typewrite("Correct! Pac-Man features a yellow character that eats dots and avoids ghosts.\n");
+                player.add_score(10);
+                break;
+            } else if (answer == 'A' || answer == 'a' || answer == 'C' || answer == 'c') {
+                typewrite("Incorrect. The correct answer is B\n");
+                break;
+            }
+        }
+    }
+    if (level == 6) {
+        
+    }
 }
 
 
