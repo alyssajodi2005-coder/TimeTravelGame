@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <cctype>
+#include <chrono>
 using namespace std;
 #include "../headers/decades.h"
 #include "../headers/typewrite.h"
@@ -772,7 +773,6 @@ void Decades::minigame(Player &player) {
         char answer;
         while(true) {
             cin >> answer;
-            cin.ignore();
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
                 player.add_score(10);
@@ -964,7 +964,52 @@ void Decades::minigame(Player &player) {
         }
     }
     if (level == 6) {
+        typewrite("Minigame: Word Scramble - 70s Edition\n");
+        cout << "You will be playing a game of scramble with 70s-related words/phrases." << endl;
+        cout << endl;
+        cout << endl;
+        vector<string> words {"queen", "eagles", "fleetwood mac", "jaws", "star wars", "alien", "boogie", "funky", "sideburns", "afro", "pong", "atari", "vcr"};
+        srand(static_cast<unsigned int>(time(0)));
+        int random_index = rand() % words.size();
+        string selected_word = words.at(random_index);
+        for (int i = selected_word.size(); i > 0; i--) {
+            int random_num = rand() % i;
+            int j = i - 1;
+            char temp = selected_word.at(j);
+            selected_word.at(j) = selected_word.at(random_num);
+            selected_word.at(random_num) = temp;
+        }
+        while(selected_word == words.at(random_index)) {
+            for (int i = selected_word.size(); i > 0; i--) {
+            int random_num = rand() % i;
+            int j = i - 1;
+            char temp = selected_word.at(j);
+            selected_word.at(j) = selected_word.at(random_num);
+            selected_word.at(random_num) = temp;
+        }
+        }
+        cout << "Your Scrambled word is " << selected_word << ". Unscramble within 60 seconds" << endl;
+        string userInput;
+        /* i learned to use this library because i wanted to time the user in scrambling the words so i 
+        searched up "c++ library thaat allows counting time"  and found this page: https://en.cppreference.com/w/cpp/chrono.html */
+        const auto start = chrono::steady_clock::now();
+        cin.ignore();
+        getline(cin, userInput);
         
+        const auto end_time = chrono::steady_clock::now();
+        const auto duration = chrono::duration_cast<chrono::seconds> (end_time - start);
+        const auto time_passed = duration.count();
+
+        if (lowerCase(userInput) == words.at(random_index) && time_passed <= 60){
+            typewrite("Congrats! You unscrambled the word and did so in " + to_string(time_passed) + "seconds! \n");
+        }
+        else if (lowerCase(userInput) == words.at(random_index) && time_passed > 60){
+            typewrite("You unscrambled the word but took too long!  \n");
+        }
+        else {
+            typewrite("Sorry you did not unscramble the word correctly. The correct word was " + words.at(random_index) + "\n");
+        } 
+
     }
 }
 
