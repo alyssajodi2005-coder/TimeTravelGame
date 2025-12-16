@@ -615,7 +615,6 @@ void Decades::minigame(Player &player) {
         srand(static_cast<unsigned int>(time(0)));
         int random_index = rand() % songs.size();
         Song selected_song = songs[random_index];
-        cin.ignore();
         bool guessed_correctly = false;
         vector<string> clues = {selected_song.lyric_snippet, selected_song.clue1, selected_song.clue2, selected_song.clue3};
         for (int i = 0; i < clues.size(); i++) {
@@ -694,14 +693,14 @@ void Decades::minigame(Player &player) {
         };
         int total_duration = 0;
         vector <musicTrack> new_tracks;
-        for (auto &track : tracks) {
-            cout << "Title: " << track.title << ", Artist: " << track.artist << ", Genre: " << track.genre << ", Duration: " << track.duration << " minutes" << endl;
+        for (size_t i = 0; i < tracks.size(); i++) {
+            const musicTrack& track = tracks.at(i);
+            typewrite("Title: " + track.title + ", Artist: " + track.artist + ", Genre: " + track.genre + ", Duration: " + to_string(track.duration) + " minutes\n");
         }
+        bool isaSongAdded = false;
         while (true) {
-            bool isaSongAdded = false;
-            cout << "Enter the title of the song to add to the mix tape (or type 'done' to finish): ";
+            typewrite("Enter the title of the song to add to the mix tape (or type 'done' to finish): ");
             string song_title;
-            cin.ignore();
             getline(cin, song_title);
             if (lowerCase(song_title) == "done") {
                 break; 
@@ -715,6 +714,7 @@ void Decades::minigame(Player &player) {
                     isaSongAdded = true;
                 }
             }
+            cout << isaSongAdded;
             if (!isaSongAdded) {
                 typewrite("Song not found. Please try again.\n");
             }
@@ -751,6 +751,7 @@ void Decades::minigame(Player &player) {
             player.subtract_score(10);
         }
     }
+    
 }
 
 
