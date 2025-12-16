@@ -75,6 +75,11 @@ int main() {
             userCharacter.travel_to_decade(currentdecade); // travel to next decade
         }
     }
+<<<<<<< HEAD
+=======
+
+    
+>>>>>>> f35c8c010d3b153fe8d144ef54ea379d4d06c517
 
     
 
