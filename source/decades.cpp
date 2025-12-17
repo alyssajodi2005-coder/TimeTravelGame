@@ -1045,8 +1045,94 @@ void Decades::minigame(Player &player) {
         else {
             typewrite("Sorry you did not unscramble the word correctly. The correct word was " + words.at(random_index) + "\n");
         } 
-
     }
-}
+    if (level == 7) {
+        typewrite("Minigame: 1960s Fact Checking quiz\n");
+
+        cout << "You will be given a series of facts about the 1960s, and have to decide if it is True of False, points will be awarded or deducted based on answers." << endl;
+
+        struct Fact{
+            string statement;
+            bool isTrue;
+        };
+
+        vector<Fact> civilRightsMovement {
+            {"The Fair Housing Act was passed in 1968, outlawing discrimination in housing", true},
+            {"Martin Luther King Jr. gave his 'I Have a Dream' speech in 1963", true},
+            {"The Civil Rights Act was passed in 1970", false},
+            {"The Civil Rights Act was passed in 1970", false},
+        };
+        vector<Fact> usMoonlanding{
+            {"Neil Armstrong was the first person to walk on the Moon on July 20, 1969", true},
+            {"Armstrong's famous quote was 'One small step for man, one giant leap for mankind'", true},
+            {"The Apollo 11 mission landed on the dark side of the Moon" , false},
+            {"Three astronauts walked on the Moon during Apollo 11" , false}
+        };
+        vector<Fact> veitnamWar{
+            {"The Tet Offensive occurred in 1968", true},
+            {"The Gulf of Tonkin incident in 1964 led to increased U.S. involvement", true},
+            {"The Vietnam War ended in 1969", false},
+            {"No protests occurred against the Vietnam War during the 1960s", false}
+        };
+
+        srand(static_cast<unsigned int> (time(0)));
+        vector<vector<Fact>> allEvents {civilRightsMovement, usMoonlanding, veitnamWar};
+        vector<vector<bool>> questionDone(3, vector<bool>(4, false));
+        
+        int num;
+        while(true){
+            typewrite("How many questions would you like to answer? (max 12 questions)");
+            cin >> num;
+            if (num > 0 && num < 13){
+                break;
+            }
+            else {
+                typewrite("Invalid Input, Please try again.");
+            }
+        }
+        int correctCount = 0;
+        int incorrectCount = 0;
+        for (int i = 0; i < num; i++) {
+            int rand_event = rand() % 3;
+            int rand_question = rand() % 4;
+            while(questionDone.at(rand_event).at(rand_question)){
+                rand_event = rand() % 3;
+                rand_question = rand() % 4;
+            }
+            questionDone.at(rand_event).at(rand_question) = true;
+            cout << "This is your question " << allEvents.at(rand_event).at(rand_question).statement << " type true or false" << endl;
+            string answer;
+            std::cin.ignore();
+            while(true){
+                std::cin >> answer;
+                if (lowerCase(answer) == "true" || lowerCase(answer) == "false"){
+                    break;
+                }
+                else {
+                    typewrite("Invalid answer, please write True or False.\n");
+                }
+
+            }
+            if ((lowerCase(answer) == "true") == allEvents.at(rand_event).at(rand_question).isTrue){
+                player.add_score(5);
+                correctCount++;
+            } else {
+                player.subtract_score(5);
+                incorrectCount++;
+            }
+        }
+        if (correctCount > incorrectCount) {
+            typewrite("Congrats, you got more questions correct than wrong.\n");
+        }
+        else if (correctCount == incorrectCount){
+            typewrite("Congrats, you got same amount of questions right as you got wrong.\n");
+        }
+        else {
+            typewrite("Unfortunately, you got more questions wrong than correct.\n");
+        }
+
+          
+    }
+}  
 
 
