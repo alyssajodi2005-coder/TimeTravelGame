@@ -28,31 +28,9 @@ vector<int> Decades::GetYears(){
     return years;
 }
 
-/* void Decades::AskDecade() {
-    int input;
-    bool isCorrect = false;
-    typewrite("You have completed all the minigames and challenges in this decade, which decade would you like to time travel to next?");
-    
-    while (!isCorrect){
-        cin >> input;
-        for (int i = 0; i < years.size(); i++){
-            if (input == years.at(i)){
-                travelDestination = input;
-                isCorrect = true;
-                break;
-            }
-        }
-        if (!isCorrect){
-            typewrite("Invalid decade, please enter a correct decade.");    
-        }
-    }
-    
-} 
-//int Decades::getDestination() {
-   // return travelDestination;
-//} */
 
 void Decades::showDecadeIntro(){
+    //Intro narratives for each decade sourced mainly from history.com, wikipedia.org, google search
     if (level == 1) {
         typewrite(".....................\n"); //loading effect
         typewrite("📚DECADE 2020'S --> Socialize vs Social Media\n");
@@ -87,7 +65,7 @@ void Decades::showDecadeIntro(){
         cout <<"------------------------------------------------------------------------" << endl;
         typewrite("The summer streets of New York City are lively as usual, \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
-        typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect and share information.\n");
+        typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect.\n");
         typewrite("The decade is also refered to as the Y2K era, the name comes from the computer crisis that occurred in the year 2000,\n");
         typewrite("when computer systems misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
         //challenge : Create a Playlist
@@ -115,7 +93,6 @@ void Decades::showDecadeIntro(){
         typewrite("You walk into a busy arcade, chatter fills the air.\n");
         typewrite("The sound of coins and buttons creates an energetic atmosphere.\n");
         typewrite("Kids and teens are concentrated in games like Donkey Kong, and Space Invaders.\n");
-        typewrite("Your goal is to navigate the arcade, and win as many games as possible with the limited money you have.\n");
         // Challenge: Arcade Games
 
        
@@ -126,56 +103,73 @@ void Decades::showDecadeIntro(){
         typewrite("---------------------------------------\n");
         typewrite("You step into the vibrant world of the 1970s, groundbreaking music, and significant social change.\n");
         typewrite("The streets of New Orleans are alive with the sounds of jazz and blues.\n");
-        typewrite("This is the time of individuality, creativity, and self-expression.\n");
-        typewrite("Music and art used to convey messages and emotions that words alone could not.\n");
+        typewrite("This is the time of expression where music and art used to convey messages and emotions.\n");
         typewrite("In a world without digital platforms, expression travels through sound, movement, and community.\n");
-        typewrite("Personal radios sit in kitchens, cars, and storefronts shaping culture, influencing opinions, and bringing communities together.\n");
+        typewrite("Personal radios are all over shaping culture, influencing opinions, and bringing communities together.\n");
         
     }
     if (level == 7) {
-        typewrite("DECADE 1960's --> Revolution ");
+        typewrite("🏛DECADE 1960's --> Revolution ");
         typewrite("Date: July 20, 1969 || Time: 8:17 PM || Location: Washington, D.C. \n");
         cout <<"------------------------------------------------------------------------" << endl;
-        typewrite("You find yourself in the midst of the 1960s, a decade defined by massive social change, cultural revolutions, and historic milestones.\n");
+        typewrite("A time of social change, cultural revolutions, and historic milestones.\n");
         typewrite("People are advocating for civil rights and social justice, while the space race captures imaginations worldwide.\n");
-        typewrite("As a news paper journalist, your role is to report on these significant events that shape history.\n");
-        typewrite("Media is becoming way more influential during this time of change and innovation.\n");
-        typewrite("The attitude and opinions of Journalists greatly impacting public opinion.\n");
+        typewrite("As a newspaper journalist, your role is to report on these significant events that shape history.\n");
+        typewrite("The attitude and opinions of Journalists greatly impacting public opinion causing media influence.\n");
         typewrite("Also during this time, the ARPANET, the predecessor to the modern internet, was being developed.\n"); // source for ARPANET INFO: https://www.techtarget.com/searchnetworking/definition/ARPANET
         // Add decade introduction narrative here
     }
     if (level == 8) {
-        typewrite("DECADE 1950's --> Television Takes Over ");
+        typewrite("📺DECADE 1950's --> Television Takes Over ");
         typewrite("Date: August 15, 1955 || Time: 6:00 PM || Location: Lakewood,CA\n");
         cout <<"------------------------------------------------------------------------" << endl;
         typewrite("In the suburbs of Lakewood people are thriving off post-war prosperity, \n");
         typewrite("cultural shifts, and the rise of television the dominant source of entertainment.\n");
         typewrite("Families gather around their TV sets to watch popular shows like I Love Lucy and The Ed Sullivan Show.\n");
-        typewrite("Television shapes public opinion, influencing households across America.\n");
+        typewrite("Television starts to shape public opinion, influencing households across America.\n");
         // Add decade introduction narrative here
     }
     if (level == 9) {
-        typewrite("DECADE 1940's --> War and Radio ");
-        typewrite("Date:  || Time:  || Location: \n");
-        typewrite("---------------------------------------\n");
+        typewrite("📻DECADE 1940's --> War and Radio ");
+        typewrite("Date: July 4, 1944 || Time: 9:00 AM || Location: Jackson, MS \n");
+        cout <<"------------------------------------------------------------------------" << endl;
+        typewrite("During the 1940s, the world is engulfed in the turmoil of World War II.\n");
+        typewrite("Radio serves as the most important source of news during the war bringing in updates and spreading propaganda.\n");
+        typewrite("This form of media was less for entertainment and more for information and surviavl.\n");
+        //source https://historyrise.com/the-radio-in-wwii-propaganda-how-airwaves-won-minds/?utm_source=copilot.com#the-radio-in-wwii-propaganda-how-airwaves-shaped-public-opinion-influenced-minds-and-changed-warfare-forever
+        typewrite("Radios were heavly used in war tactics for communitation, messages were often encoded and decoded using ");
+        typewrite("devices like the Enigma machine to prevent enemy interception.\n");
         // Add decade introduction narrative here
     }
     if (level == 10) {
-        typewrite("DECADE 1930's -->");
+        typewrite("💰DECADE 1930's --> Trying Times ");
         typewrite("Date:  || Time:  || Location: \n");
-        typewrite("---------------------------------------\n");
+        cout <<"------------------------------------------------------------------------" << endl;
+        typewrite("The 1930s are quiet and challenging times, marked by the Great Depression.\n");
+        typewrite("People rely on radio broadcasts for news, entertainment, and escapism from the harsh realities of daily life.\n");
+        typewrite("News papers captivate audiences, providing a temporary relief from economic hardships.\n");
+        typewrite("In a time with little certainty about the future, media provides reassurance.\n");
+
         // Add decade introduction narrative here
     }
     if (level == 11) {
-        typewrite("DECADE 1920's -->");
+        typewrite("🎷DECADE 1920's --> Roaring Twenties ");
         typewrite("Date:  || Time:  || Location: \n");
-        typewrite("---------------------------------------\n");
+        cout <<"------------------------------------------------------------------------" << endl;
+        typewrite("The 1920s, often referred to as the Roaring Twenties, is a decade of economic prosperity and a vibrant culture.\n");
+        typewrite("Jazz music, flapper style, and speakeasies define the social scene.\n");
+        typewrite("People are connected like never before entertainment travels fast and trends easily spread.\n");
+        typewrite("For the first time ever media is reaching the masses.\n");
         // Add decade introduction narrative here
     }
     if (level == 12) {
-        typewrite("DECADE 2020's -->");
-        typewrite("Date:  || Time:  || Location: \n");
-        typewrite("---------------------------------------\n");
+        typewrite("📚DECADE 2020's --> Back to the Future ");
+        typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
+        cout <<"------------------------------------------------------------------------" << endl;
+        typewrite("Back on campus in the library and finsih up the conclusions for your research paperon how technology and media have shaped society.\n");
+        typewrite("Your journey through time highlights the impact all the different forms technology has had on communication, culture, and daily life.\n");
+        cout << "\n--- SOURCES & ARTIFACTS COLLECTED ---\n";
+        player.print_inventory();
         //Winning level
         // Add decade introduction narrative here
     }
@@ -736,9 +730,48 @@ void Decades::challenge(Player &player) {
         player.add_to_inventory("TV Remote");
         typewrite(".....................\n"); //loading effect
 
-
     } 
-}   
+    if (level == 9) {
+        typewrite("Challenge: Decryption\n");
+        typewrite("You are tasked with decrypting a message from your Army General.\n");
+        cout << "=== WWII Cipher Codebook ===" << endl;
+        cout << "A -> XC         N -> TR" << endl; 
+        cout << "B -> QZ         O -> HY" << endl;
+        cout << "C -> RT         P -> AC" << endl;
+        cout << "D -> PL         Q -> BX" << endl;
+        cout << "E -> MN         R -> LO" << endl;
+        cout << "F -> YK         S -> KP" << endl;
+        cout << "G -> VA         T -> ME" << endl;
+        cout << "H -> SJ         U -> NI" << endl;
+        cout << "I -> OB         V -> CJ" << endl;
+        cout << "J -> DW         W -> QA" << endl;
+        cout << "K -> FE         X -> EV" << endl;
+        cout << "L -> UG         Y -> RW" << endl;
+        cout << "M -> ZN         Z -> TD" << endl;
+        cout << "============================" << endl;
+
+        typewrite("Encrypted Word:\n");
+        typewrite("PL XC QA TR\n\n");
+
+        typewrite("Enter the decrypted word: ");
+
+        string answer;
+        cin.ignore();
+        getline(cin, answer);
+
+        if (answer == "DAWN" || answer == "dawn" || answer == "Dawn") {
+            typewrite("\nCorrect! \n");
+            player.add_score(10);
+        } else {
+            typewrite("\nIncorrect.\n");
+            typewrite("The correct word was: DAWN\n");
+            player.subtract_score(5);
+        }
+        player.add_to_inventory("Cipher Decoder");
+        typewrite(".....................\n"); //loading effect
+    }
+}
+
 
 
 void Decades::minigame(Player &player) {
