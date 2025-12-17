@@ -29,7 +29,7 @@ vector<int> Decades::GetYears(){
 }
 
 
-void Decades::showDecadeIntro(){
+void Decades::showDecadeIntro(Player &player) {
     //Intro narratives for each decade sourced mainly from history.com, wikipedia.org, google search
     if (level == 1) {
         typewrite(".....................\n"); //loading effect

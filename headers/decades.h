@@ -20,7 +20,7 @@ class Decades {
         int GetLevel();
         vector <int> GetYears();
         /* void AskDecade(); */
-        void showDecadeIntro();
+        void showDecadeIntro(Player &player);
         void nextDecade();
         void challenge(Player &player);
         void minigame(Player &player);
