@@ -39,9 +39,7 @@ int main() {
     //all main variables here:
     string userName;
     int level = 1;
-    
-    //test challendes and minigames here:
-    level = 1; //set starting level
+
     
     
     //game welcome message
@@ -67,7 +65,7 @@ int main() {
         timeMachine.TimeTravel(); // Time travel effect, check machine energy
         userCharacter.GetInfo(); // show player info
         userCharacter.print_inventory(); // show starting inventory
-        currentdecade.showDecadeIntro(); // show decade intro
+        currentdecade.showDecadeIntro(userCharacter); // show decade intro
         currentdecade.challenge(userCharacter); // decade challenge
         currentdecade.minigame(userCharacter); // decade minigame
         if (currentdecade.GetLevel() < max_level){

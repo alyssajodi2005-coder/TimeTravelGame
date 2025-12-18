@@ -159,7 +159,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("The 1920s, often referred to as the Roaring Twenties, is a decade of economic prosperity and a vibrant culture.\n");
         typewrite("Jazz music, flapper style, and speakeasies define the social scene.\n");
         typewrite("People are connected like never before entertainment travels fast and trends easily spread.\n");
-        typewrite("For the first time ever media is reaching the masses.\n");
+        typewrite("People enjoy speakeasies, often hidden places of music and rebellion.\n");
         // Add decade introduction narrative here
     }
     if (level == 12) {
@@ -770,6 +770,153 @@ void Decades::challenge(Player &player) {
         player.add_to_inventory("Cipher Decoder");
         typewrite(".....................\n"); //loading effect
     }
+    if (level == 10) {
+        typewrite("Challenge: Headline Pressure\n");
+        typewrite("The Great Depression has left millions struggling.\n");
+        typewrite("Your newspaper must publish tomorrow's front-page headline.\n");
+
+        cout << "Choose your headline: " << endl;
+        cout << "A) 'Hope on the Horizon: New Deal = New Jobs?'" << endl;
+        cout << "B) 'Banks Continue to Fail: National Crisis'" << endl;
+        cout << "C) 'Bread Lines Grow as Families Struggle'" << endl;
+        char lv10multiple_choice;
+        while (true) {
+            cin >> lv10multiple_choice;
+            if (lv10multiple_choice == 'A' || lv10multiple_choice == 'a') {
+                typewrite("Your optimistic headline resonates with readers looking for hope during tough times.\n");
+                player.add_score(10);
+                break;
+            } else if (lv10multiple_choice == 'B' || lv10multiple_choice == 'b') {
+                typewrite("Your headline captures the severity of the situation, drawing attention to the financial crisis.\n");
+                player.add_score(5);
+                break;
+            } else if (lv10multiple_choice == 'C' || lv10multiple_choice == 'c') {
+                typewrite("Your headline highlights the human impact of the depression, evoking empathy from readers.\n");
+                player.subtract_score(5);
+                break;
+            } else {
+                typewrite("Invalid choice. Please select A, B, or C.\n");
+            }
+    }
+    typewrite("Your words travel across the country by print and radio.\n");
+    typewrite("In difficult times, information can either bring hope or deepen fear.\n");
+
+    typewrite("You roll a blank sheet into the typewriter and start typing.\n");
+    if (lv10multiple_choice == 'A' || lv10multiple_choice == 'a') {
+        typewrite("'Hope on the Horizon: New Deal = New Jobs?'\n");
+    } else if (lv10multiple_choice == 'B' || lv10multiple_choice == 'b') {
+        typewrite("'Banks Continue to Fail: National Crisis'\n");
+    } else if (lv10multiple_choice == 'C' || lv10multiple_choice == 'c') {
+        typewrite("'Bread Lines Grow as Families Struggle'\n");
+    }
+    typewrite("Your editor shouts across the room:\n");
+    typewrite("\"Use these words on cover: HOPE, WORK, TOMORROW\"\n");
+    typewrite("You must type a short message using all three words to go on the cover:\n");
+    typewrite("Type a short message in all caps (5-40 characters):\n");
+    string message;
+    cin.ignore();
+    getline(cin, message);
+    while (true) {
+        if (message.length() >= 5 && message.length() <= 40 &&
+            message.find("HOPE") != string::npos &&
+            message.find("WORK") != string::npos &&
+            message.find("TOMORROW") != string::npos) {
+            typewrite("You type your message onto the paper:\n");
+            typewrite("\"" + message + "\"\n");
+            typewrite("The editor nods. \"That'll do.\"\n");
+            player.add_score(10);
+            break;
+        } else {
+            typewrite("Not quite right. Make sure your message is 5-40 characters and includes HOPE, WORK, and TOMORROW.\n");
+            typewrite("Type a short message (5-40 characters):\n");
+            getline(cin, message);
+        }
+    }
+
+    typewrite("In the 1930s, typewriters turn thoughts into history.\n");
+    typewrite("There is no delete key. No algorithm only paper and ink.\n");
+
+    player.add_to_inventory("Typewriter");
+    typewrite(".....................\n"); //loading effect
+
+    }
+    if (level == 11) {
+        typewrite("Challenge: The Hidden Speakeasy\n");
+        typewrite("New York City, 1926. Prohibition is in full force.\n");
+        typewrite("Rumors say a speakeasy is hidden nearby.\n\n");
+
+        typewrite("With a crumpled map in your hand you make your way around Lower Manhattan:\n\n");
+
+        cout << "==============================\n";
+        cout << "   LOWER MANHATTAN — 1926\n";
+        cout << "==============================\n\n";
+
+        cout << "[1] Bakery\n";
+        cout << "    \"Fresh bread. Family owned.\"\n\n";
+
+        cout << "[2] Tailor Shop\n";
+        cout << "    \"Suits pressed daily.\"\n\n";
+
+        cout << "[3] Narrow Alley\n";
+        cout << "    \"No sign. One dim light.\"\n\n";
+
+        cout << "[4] Jazz Hall\n";
+        cout << "    \"Music spills onto the street.\"\n\n";
+
+        cout << "[5] Apartment Building\n";
+        cout << "    \"Quiet. Locked doors.\"\n\n";
+
+        typewrite("Rumor says the speakeasy has:\n");
+        typewrite("- No sign\n");
+        typewrite("- No crowds\n");
+        typewrite("- Only whispers\n\n");
+
+        int location;
+        bool found = false;
+
+        while (!found) {
+            cout << "Where do you investigate? (1-5): ";
+            cin >> location;
+
+            if (location == 3) {
+                found = true;
+            } else {
+                typewrite("You look around, but this place seems too obvious so keep searching.\n");
+            }
+        }
+
+        typewrite("\nYou slip into the narrow alley.\n");
+        typewrite("The street noise fades behind you.\n");
+        typewrite("You see a man standing casually against the wall in front of a door.\n\n");
+
+        typewrite("You both make eye contact.\n");
+        typewrite("\"Password?\" he asks.\n\n");
+
+        cin.ignore();
+        string password;
+        typewrite("Hint: A book by F. Scott Fitzgerald — \"The Great ______\"\n");
+        cout << "Enter the password: ";
+        getline(cin, password);
+
+        if (password == "Gatsby" || password == "gatsby") {
+            typewrite("\nThe man nods.\n");
+            typewrite("Music swells from behind the door.\n");
+            typewrite("You've found the speakeasy.\n\n");
+
+            typewrite("Inside, flappers dance and jazz fills the air.\n");
+            typewrite("For a moment, the world forgets its rules.\n");
+
+            player.add_score(10);
+            player.add_to_inventory("Speakeasy Matchbook");
+
+        } else {
+            typewrite("\nThe man shakes his head.\n");
+            typewrite("\"Wrong password. Come back when you know it.\"\n");
+            player.subtract_score(5);
+        }
+        typewrite("In the 1920s, speakeasies were hidden havens of music and rebellion.\n");
+    }
+    
 }
 
 
