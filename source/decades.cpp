@@ -1134,12 +1134,10 @@ void Decades::minigame(Player &player) {
           
     }
     if (level == 8){
-        typewrite("Minigame: 19050's TV Schedule Memory Game\n");
-        cout << "You will be shown 3-5 shows with their air time. You will have some time to study the Schdedule." << endl;
-        cout << "The schdule will then be erased, and you will have to recall which shows aried at what time." << endl;
+        typewrite("Minigame: 1950's TV Schedule Memory Game\n");
+        cout << "You will be shown 3-5 shows with their air time. You will have some time to study the Schedule." << endl;
+        cout << "The schedule will then be erased, and you will have to recall which shows aired at what time." << endl;
 
-
-        cout << "TONIGHTS SCHEDULE: "<< endl;
 
         cout << "TONIGHT'S SCHEDULE - Study this carefully!" << endl;
         cout << "I Love Lucy - 7:00 PM" << endl;
@@ -1161,18 +1159,40 @@ void Decades::minigame(Player &player) {
             }
 
             /* I learned to use /r when i searched "is there a way to make a statement override another statement in c++ in the same line
-            because i wanted it to keep on changing as the loop ran so it would be better if it kept overriding it"*/
-            cout << "Time Remainng : " << seconds << " seconds\r";
+            because i wanted it to keep on changing as the loop ran so it would be better if it kept overriding it
+            i also learned that you should use flush so that the countdown could be displayed instantaneous
+            instead of the countdown being not accurate*/
+            cout << "Time Remainng : " << seconds << " seconds\r" << flush;
 
         }
         /* I searched " is there a clear function in c++ that clears the console ouput for the user"
-        and the ai orview gave me this code.*/
+        and the ai overview gave me this code.*/
         #if defined(_WIN32) | defined(_WIN64)
             std::system("cls");
         #else
             std::system("clear");
         #endif
-
-        
+        typewrite("Now, please recall the air times for the following shows:\n");
+        vector<string> shows = {"I Love Lucy", "Gunsmoke", "The Ed Sullivan Show", "Maverick"};
+        vector<string> correctTimes = {"7:00 PM", "8:00 PM", "8:30 PM", "9:00 PM"};
+        std::cin.ignore();
+        for (size_t i = 0; i < shows.size(); i++) {
+            typewrite("What time did " + shows.at(i) + " air? ");
+            string userInput;
+            while (true) {
+                std::getline(std::cin, userInput);
+                if (userInput.find(":") != string::npos && (userInput.find("AM") != string::npos || userInput.find("PM") != string::npos)) {
+                    break;
+                } else {
+                    typewrite("Invalid time format. Please enter the time in the format HH:MM AM/PM.\n");
+                }
+            }
+            if (lowerCase(userInput) == lowerCase(correctTimes.at(i))) {
+                typewrite("Correct!\n");
+                player.add_score(5);
+            } else {
+                typewrite("Incorrect. The correct time was " + correctTimes.at(i) + ".\n");
+            }
+        }
     }
-}  
+}
