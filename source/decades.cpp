@@ -1133,6 +1133,46 @@ void Decades::minigame(Player &player) {
 
           
     }
+    if (level == 8){
+        typewrite("Minigame: 19050's TV Schedule Memory Game\n");
+        cout << "You will be shown 3-5 shows with their air time. You will have some time to study the Schdedule." << endl;
+        cout << "The schdule will then be erased, and you will have to recall which shows aried at what time." << endl;
+
+
+        cout << "TONIGHTS SCHEDULE: "<< endl;
+
+        cout << "TONIGHT'S SCHEDULE - Study this carefully!" << endl;
+        cout << "I Love Lucy - 7:00 PM" << endl;
+        cout << "Gunsmoke - 8:00 PM" << endl;
+        cout << "The Ed Sullivan Show - 8:30 PM" << endl;
+        cout << "Maverick - 9:00 PM" << endl;
+        cout << "\nMemorizing time: ";
+
+        const auto startTime = chrono::steady_clock::now();
+        int study_duration = 10;
+        while (true) {
+            auto currentTime = chrono::steady_clock::now();
+
+            auto elapsedTime = chrono::duration_cast<chrono::seconds>(currentTime - startTime);
+            int seconds = study_duration - elapsedTime.count();
+
+            if (seconds <= 0) {
+                break;
+            }
+
+            /* I learned to use /r when i searched "is there a way to make a statement override another statement in c++ in the same line
+            because i wanted it to keep on changing as the loop ran so it would be better if it kept overriding it"*/
+            cout << "Time Remainng : " << seconds << " seconds\r";
+
+        }
+        /* I searched " is there a clear function in c++ that clears the console ouput for the user"
+        and the ai orview gave me this code.*/
+        #if defined(_WIN32) | defined(_WIN64)
+            std::system("cls");
+        #else
+            std::system("clear");
+        #endif
+
+        
+    }
 }  
-
-
