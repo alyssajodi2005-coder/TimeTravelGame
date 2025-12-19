@@ -7,6 +7,7 @@ using namespace std;
 #include <unistd.h>
 
 void typewrite(const string &text);
-
+void clearScreen();
+void Continue();
 
 #endif // TYPEWRITE_H   

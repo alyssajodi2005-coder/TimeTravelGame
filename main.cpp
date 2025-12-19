@@ -23,11 +23,7 @@ void ShowIntro() {
     //finish explain points, money, food, etc
 
     //prompt user to begin game
-    char startkey = '\0';
-    while (startkey != 'y') {
-        cout << "Type y to begin: ";
-        cin >> startkey;
-    }
+    Continue();
 }
 
 
@@ -62,12 +58,20 @@ int main() {
     //Lv.1 Decade:2020s
     const int max_level = 12;
     while (currentdecade.GetLevel() <= max_level) {
+        clearScreen();
         timeMachine.TimeTravel(); // Time travel effect, check machine energy
+        clearScreen();
         userCharacter.GetInfo(); // show player info
         userCharacter.print_inventory(); // show starting inventory
         currentdecade.showDecadeIntro(userCharacter); // show decade intro
+        Continue();
+        clearScreen();
         currentdecade.challenge(userCharacter); // decade challenge
+        Continue();
+        clearScreen();
         currentdecade.minigame(userCharacter); // decade minigame
+        Continue();
+        clearScreen();
         if (currentdecade.GetLevel() < max_level){
             currentdecade.nextDecade(); // advance to next decade, inc level
             userCharacter.travel_to_decade(currentdecade); // travel to next decade
