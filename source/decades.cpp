@@ -32,37 +32,21 @@ vector<int> Decades::GetYears(){
 void Decades::showDecadeIntro(Player &player) {
     //Intro narratives for each decade sourced mainly from history.com, wikipedia.org, google search
     if (level == 1) {
-        typewrite(".....................\n"); //loading effect
         typewrite("📚DECADE 2020'S --> Socialize vs Social Media\n");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-        typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");
-        typewrite("Your phone buzzes nonstop. Online opinions spread faster than facts, and everyone seems connected yet distant.\n");
-        typewrite("Students rush past you on Campus with headphones in, glued to screens.\n");
-        typewrite("You make Your way to the library to research for your paper.\n");
-        cout << endl;
-    }
-=======
-        cout <<"---------------------------------------\n" << endl;
         typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");
         typewrite("Your phone buzzes nonstop. Online opinions spread faster than facts, and everyone seems connected yet distant.\n");
         typewrite("Students rush past you on Campus with headphones in, glued to screens.\n");
         typewrite("Every choice you make can spread fast and its impact may reach further than you expect.\n");
         typewrite("Navigate carefully, and see how your decisions ripple through time.\n");
-        // challenge 1: social media dilemma
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
-
     }
+
+
     if (level == 2) {
-        typewrite(".....................\n"); //loading effect
         typewrite("💻DECADE 2010's --> Internet Boom\n");
         typewrite("Date: June 10, 2015 || Time: 3:15 PM || Location: Cupertino, CA\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"---------------------------------------\n" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("You are in the lobby of a tech company building, surrounded by the latest gadgets and innovations.\n");
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
         typewrite("You head up to a conference floor. The floor is packed with people, loud chatter fills the room,\n");
@@ -70,21 +54,11 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("Social media platforms like Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
         typewrite("A group of young programmers storm out of a meeting, clearly frustrated, one even crying.\n");
         typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"You're up, time to pitch!\"\n");
-<<<<<<< HEAD
-        cout << endl;
-=======
-        // challenge 1: impromptu pitch presentation
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
     }
     if (level == 3) {
-        typewrite(".....................\n"); //loading effect
         typewrite("📱DECADE 2000's --> Y2K\n");
         typewrite("Date: August 15, 2003 || Time: 12:30 PM || Location: Brooklyn, NY\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The summer streets of New York City are lively as usual, \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
         typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect.\n");
@@ -93,14 +67,9 @@ void Decades::showDecadeIntro(Player &player) {
         //challenge : Create a Playlist
     }
     if (level == 4) {
-        typewrite(".....................\n"); //loading effect
         typewrite("💿DECADE 1990's --> For the Record\n");
         typewrite("Date: September 15, 1994 || Time: 10:00 AM || Location: Philadelphia, PA\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 90s are loud, expressive, and unforgettable.\n");
         typewrite("Baggy clothes, flannel shirts, and iconic TV shows define the culture of the decade.\n");
         typewrite("You're an aspiring musician and just started your shift at a local vinyl record store.\n");
@@ -110,14 +79,9 @@ void Decades::showDecadeIntro(Player &player) {
         //Challenge: Sell Records
     }
     if (level == 5) {
-        typewrite(".....................\n"); //loading effect
         typewrite("🎯DECADE 1980's --> Arcade Antics\n");
         typewrite("Date: January 10, 1986 || Time: 3:49 PM  || Location: Indianapolis, IN\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 80s are bold , big hair, bright colors and blockbuster movies.\n") ;
         typewrite("Personal computers are becoming more common and video games gaining massive popularity.\n");
         typewrite("You walk into a busy arcade, chatter fills the air.\n");
@@ -130,11 +94,7 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 6) {
         typewrite("✌🏾DECADE 1970's --> The Airwaves");
         typewrite("Date: November 21, 1975 || Time: 7 AM || Location: New Orleans, LA\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        typewrite("---------------------------------------\n");
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("You step into the vibrant world of the 1970s, groundbreaking music, and significant social change.\n");
         typewrite("The streets of New Orleans are alive with the sounds of jazz and blues.\n");
         typewrite("This is the time of expression where music and art used to convey messages and emotions.\n");
@@ -145,11 +105,7 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 7) {
         typewrite("🏛DECADE 1960's --> Revolution ");
         typewrite("Date: July 20, 1969 || Time: 8:17 PM || Location: Washington, D.C. \n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("A time of social change, cultural revolutions, and historic milestones.\n");
         typewrite("People are advocating for civil rights and social justice, while the space race captures imaginations worldwide.\n");
         typewrite("As a newspaper journalist, your role is to report on these significant events that shape history.\n");
@@ -160,11 +116,7 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 8) {
         typewrite("📺DECADE 1950's --> Television Takes Over ");
         typewrite("Date: August 15, 1955 || Time: 6:00 PM || Location: Lakewood,CA\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("In the suburbs of Lakewood people are thriving off post-war prosperity, \n");
         typewrite("cultural shifts, and the rise of television the dominant source of entertainment.\n");
         typewrite("Families gather around their TV sets to watch popular shows like I Love Lucy and The Ed Sullivan Show.\n");
@@ -174,11 +126,7 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 9) {
         typewrite("📻DECADE 1940's --> War and Radio ");
         typewrite("Date: July 4, 1944 || Time: 9:00 AM || Location: Jackson, MS \n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("During the 1940s, the world is engulfed in the turmoil of World War II.\n");
         typewrite("Radio serves as the most important source of news during the war bringing in updates and spreading propaganda.\n");
         typewrite("This form of media was less for entertainment and more for information and surviavl.\n");
@@ -190,11 +138,7 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 10) {
         typewrite("💰DECADE 1930's --> Trying Times ");
         typewrite("Date:  || Time:  || Location: \n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 1930s are quiet and challenging times, marked by the Great Depression.\n");
         typewrite("People rely on radio broadcasts for news, entertainment, and escapism from the harsh realities of daily life.\n");
         typewrite("News papers captivate audiences, providing a temporary relief from economic hardships.\n");
@@ -205,11 +149,7 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 11) {
         typewrite("🎷DECADE 1920's --> Roaring Twenties ");
         typewrite("Date:  || Time:  || Location: \n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 1920s, often referred to as the Roaring Twenties, is a decade of economic prosperity and a vibrant culture.\n");
         typewrite("Jazz music, flapper style, and speakeasies define the social scene.\n");
         typewrite("People are connected like never before entertainment travels fast and trends easily spread.\n");
@@ -219,15 +159,9 @@ void Decades::showDecadeIntro(Player &player) {
     if (level == 12) {
         typewrite("📚DECADE 2020's --> Back to the Future ");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
-<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("Back on campus in the library and you finish up the conclusion for your paper on how technology has shaped society.\n");
         typewrite("Your journey through time highlights the impact all the different forms technology has had on daily life.\n");
-=======
-        cout <<"------------------------------------------------------------------------" << endl;
-        typewrite("Back on campus in the library and finsih up the conclusions for your research paperon how technology and media have shaped society.\n");
-        typewrite("Your journey through time highlights the impact all the different forms technology has had on communication, culture, and daily life.\n");
->>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         cout << "\n--- SOURCES & ARTIFACTS COLLECTED ---\n";
         player.print_inventory();
         //Winning level
@@ -303,6 +237,7 @@ void Decades::challenge(Player &player) {
     cout << endl;
     typewrite("You continue working on your paper...\n");
     player.add_to_inventory("Cellphone");
+    typewrite("You obtained: Cellphone\n");
     typewrite(".....................\n"); //loading effect
 
     }
@@ -369,7 +304,7 @@ void Decades::challenge(Player &player) {
             }
         }
         
-        // add more challenge logic here
+        
         player.add_to_inventory("Tech Company Business Card");
         typewrite(".....................\n"); //loading effect
     }
