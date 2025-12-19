@@ -32,8 +32,10 @@ vector<int> Decades::GetYears(){
 void Decades::showDecadeIntro(Player &player) {
     //Intro narratives for each decade sourced mainly from history.com, wikipedia.org, google search
     if (level == 1) {
+        typewrite(".....................\n"); //loading effect
         typewrite("📚DECADE 2020'S --> Socialize vs Social Media\n");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");
         typewrite("Your phone buzzes nonstop. Online opinions spread faster than facts, and everyone seems connected yet distant.\n");
@@ -41,129 +43,195 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("You make Your way to the library to research for your paper.\n");
         cout << endl;
     }
+=======
+        cout <<"---------------------------------------\n" << endl;
+        typewrite("You find yourself in the year 2024. Social media shapes opinions, and technology connects everyone.\n");
+        typewrite("Your phone buzzes nonstop. Online opinions spread faster than facts, and everyone seems connected yet distant.\n");
+        typewrite("Students rush past you on Campus with headphones in, glued to screens.\n");
+        typewrite("Every choice you make can spread fast and its impact may reach further than you expect.\n");
+        typewrite("Navigate carefully, and see how your decisions ripple through time.\n");
+        // challenge 1: social media dilemma
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
 
+    }
     if (level == 2) {
+        typewrite(".....................\n"); //loading effect
         typewrite("💻DECADE 2010's --> Internet Boom\n");
         typewrite("Date: June 10, 2015 || Time: 3:15 PM || Location: Cupertino, CA\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"---------------------------------------\n" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("You are in the lobby of a tech company building, surrounded by the latest gadgets and innovations.\n");
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
         typewrite("You head up to a conference floor. The floor is packed with people, loud chatter fills the room,\n");
         typewrite("whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
-        typewrite("Social media like Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
+        typewrite("Social media platforms like Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
         typewrite("A group of young programmers storm out of a meeting, clearly frustrated, one even crying.\n");
         typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"You're up, time to pitch!\"\n");
+<<<<<<< HEAD
         cout << endl;
+=======
+        // challenge 1: impromptu pitch presentation
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
     }
-
     if (level == 3) {
+        typewrite(".....................\n"); //loading effect
         typewrite("📱DECADE 2000's --> Y2K\n");
         typewrite("Date: August 15, 2003 || Time: 12:30 PM || Location: Brooklyn, NY\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The summer streets of New York City are lively as usual, \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
-        typewrite("The rise of platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect.\n");
-        typewrite("The Y2K era name comes from the computer crisis that occurred in the year 2000,\n");
+        typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect.\n");
+        typewrite("The decade is also refered to as the Y2K era, the name comes from the computer crisis that occurred in the year 2000,\n");
         typewrite("when computer systems misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
+        //challenge : Create a Playlist
     }
-
     if (level == 4) {
         typewrite(".....................\n"); //loading effect
         typewrite("💿DECADE 1990's --> For the Record\n");
         typewrite("Date: September 15, 1994 || Time: 10:00 AM || Location: Philadelphia, PA\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 90s are loud, expressive, and unforgettable.\n");
         typewrite("Baggy clothes, flannel shirts, and iconic TV shows define the culture of the decade.\n");
         typewrite("You're an aspiring musician and just started your shift at a local vinyl record store.\n");
         typewrite("Record stores are starting to face a decline in sales due to the rise of CDs replacing vinyls.\n");
         typewrite("CD's were more portable and provided a superior sound quality compared to vinyl records.\n");
         typewrite("Inside the store, shelves are packed, but the customers are few.\n");
+        //Challenge: Sell Records
     }
-
     if (level == 5) {
         typewrite(".....................\n"); //loading effect
         typewrite("🎯DECADE 1980's --> Arcade Antics\n");
         typewrite("Date: January 10, 1986 || Time: 3:49 PM  || Location: Indianapolis, IN\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 80s are bold , big hair, bright colors and blockbuster movies.\n") ;
         typewrite("Personal computers are becoming more common and video games gaining massive popularity.\n");
         typewrite("You walk into a busy arcade, chatter fills the air.\n");
         typewrite("The sound of coins and buttons creates an energetic atmosphere.\n");
         typewrite("Kids and teens are concentrated in games like Donkey Kong, and Space Invaders.\n");
-    }
+        // Challenge: Arcade Games
 
+       
+    }
     if (level == 6) {
         typewrite("✌🏾DECADE 1970's --> The Airwaves");
         typewrite("Date: November 21, 1975 || Time: 7 AM || Location: New Orleans, LA\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        typewrite("---------------------------------------\n");
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("You step into the vibrant world of the 1970s, groundbreaking music, and significant social change.\n");
         typewrite("The streets of New Orleans are alive with the sounds of jazz and blues.\n");
         typewrite("This is the time of expression where music and art used to convey messages and emotions.\n");
         typewrite("In a world without digital platforms, expression travels through sound, movement, and community.\n");
         typewrite("Personal radios are all over shaping culture, influencing opinions, and bringing communities together.\n");
+        
     }
-
     if (level == 7) {
         typewrite("🏛DECADE 1960's --> Revolution ");
         typewrite("Date: July 20, 1969 || Time: 8:17 PM || Location: Washington, D.C. \n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("A time of social change, cultural revolutions, and historic milestones.\n");
         typewrite("People are advocating for civil rights and social justice, while the space race captures imaginations worldwide.\n");
         typewrite("As a newspaper journalist, your role is to report on these significant events that shape history.\n");
         typewrite("The attitude and opinions of Journalists greatly impacting public opinion causing media influence.\n");
         typewrite("Also during this time, the ARPANET, the predecessor to the modern internet, was being developed.\n"); // source for ARPANET INFO: https://www.techtarget.com/searchnetworking/definition/ARPANET
+        // Add decade introduction narrative here
     }
-
     if (level == 8) {
         typewrite("📺DECADE 1950's --> Television Takes Over ");
         typewrite("Date: August 15, 1955 || Time: 6:00 PM || Location: Lakewood,CA\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("In the suburbs of Lakewood people are thriving off post-war prosperity, \n");
         typewrite("cultural shifts, and the rise of television the dominant source of entertainment.\n");
         typewrite("Families gather around their TV sets to watch popular shows like I Love Lucy and The Ed Sullivan Show.\n");
         typewrite("Television starts to shape public opinion, influencing households across America.\n");
+        // Add decade introduction narrative here
     }
-
     if (level == 9) {
         typewrite("📻DECADE 1940's --> War and Radio ");
         typewrite("Date: July 4, 1944 || Time: 9:00 AM || Location: Jackson, MS \n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("During the 1940s, the world is engulfed in the turmoil of World War II.\n");
         typewrite("Radio serves as the most important source of news during the war bringing in updates and spreading propaganda.\n");
         typewrite("This form of media was less for entertainment and more for information and surviavl.\n");
         //source https://historyrise.com/the-radio-in-wwii-propaganda-how-airwaves-won-minds/?utm_source=copilot.com#the-radio-in-wwii-propaganda-how-airwaves-shaped-public-opinion-influenced-minds-and-changed-warfare-forever
         typewrite("Radios were heavly used in war tactics for communitation, messages were often encoded and decoded using ");
         typewrite("devices like the Enigma machine to prevent enemy interception.\n");
+        // Add decade introduction narrative here
     }
-
     if (level == 10) {
         typewrite("💰DECADE 1930's --> Trying Times ");
         typewrite("Date:  || Time:  || Location: \n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 1930s are quiet and challenging times, marked by the Great Depression.\n");
         typewrite("People rely on radio broadcasts for news, entertainment, and escapism from the harsh realities of daily life.\n");
         typewrite("News papers captivate audiences, providing a temporary relief from economic hardships.\n");
         typewrite("In a time with little certainty about the future, media provides reassurance.\n");
-    }
 
+        // Add decade introduction narrative here
+    }
     if (level == 11) {
         typewrite("🎷DECADE 1920's --> Roaring Twenties ");
         typewrite("Date:  || Time:  || Location: \n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         typewrite("The 1920s, often referred to as the Roaring Twenties, is a decade of economic prosperity and a vibrant culture.\n");
         typewrite("Jazz music, flapper style, and speakeasies define the social scene.\n");
         typewrite("People are connected like never before entertainment travels fast and trends easily spread.\n");
         typewrite("People enjoy speakeasies, often hidden places of music and rebellion.\n");
+        // Add decade introduction narrative here
     }
-
     if (level == 12) {
         typewrite("📚DECADE 2020's --> Back to the Future ");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
+<<<<<<< HEAD
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("Back on campus in the library and you finish up the conclusion for your paper on how technology has shaped society.\n");
         typewrite("Your journey through time highlights the impact all the different forms technology has had on daily life.\n");
+=======
+        cout <<"------------------------------------------------------------------------" << endl;
+        typewrite("Back on campus in the library and finsih up the conclusions for your research paperon how technology and media have shaped society.\n");
+        typewrite("Your journey through time highlights the impact all the different forms technology has had on communication, culture, and daily life.\n");
+>>>>>>> 3278c0ffa406efc4b1720954d65400c3a669fbf6
         cout << "\n--- SOURCES & ARTIFACTS COLLECTED ---\n";
         player.print_inventory();
+        //Winning level
+        // Add decade introduction narrative here
     }
 
 }
@@ -235,8 +303,7 @@ void Decades::challenge(Player &player) {
     cout << endl;
     typewrite("You continue working on your paper...\n");
     player.add_to_inventory("Cellphone");
-    typewrite("You obtained: Cellphone\n");
-    cout << endl;
+    typewrite(".....................\n"); //loading effect
 
     }
     if (level == 2) {
@@ -286,7 +353,6 @@ void Decades::challenge(Player &player) {
                     typewrite("Combined with your strong pitch, the investor is eager to support your venture.\n");
                     player.add_score(10);
                     player.add_to_inventory("Contract");
-                    typewrite("You obtained: Contract\n");
                 }
                 break;
             } else if (funding >= 10000 && funding <= 20000) {
@@ -305,7 +371,6 @@ void Decades::challenge(Player &player) {
         
         // add more challenge logic here
         player.add_to_inventory("Tech Company Business Card");
-        typewrite("You obtained: Tech Company Business Card\n");
         typewrite(".....................\n"); //loading effect
     }
     if (level == 3) {
@@ -363,7 +428,6 @@ void Decades::challenge(Player &player) {
             player.add_score(5);
         }
         player.add_to_inventory("iPod");
-        typewrite("You obtained: iPod\n");
         typewrite(".....................\n"); //loading effect
     }
     if (level == 4) {
@@ -416,7 +480,6 @@ void Decades::challenge(Player &player) {
             }
         }
         player.add_to_inventory("Vinyl Record");
-        typewrite("You obtained: Vinyl Record\n");
         typewrite(".....................\n"); //loading effect
     }
     if (level == 5) {
@@ -505,14 +568,12 @@ void Decades::challenge(Player &player) {
             typewrite("Congratulations! You have enough tickets to redeem a big prize!\n");
             player.add_score(10);
             player.add_to_inventory("Arcade Prize"); 
-            typewrite("You obtained: Arcade Prize\n");
         } else {
             typewrite("You didn't earn enough tickets for a big prize, but you had fun at the arcade!\n");
             player.add_score(5);
         } 
         typewrite("As you leave the arcade, you turn your walkman on and walk home\n");
         player.add_to_inventory("Walkman"); 
-        typewrite("You obtained: Walkman\n");
         typewrite(".....................\n"); //loading effect
     }
     if (level == 6) {
@@ -575,7 +636,6 @@ void Decades::challenge(Player &player) {
         typewrite("Technology may change — but influence always remains.\n");
 
         player.add_to_inventory("Portable Radio");
-        typewrite("You obtained: Portable Radio\n");
         typewrite(".....................\n"); //loading effect
     }
     if (level == 7) {
@@ -666,12 +726,7 @@ void Decades::challenge(Player &player) {
         typewrite("|                                      |\n");
         typewrite("+--------------------------------------+\n\n");
 
-
-        typewrite("Your cover story on the " + event_choice + " receives widespread acclaim for its insight and impactful storytelling.\n");
-        player.add_score(10);
-        player.add_to_inventory("News paper");
-        typewrite("You obtained: News paper\n");
-        typewrite(".....................\n"); //loading effect
+        //FINISH
 
     }  
     if (level == 8) {
@@ -713,30 +768,21 @@ void Decades::challenge(Player &player) {
         cout << "choose a channel to watch (1-10): ";
 
         int channel;
-        if (channel == 1 || channel == 4) {
-            typewrite("You watch a family sitcom that reflects post-war American values.\n");
-        } 
-        else if (channel == 2 || channel == 3 || channel == 8) {
-            typewrite("You watch a Western adventure.\n");
-        } 
-        else if (channel == 5) {
-            typewrite("You watch a live showcase of music and culture.\n");
-        } 
-        else {
-            typewrite("You watch a colorful animated musical film.\n");
+        while (true) {
+            std::cin >> channel;
+            if (channel >= 1 && channel <= 10) {
+                typewrite("You tune into channel " + to_string(channel) + " and enjoy the show!\n");
+                player.add_score(5);
+                break;
+            } else {
+                typewrite("Invalid channel. Please select a channel between 1 and 10.\n");
+            }
         }
-        player.add_score(5);
 
-        typewrite("Suddenly, the screen shifts.\n");
-        typewrite("The black-and-white image bursts into color.\n");
-        typewrite("Television in the 1950s revolutionized entertainment. \n");
-        typewrite("Color television began commercial broadcasting in 1953, with the first major live event aired in color occurring on January 1, 1954.\n");
-        
-        //https://www.thoughtco.com/color-television-history-4070934
+        //FINISH]
 
 
-        player.add_to_inventory("Color TV");
-        typewrite("You obtained: Color TV\n");
+        player.add_to_inventory("TV Remote");
         typewrite(".....................\n"); //loading effect
 
     } 
@@ -807,47 +853,46 @@ void Decades::challenge(Player &player) {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }
     }
-        typewrite("Your words travel across the country by print and radio.\n");
-        typewrite("In difficult times, information can either bring hope or deepen fear.\n");
+    typewrite("Your words travel across the country by print and radio.\n");
+    typewrite("In difficult times, information can either bring hope or deepen fear.\n");
 
-        typewrite("You roll a blank sheet into the typewriter and start typing.\n");
-        if (lv10multiple_choice == 'A' || lv10multiple_choice == 'a') {
-            typewrite("'Hope on the Horizon: New Deal = New Jobs?'\n");
-        } else if (lv10multiple_choice == 'B' || lv10multiple_choice == 'b') {
-            typewrite("'Banks Continue to Fail: National Crisis'\n");
-        } else if (lv10multiple_choice == 'C' || lv10multiple_choice == 'c') {
-            typewrite("'Bread Lines Grow as Families Struggle'\n");
+    typewrite("You roll a blank sheet into the typewriter and start typing.\n");
+    if (lv10multiple_choice == 'A' || lv10multiple_choice == 'a') {
+        typewrite("'Hope on the Horizon: New Deal = New Jobs?'\n");
+    } else if (lv10multiple_choice == 'B' || lv10multiple_choice == 'b') {
+        typewrite("'Banks Continue to Fail: National Crisis'\n");
+    } else if (lv10multiple_choice == 'C' || lv10multiple_choice == 'c') {
+        typewrite("'Bread Lines Grow as Families Struggle'\n");
+    }
+    typewrite("Your editor shouts across the room:\n");
+    typewrite("\"Use these words on cover: HOPE, WORK, TOMORROW\"\n");
+    typewrite("You must type a short message using all three words to go on the cover:\n");
+    typewrite("Type a short message in all caps (5-40 characters):\n");
+    string message;
+    cin.ignore();
+    getline(cin, message);
+    while (true) {
+        if (message.length() >= 5 && message.length() <= 40 &&
+            message.find("HOPE") != string::npos &&
+            message.find("WORK") != string::npos &&
+            message.find("TOMORROW") != string::npos) {
+            typewrite("You type your message onto the paper:\n");
+            typewrite("\"" + message + "\"\n");
+            typewrite("The editor nods. \"That'll do.\"\n");
+            player.add_score(10);
+            break;
+        } else {
+            typewrite("Not quite right. Make sure your message is 5-40 characters and includes HOPE, WORK, and TOMORROW.\n");
+            typewrite("Type a short message (5-40 characters):\n");
+            getline(cin, message);
         }
-        typewrite("Your editor shouts across the room:\n");
-        typewrite("\"Use these words on cover: HOPE, WORK, TOMORROW\"\n");
-        typewrite("You must type a short message using all three words to go on the cover:\n");
-        typewrite("Type a short message in all caps (5-40 characters):\n");
-        string message;
-        cin.ignore();
-        getline(cin, message);
-        while (true) {
-            if (message.length() >= 5 && message.length() <= 40 &&
-                message.find("HOPE") != string::npos &&
-                message.find("WORK") != string::npos &&
-                message.find("TOMORROW") != string::npos) {
-                typewrite("You type your message onto the paper:\n");
-                typewrite("\"" + message + "\"\n");
-                typewrite("The editor nods. \"That'll do.\"\n");
-                player.add_score(10);
-                break;
-            } else {
-                typewrite("Not quite right. Make sure your message is 5-40 characters and includes HOPE, WORK, and TOMORROW.\n");
-                typewrite("Type a short message (5-40 characters):\n");
-                getline(cin, message);
-            }
-        }
+    }
 
-        typewrite("In the 1930s, typewriters turn thoughts into history.\n");
-        typewrite("There is no delete key. No algorithm only paper and ink.\n");
+    typewrite("In the 1930s, typewriters turn thoughts into history.\n");
+    typewrite("There is no delete key. No algorithm only paper and ink.\n");
 
-        player.add_to_inventory("Typewriter");
-        typewrite("You obtained: Typewriter\n");
-        typewrite(".....................\n"); //loading effect
+    player.add_to_inventory("Typewriter");
+    typewrite(".....................\n"); //loading effect
 
     }
     if (level == 11) {
@@ -909,12 +954,15 @@ void Decades::challenge(Player &player) {
         getline(cin, password);
 
         if (password == "Gatsby" || password == "gatsby") {
-            typewrite("\nThe man nods and opens the door.\n");
-            typewrite("You've found the speakeasy!\n\n");
+            typewrite("\nThe man nods.\n");
+            typewrite("Music swells from behind the door.\n");
+            typewrite("You've found the speakeasy.\n\n");
 
-            typewrite("Inside, flappers dance and jazz fills the room.\n");
+            typewrite("Inside, flappers dance and jazz fills the air.\n");
+            typewrite("For a moment, the world forgets its rules.\n");
 
             player.add_score(10);
+            player.add_to_inventory("Speakeasy Matchbook");
 
         } else {
             typewrite("\nThe man shakes his head.\n");
@@ -922,8 +970,6 @@ void Decades::challenge(Player &player) {
             player.subtract_score(5);
         }
         typewrite("In the 1920s, speakeasies were hidden havens of music and rebellion.\n");
-        player.add_to_inventory("Speakeasy Matchbook");
-        typewrite("You obtained: Speakeasy Matchbook\n");
     }
     
 }
@@ -1351,4 +1397,290 @@ void Decades::minigame(Player &player) {
             }
         }
     }
+    if (level == 9) {
+        typewrite("Challenge: Decryption\n");
+        typewrite("Intelligence has intercepted multiple codebooks from various sources.\n");
+        typewrite("Only ONE is currently being used by your Army General.\n");
+        typewrite("The others are outdated codes, enemy ciphers, or deliberate decoys.\n");
+        typewrite("Choose wisely - incorrect attempts may alert the enemy!\n\n");
+        
+        typewrite("Encrypted Message: PL XC QA TR\n\n");
+        
+        int attempts = 0;
+        int maxAttempts = 3;
+        bool success = false;
+        
+        while (attempts < maxAttempts && !success) {
+            cout << "\n╔════════════════════════════════════╗" << endl;
+            cout << "║     AVAILABLE CODEBOOKS            ║" << endl;
+            cout << "╚════════════════════════════════════╝" << endl;
+            
+            // Codebook 1 - CORRECT
+            cout << "\n1 - Operation Overlord" << endl;
+            cout << "    Origin: Allied Command, June 1944" << endl;
+            cout << "    Status: ACTIVE" << endl;
+            
+            // Codebook 2 - Enemy cipher
+            cout << "\n2 - Axis Intercept" << endl;
+            cout << "    Origin: Captured from German officer, Berlin" << endl;
+            cout << "    Status: ENEMY CIPHER" << endl;
+            
+            // Codebook 3 - Outdated
+            cout << "\n3 - Atlantic Protocol" << endl;
+            cout << "    Origin: Allied cipher, discontinued March 1942" << endl;
+            cout << "    Status: OUTDATED" << endl;
+            
+            // Codebook 4 - Pacific theater
+            cout << "\n4 - Pacific Theater Code" << endl;
+            cout << "    Origin: U.S. Navy cipher, Pacific Command" << endl;
+            cout << "    Status: REGIONAL USE ONLY" << endl;
+            
+            typewrite("\nSelect codebook to use (1-4): ");
+            int codebookChoice;
+            cin >> codebookChoice;
+            
+            if (codebookChoice < 1 || codebookChoice > 4) {
+                typewrite("\nInvalid selection. Try again.\n");
+                continue;
+            }
+            
+            attempts++;
+            
+            cout << "\n=== ";
+            if (codebookChoice == 1) {
+                cout << "OPERATION OVERLORD CIPHER";
+            } else if (codebookChoice == 2) {
+                cout << "AXIS INTERCEPT CIPHER";
+            } else if (codebookChoice == 3) {
+                cout << "ATLANTIC PROTOCOL CIPHER";
+            } else if (codebookChoice == 4) {
+                cout << "PACIFIC THEATER CIPHER";
+            }
+            cout << " ===" << endl;
+            
+            if (codebookChoice == 1) {
+                // CORRECT CODEBOOK
+                cout << "A -> XC         N -> TR" << endl;
+                cout << "B -> QZ         O -> HY" << endl;
+                cout << "C -> RT         P -> AC" << endl;
+                cout << "D -> PL         Q -> BX" << endl;
+                cout << "E -> MN         R -> LO" << endl;
+                cout << "F -> YK         S -> KP" << endl;
+                cout << "G -> VA         T -> ME" << endl;
+                cout << "H -> SJ         U -> NI" << endl;
+                cout << "I -> OB         V -> CJ" << endl;
+                cout << "J -> DW         W -> QA" << endl;
+                cout << "K -> FE         X -> EV" << endl;
+                cout << "L -> UG         Y -> RW" << endl;
+                cout << "M -> ZN         Z -> TD" << endl;
+            } 
+            else if (codebookChoice == 2) {
+                // AXIS CIPHER - produces gibberish
+                cout << "A -> MK         N -> XP" << endl;
+                cout << "B -> LS         O -> CQ" << endl;
+                cout << "C -> NR         P -> ZT" << endl;
+                cout << "D -> FH         Q -> WY" << endl;
+                cout << "E -> TJ         R -> BV" << endl;
+                cout << "F -> PD         S -> GU" << endl;
+                cout << "G -> QE         T -> HO" << endl;
+                cout << "H -> VW         U -> KL" << endl;
+                cout << "I -> XZ         V -> MN" << endl;
+                cout << "J -> RY         W -> AC" << endl;
+                cout << "K -> BC         X -> DF" << endl;
+                cout << "L -> GI         Y -> SJ" << endl;
+                cout << "M -> OP         Z -> EQ" << endl;
+            }
+            else if (codebookChoice == 3) {
+                // OUTDATED - produces "DUSK"
+                cout << "A -> XC         N -> PQ" << endl;
+                cout << "B -> QZ         O -> HY" << endl;
+                cout << "C -> RT         P -> AC" << endl;
+                cout << "D -> PL         Q -> BX" << endl;
+                cout << "E -> MN         R -> LO" << endl;
+                cout << "F -> YK         S -> TR" << endl;
+                cout << "G -> VA         T -> ME" << endl;
+                cout << "H -> SJ         U -> NI" << endl;
+                cout << "I -> OB         V -> CJ" << endl;
+                cout << "J -> DW         W -> QA" << endl;
+                cout << "K -> QA         X -> EV" << endl;
+                cout << "L -> UG         Y -> RW" << endl;
+                cout << "M -> ZN         Z -> TD" << endl;
+            }
+            else if (codebookChoice == 4) {
+                // PACIFIC - produces "DARN"
+                cout << "A -> XC         N -> TR" << endl;
+                cout << "B -> QZ         O -> HY" << endl;
+                cout << "C -> RT         P -> AC" << endl;
+                cout << "D -> PL         Q -> BX" << endl;
+                cout << "E -> MN         R -> LO" << endl;
+                cout << "F -> YK         S -> KP" << endl;
+                cout << "G -> VA         T -> ME" << endl;
+                cout << "H -> SJ         U -> NI" << endl;
+                cout << "I -> OB         V -> CJ" << endl;
+                cout << "J -> DW         W -> QA" << endl;
+                cout << "K -> FE         X -> EV" << endl;
+                cout << "L -> UG         Y -> RW" << endl;
+                cout << "M -> ZN         Z -> TD" << endl;
+                
+            }
+            
+            cout << "============================" << endl;
+            
+            typewrite("\nEncrypted Message: PL XC QA TR\n");
+            typewrite("Enter the decrypted word: ");
+            
+            string answer;
+            cin.ignore();
+            std::getline(std::cin, answer);
+            
+
+
+            if (codebookChoice == 1 && answer == lowerCase("dawn")) {
+                typewrite("\n*** CORRECT! ***\n");
+                typewrite("You've successfully identified the active cipher and decrypted the message!\n");
+                typewrite("The General's order is confirmed: Attack at DAWN.\n\n");
+                
+                if (attempts == 1) {
+                    player.add_score(15);
+                    typewrite("BONUS: Perfect intelligence work! +15 points\n");
+                } else if (attempts == 2) {
+                    player.add_score(10);
+                    typewrite("+10 points\n");
+                } else {
+                    player.add_score(5);
+                    typewrite("+5 points\n");
+                }
+                
+                success = true;
+            } 
+            else {
+                typewrite("\n*** INCORRECT ***\n");
+                
+                if (codebookChoice != 1) {
+                    typewrite("The decoded message '");
+                    typewrite(answer);
+                    typewrite("' doesn't match any known Allied communication patterns.\n");
+                    typewrite("This appears to be the wrong codebook!\n");
+                } else {
+                    typewrite("You selected the correct codebook but decoded the message incorrectly.\n");
+                    typewrite("Double-check your cipher mappings.\n");
+                }
+                
+                player.subtract_score(3);
+                
+                if (attempts < maxAttempts) {
+                    typewrite("\nAttempts remaining: ");
+                    cout << (maxAttempts - attempts) << endl;
+                    typewrite("The enemy is triangulating our position. Try again quickly!\n");
+                }
+            }
+        }
+        
+        if (!success) {
+            typewrite("\n=== MISSION FAILED ===\n");
+            typewrite("Too many failed attempts. Enemy has detected our transmission.\n");
+            typewrite("The correct codebook was: Operation Overlord\n");
+            typewrite("The decrypted message was: DAWN\n");
+            player.subtract_score(5);
+        }
+    }
+    if (level == 10) {
+        typewrite("Challenge: Error Hunt\n");
+        typewrite("It's 1930, and you're the chief proofreader at The Daily Tribune.\n");
+        typewrite("The typesetter has just delivered tonight's front page proof.\n");
+        typewrite("You have 10 minutes before the paper goes to print!\n\n");
+        
+        typewrite("=== FRONT PAGE PROOF ===\n");
+        typewrite("President Roosvelt announced the New Deel will create\n");
+        typewrite("thousands of jobs. Workers will bilud roads and dams\n");
+        typewrite("across the nation. The goverment promises hope for\n");
+        typewrite("struggling familys during these difficult times.\n");
+        typewrite("========================\n\n");
+        
+        typewrite("Your job: Find and fix all spelling errors before we print!\n\n");
+        
+        int errorAttempts = 0;
+        bool countCorrect = false;
+        
+        while (errorAttempts < 2 && !countCorrect) {
+            typewrite("How many spelling errors do you see? (Enter a number): ");
+            int errorCount;
+            cin >> errorCount;
+            
+            if (errorCount == 5) {
+                typewrite("\n✓ Correct! You spotted all 5 errors.\n");
+                typewrite("Your sharp eye catches every mistake.\n\n");
+                player.add_score(5);
+                countCorrect = true;
+            } else {
+                errorAttempts++;
+                if (errorAttempts < 2) {
+                    typewrite("\n✗ Not quite right. Look more carefully.\n");
+                    typewrite("The editor gives you one more chance.\n\n");
+                } else {
+                    typewrite("\n✗ The correct answer was 5 errors.\n");
+                    typewrite("The editor frowns. \"Your eye's not as sharp today.\"\n\n");
+                    player.subtract_score(3);
+                }
+            }
+        }
+        
+        typewrite("=== CORRECTION PHASE ===\n");
+        typewrite("Now fix each misspelled word. Type the CORRECT spelling.\n");
+        typewrite("(Spelling must be exact - capitals matter!)\n\n");
+        
+        vector<string> errors = {"Roosvelt", "Deel", "bilud", "goverment", "familys"};
+        vector<string> corrections = {"Roosevelt", "Deal", "build", "government", "families"};
+        int correctFixes = 0;
+        
+        for (int i = 0; i < 5; i++) {
+            typewrite("Misspelled word: '");
+            typewrite(errors.at(i));
+            typewrite("'\n");
+            typewrite("Correct spelling: ");
+            
+            string playerAnswer;
+            cin >> playerAnswer;
+            
+            if (playerAnswer == corrections.at(i)) {
+                typewrite("✓ Perfect! Correction accepted.\n\n");
+                correctFixes++;
+                player.add_score(2);
+            } else {
+                typewrite("✗ Incorrect. The right spelling is: ");
+                typewrite(corrections.at(i));
+                typewrite("\n");
+                typewrite("The error will remain in print.\n\n");
+            }
+        }
+        
+        typewrite("\n=========================\n");
+        typewrite("PROOFREADING COMPLETE\n");
+        typewrite("=========================\n");
+        typewrite("Errors corrected: ");
+        cout << correctFixes << " out of 5\n\n";
+        
+        if (correctFixes == 5) {
+            typewrite("EXCELLENT WORK!\n");
+            typewrite("Every error caught. The paper prints flawlessly.\n");
+            typewrite("Your editor promotes you to Senior Proofreader.\n");
+            player.add_score(5);
+        } else if (correctFixes >= 3) {
+            typewrite("GOOD JOB.\n");
+            typewrite("Most errors fixed, though a few slipped through.\n");
+            typewrite("The paper prints with minor imperfections.\n");
+        } else {
+            typewrite("NEEDS IMPROVEMENT.\n");
+            typewrite("Too many errors made it to print.\n");
+            typewrite("Readers will notice. The editor is not pleased.\n");
+            player.subtract_score(5);
+        }
+        
+        typewrite("\nIn the 1930s, there was no spell-check, no backspace.\n");
+        typewrite("Just careful eyes and steady hands.\n");
+        typewrite("Every word mattered.\n");
+        
+        typewrite(".....................\n");
+    }
+    
 }
