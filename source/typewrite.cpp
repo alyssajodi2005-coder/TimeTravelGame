@@ -18,8 +18,6 @@ void clearScreen() {
 }
 void Continue() {
     cout << "Press Enter to continue...";
-    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-    cin.clear();
     cin.get();
     //https://stackoverflow.com/questions/903221/press-enter-to-continue
 }

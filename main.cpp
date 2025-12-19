@@ -22,8 +22,6 @@ void ShowIntro() {
     cout << "4. Choices affect your final score." << endl;
     //finish explain points, money, food, etc
 
-    //prompt user to begin game
-    Continue();
 }
 
 
@@ -39,6 +37,7 @@ int main() {
     
     
     //game welcome message
+    clearScreen();
     cout << "-------------------------------------" << endl;
     typewrite("        Welcome to *GameName*        \n");
     cout << "-------------------------------------" << endl;
@@ -48,28 +47,24 @@ int main() {
     cout << "Enter username: ";
     getline(cin, userName);
     ShowIntro();
-    typewrite(".....................\n"); //loading effect
+    Continue();
+    clearScreen();
 
     Player userCharacter(userName); // create player object initailize player
     TimeMachine timeMachine; // create time machine object initialize time machine
     Decades currentdecade(level); // create decades object inital decade
 
 
-    //Lv.1 Decade:2020s
+
     const int max_level = 12;
     while (currentdecade.GetLevel() <= max_level) {
-        clearScreen();
         timeMachine.TimeTravel(); // Time travel effect, check machine energy
-        clearScreen();
         userCharacter.GetInfo(); // show player info
         userCharacter.print_inventory(); // show starting inventory
         currentdecade.showDecadeIntro(userCharacter); // show decade intro
-        Continue();
-        clearScreen();
         currentdecade.challenge(userCharacter); // decade challenge
-        Continue();
-        clearScreen();
         currentdecade.minigame(userCharacter); // decade minigame
+        cin.ignore();
         Continue();
         clearScreen();
         if (currentdecade.GetLevel() < max_level){

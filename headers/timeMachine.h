@@ -8,13 +8,9 @@ using namespace std;
 class Player;
 
 class TimeMachine {
-    private:
-        int machine_energy_level; // Energy level percentage
-
+        
     public:
-        TimeMachine();
         void TimeTravel();
-        void Recharge(int amount);
 };
 
 #endif // TIMEMACHINE_H

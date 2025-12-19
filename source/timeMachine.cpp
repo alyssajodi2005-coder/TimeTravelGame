@@ -1,32 +1,117 @@
 #include <iostream>
 #include "../headers/timeMachine.h"
 #include <vector>
+#include <thread>
+#include <chrono>
 using namespace std;
 #include "../headers/typewrite.h"
 #include "../headers/player.h"
 
 
-TimeMachine::TimeMachine() {
-    machine_energy_level = 100; // Initialize energy level to 100%
-}
 
 void TimeMachine::TimeTravel() {
-    if (machine_energy_level >= 10) {
-        cout << "    TIME WARP INITIATED" << endl;
-        cout << "============================" << endl;
-        cout << "    > > >   > > >" << endl;
-        cout << "    < < <   < < <" << endl;
-        cout << "============================" << endl;
-        machine_energy_level -= 10; // Decrease energy level after travel
-    } else {
-        typewrite("Not enough energy to travel!\n");
-        // Handle insufficient energy scenario
-    }
-}
-void TimeMachine::Recharge(int amount) {
-    machine_energy_level += amount;
-    if (machine_energy_level > 100) {
-        machine_energy_level = 100; // Cap energy level at 100%
-    }
-    typewrite("Time Machine recharged. Current energy level: " + to_string(machine_energy_level) + "%\n");
-}
+        //frame 1
+        cout << " _____________" << endl;
+        cout << " | ,.-----., |" << endl;
+        cout << " |/         \\|" << endl;
+        cout << " |\\:::::::::/|" << endl;
+        cout << " | \\:::::::/ |" << endl;
+        cout << " |  \\:::::/  |" << endl;
+        cout << " |   \\:::/   |" << endl;
+        cout << " |    ):(    |" << endl;
+        cout << " |   /   \\   |" << endl;
+        cout << " |  /     \\  |" << endl;
+        cout << " | /       \\ |" << endl;
+        cout << " |/         \\|" << endl;
+        cout << " |\\         /|" << endl;
+        cout << " |  --___--  |" << endl;
+        cout << " |___________|" << endl;
+         
+        usleep(1500000); //1.5 second delay
+        clearScreen();
+
+        //frame 2
+        cout << " _____________" << endl;
+        cout << " | ,.-----., |" << endl;
+        cout << " |/         \\|" << endl;
+        cout << " |\\:.     .:/|" << endl;
+        cout << " | \\:::::::/ |" << endl;
+        cout << " |  \\:::::/  |" << endl;
+        cout << " |   \\:::/   |" << endl;
+        cout << " |    ):(    |" << endl;
+        cout << " |   / : \\   |" << endl;
+        cout << " |  /  :  \\  |" << endl;
+        cout << " | /   :   \\ |" << endl;
+        cout << " |/    :    \\|" << endl;
+        cout << " |\\  ..:..  /|" << endl;
+        cout << " |  --___--  |" << endl;
+        cout << " |___________|" << endl;
+
+        usleep(1500000); //1.5 second delay
+        clearScreen();
+
+        //frame 3
+        cout << " _____________" << endl;
+        cout << " | ,.-----., |" << endl;
+        cout << " |/         \\|" << endl;
+        cout << " |\\         /|" << endl;
+        cout << " | \\:.   .:/ |" << endl;
+        cout << " |  \\:::::/  |" << endl;
+        cout << " |   \\:::/   |" << endl;
+        cout << " |    ):(    |" << endl;
+        cout << " |   / : \\   |" << endl;
+        cout << " |  /  :  \\  |" << endl;
+        cout << " | /   :   \\ |" << endl;
+        cout << " |/   .:.   \\|" << endl;
+        cout << " |\\.:::::::./|" << endl;
+        cout << " |  --___--  |" << endl;
+        cout << " |___________|" << endl;
+
+        usleep(1500000); //1.5 second delay
+        clearScreen();
+
+        //frame 4
+        cout << " _____________" << endl;
+        cout << " | ,.-----., |" << endl;
+        cout << " |/         \\|" << endl;
+        cout << " |\\         /|" << endl;
+        cout << " | \\       / |" << endl;
+        cout << " |  \\:. .:/  |" << endl;
+        cout << " |   \\:::/   |" << endl;
+        cout << " |    ):(    |" << endl;
+        cout << " |   / : \\   |" << endl;
+        cout << " |  /  :  \\  |" << endl;
+        cout << " | /  .:.  \\ |" << endl;
+        cout << " |/.:::::::.\\|" << endl;
+        cout << " |\\:::::::::/|" << endl;
+        cout << " |  --___--  |" << endl;
+        cout << " |___________|" << endl;
+
+        usleep(1500000); //1.5 second delay
+        clearScreen();
+
+        //frame 5
+        cout << " _____________" << endl;
+        cout << " | ,.-----., |" << endl;
+        cout << " |/         \\|" << endl;
+        cout << " |\\         /|" << endl;
+        cout << " | \\       / |" << endl;
+        cout << " |  \\     /  |" << endl;
+        cout << " |   \\   /   |" << endl;
+        cout << " |    ) (    |" << endl;
+        cout << " |   /   \\   |" << endl;
+        cout << " |  /..:..\\  |" << endl;
+        cout << " | /:::::::\\ |" << endl;
+        cout << " |/:::::::::\\|" << endl;
+        cout << " |\\:::::::::/|" << endl;
+        cout << " |  --___--  |" << endl;
+        cout << " |___________|" << endl;
+
+        usleep(1500000); //1.5 second delay
+        clearScreen();
+
+
+    };
+
+
+
