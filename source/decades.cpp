@@ -39,7 +39,8 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("Your phone buzzes nonstop. Online opinions spread faster than facts, and everyone seems connected yet distant.\n");
         typewrite("Students rush past you on Campus with headphones in, glued to screens.\n");
         typewrite("Every choice you make can spread fast and its impact may reach further than you expect.\n");
-        typewrite("Navigate carefully, and see how your decisions ripple through time.\n");
+        typewrite("You make your way to the campus library to work on your research paper.\n");
+        cout << endl;
     }
 
 
@@ -51,20 +52,21 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
         typewrite("You head up to a conference floor. The floor is packed with people, loud chatter fills the room,\n");
         typewrite("whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
-        typewrite("Social media platforms like Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
+        typewrite("New app Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
         typewrite("A group of young programmers storm out of a meeting, clearly frustrated, one even crying.\n");
         typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"You're up, time to pitch!\"\n");
+        cout << endl;
     }
     if (level == 3) {
         typewrite("📱DECADE 2000's --> Y2K\n");
         typewrite("Date: August 15, 2003 || Time: 12:30 PM || Location: Brooklyn, NY\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
-        typewrite("The summer streets of New York City are lively as usual, \n");
+        typewrite("The summer streets of New York City are lively and loud as usual. \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
-        typewrite("The rise of social media platforms like YouTube and Facebook and gadgets like the iPod are transforming the way people connect.\n");
+        typewrite("There is a rise of social media platforms like YouTube and Facebook and gadgets like the iPod.\n");
         typewrite("The decade is also refered to as the Y2K era, the name comes from the computer crisis that occurred in the year 2000,\n");
         typewrite("when computer systems misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
-        //challenge : Create a Playlist
+        cout << endl;
     }
     if (level == 4) {
         typewrite("💿DECADE 1990's --> For the Record\n");
@@ -76,7 +78,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("Record stores are starting to face a decline in sales due to the rise of CDs replacing vinyls.\n");
         typewrite("CD's were more portable and provided a superior sound quality compared to vinyl records.\n");
         typewrite("Inside the store, shelves are packed, but the customers are few.\n");
-        //Challenge: Sell Records
+        cout << endl;
     }
     if (level == 5) {
         typewrite("🎯DECADE 1980's --> Arcade Antics\n");
@@ -87,9 +89,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("You walk into a busy arcade, chatter fills the air.\n");
         typewrite("The sound of coins and buttons creates an energetic atmosphere.\n");
         typewrite("Kids and teens are concentrated in games like Donkey Kong, and Space Invaders.\n");
-        // Challenge: Arcade Games
-
-       
+        cout << endl;
     }
     if (level == 6) {
         typewrite("✌🏾DECADE 1970's --> The Airwaves");
@@ -100,7 +100,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("This is the time of expression where music and art used to convey messages and emotions.\n");
         typewrite("In a world without digital platforms, expression travels through sound, movement, and community.\n");
         typewrite("Personal radios are all over shaping culture, influencing opinions, and bringing communities together.\n");
-        
+        cout << endl;
     }
     if (level == 7) {
         typewrite("🏛DECADE 1960's --> Revolution ");
@@ -111,7 +111,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("As a newspaper journalist, your role is to report on these significant events that shape history.\n");
         typewrite("The attitude and opinions of Journalists greatly impacting public opinion causing media influence.\n");
         typewrite("Also during this time, the ARPANET, the predecessor to the modern internet, was being developed.\n"); // source for ARPANET INFO: https://www.techtarget.com/searchnetworking/definition/ARPANET
-        // Add decade introduction narrative here
+        cout << endl;
     }
     if (level == 8) {
         typewrite("📺DECADE 1950's --> Television Takes Over ");
@@ -121,7 +121,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("cultural shifts, and the rise of television the dominant source of entertainment.\n");
         typewrite("Families gather around their TV sets to watch popular shows like I Love Lucy and The Ed Sullivan Show.\n");
         typewrite("Television starts to shape public opinion, influencing households across America.\n");
-        // Add decade introduction narrative here
+        cout << endl;
     }
     if (level == 9) {
         typewrite("📻DECADE 1940's --> War and Radio ");
@@ -133,28 +133,27 @@ void Decades::showDecadeIntro(Player &player) {
         //source https://historyrise.com/the-radio-in-wwii-propaganda-how-airwaves-won-minds/?utm_source=copilot.com#the-radio-in-wwii-propaganda-how-airwaves-shaped-public-opinion-influenced-minds-and-changed-warfare-forever
         typewrite("Radios were heavly used in war tactics for communitation, messages were often encoded and decoded using ");
         typewrite("devices like the Enigma machine to prevent enemy interception.\n");
-        // Add decade introduction narrative here
+        cout << endl;
     }
     if (level == 10) {
         typewrite("💰DECADE 1930's --> Trying Times ");
-        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("Date: March 30, 1935 || Time: 10:00 AM || Location: Memphis, TN \n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("The 1930s are quiet and challenging times, marked by the Great Depression.\n");
         typewrite("People rely on radio broadcasts for news, entertainment, and escapism from the harsh realities of daily life.\n");
         typewrite("News papers captivate audiences, providing a temporary relief from economic hardships.\n");
         typewrite("In a time with little certainty about the future, media provides reassurance.\n");
-
-        // Add decade introduction narrative here
+        cout << endl;
     }
     if (level == 11) {
         typewrite("🎷DECADE 1920's --> Roaring Twenties ");
-        typewrite("Date:  || Time:  || Location: \n");
+        typewrite("Date: May 6, 1928 || Time: 9:43 PM  || Location: Manhattan, NY \n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("The 1920s, often referred to as the Roaring Twenties, is a decade of economic prosperity and a vibrant culture.\n");
         typewrite("Jazz music, flapper style, and speakeasies define the social scene.\n");
         typewrite("People are connected like never before entertainment travels fast and trends easily spread.\n");
         typewrite("People enjoy speakeasies, often hidden places of music and rebellion.\n");
-        // Add decade introduction narrative here
+        cout << endl;
     }
     if (level == 12) {
         typewrite("📚DECADE 2020's --> Back to the Future ");
@@ -164,8 +163,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("Your journey through time highlights the impact all the different forms technology has had on daily life.\n");
         cout << "\n--- SOURCES & ARTIFACTS COLLECTED ---\n";
         player.print_inventory();
-        //Winning level
-        // Add decade introduction narrative here
+        cout << endl;
     }
 
 }
@@ -187,60 +185,56 @@ void Decades::challenge(Player &player) {
         cout << "A) Share the post without verifying its accuracy." << endl;
         cout << "B) Research the information before sharing it." << endl;
         cout << "C) Ignore the post entirely." << endl;
-    while (true) {
-        std::cin >> multiple_choice;
-            if (multiple_choice == 'A' || multiple_choice == 'a') {
-                typewrite("You shared unverified information, adding to the spread of misinformation negatively impacting your social reputation.\n");
-                player.subtract_score(10);
-                break;
-            } else if (multiple_choice == 'B' || multiple_choice == 'b') {
-                typewrite("You took the time to research and verify the information before sharing it, your repost was well received. \n");
-                player.add_score(10);
-                break;
-            } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-                typewrite("By ignoring the post, you avoided contributing to misinformation.\n");
-                typewrite("However, this was a missed opportunity to educate yourself and others on social media credibility and the global issue.\n");
-                player.add_score(5);
-                break;
-            } else {
-                typewrite("Invalid choice. Please select A, B, or C.\n");
-            } 
-    }
-    cout << endl;
-    typewrite("You make your way to the library. While in the library, you intend to be as productive as possible.\n");
-    cout << "Enter the name of an app that helps you with school productivity: ";
-    std::cin.ignore(); // helps to clear the newline character 
-    std::getline(std::cin, user_input);
-    cout << "You get started on studying using " << user_input << " to lock in." << endl;
-    cout << "To avoid doomscrolling you choose to: " << endl;
-    cout << "A) Turn off your cellphone.\n";
-    cout << "B) Time block your study seesion with small breaks for social media.\n";
-    cout << "C) Keep your phone on silent but within reach.\n";
-    cin.ignore();
-    while (true) {
-        std::cin >> multiple_choice;
-            if (multiple_choice == 'A' || multiple_choice == 'a') {
-                typewrite("Turning off your cellphone helped you stay focused and avoid distractions.\n");
-                player.add_score(10);
-                break;
-            } else if (multiple_choice == 'B' || multiple_choice == 'b') {
-                typewrite("Setting specific time blocks for breaks allowed a good balance of productivity and relaxation without doomscrolling.\n");
-                player.add_score(5);
-                break;
-            } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-                typewrite("Keeping your phone within reach made it tempting to check it frequently, leading to distractions and doomscrolling.\n");
-                player.subtract_score(5);
-                break;
-            } else {
-                typewrite("Invalid choice. Please select A, B, or C.\n");
-            }   
-    }
-    cout << endl;
-    typewrite("You continue working on your paper...\n");
-    player.add_to_inventory("Cellphone");
-    typewrite("You obtained: Cellphone\n");
-    typewrite(".....................\n"); //loading effect
-
+        while (true) {
+            std::cin >> multiple_choice;
+                if (multiple_choice == 'A' || multiple_choice == 'a') {
+                    typewrite("You shared unverified information, adding to the spread of misinformation negatively impacting your social reputation.\n");
+                    player.subtract_score(10);
+                    break;
+                } else if (multiple_choice == 'B' || multiple_choice == 'b') {
+                    typewrite("You took the time to research and verify the information before sharing it, your repost was well received. \n");
+                    player.add_score(10);
+                    break;
+                } else if (multiple_choice == 'C' || multiple_choice == 'c') {
+                    typewrite("By ignoring the post, you avoided contributing to misinformation.\n");
+                    typewrite("However, this was a missed opportunity to educate yourself and others on social media credibility and the global issue.\n");
+                    player.add_score(5);
+                    break;
+                } else {
+                    typewrite("Invalid choice. Please select A, B, or C.\n");
+                } 
+        }
+        cout << endl;
+        cin.ignore();
+        cout << "Enter the name of an app or website that helps you with school productivity: ";
+        std::getline(std::cin, user_input);
+        typewrite("You get started on your assignment using " + user_input + " to lock in.\n");
+        cout << "To avoid doomscrolling you choose to: " << endl;
+        cout << "A) Turn off your cellphone.\n";
+        cout << "B) Time block your study seesion with small breaks for social media.\n";
+        cout << "C) Keep your phone on silent but within reach.\n";
+        while (true) {
+            std::cin >> multiple_choice;
+                if (multiple_choice == 'A' || multiple_choice == 'a') {
+                    typewrite("Turning off your cellphone helped you stay focused and avoid distractions.\n");
+                    player.add_score(10);
+                    break;
+                } else if (multiple_choice == 'B' || multiple_choice == 'b') {
+                    typewrite("Setting specific time blocks for breaks allowed a good balance of productivity and relaxation without doomscrolling.\n");
+                    player.add_score(5);
+                    break;
+                } else if (multiple_choice == 'C' || multiple_choice == 'c') {
+                    typewrite("Keeping your phone within reach made it tempting to check it frequently, leading to distractions and doomscrolling.\n");
+                    player.subtract_score(5);
+                    break;
+                } else {
+                    typewrite("Invalid choice. Please select A, B, or C.\n");
+                }   
+        }
+        cout << endl;
+        player.add_to_inventory("Cellphone");
+        typewrite("You obtained: Cellphone\n");
+        cout << endl;
     }
     if (level == 2) {
         string lv2inp1;
@@ -305,9 +299,13 @@ void Decades::challenge(Player &player) {
             }
         }
         
-        
+        cout << endl;
         player.add_to_inventory("Tech Company Business Card");
-        typewrite(".....................\n"); //loading effect
+        typewrite("You obtained: Tech Company Business Card\n");
+        if(multiple_choice == 'B' || multiple_choice == 'b' && funding < 10000) {
+            typewrite("You obtained: Contract\n");
+        }
+        cout << endl;
     }
     if (level == 3) {
         vector<string> playlist;
@@ -315,19 +313,19 @@ void Decades::challenge(Player &player) {
         cout << "Your playlist will be based on: " << endl;
         cout << "A) Genre" << endl;
         cout << "B) Artist" << endl;
+        string genre;
+        string artist;
         while (true) {
             std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("You decide to create a playlist based on a specific genre, capturing the essence of the 2000s music scene.\n");
                 cout << "What genre of music would you like to make your playlist? (e.g., Pop, Rock, Hip-Hop): ";
-                string genre;
                 std::cin.ignore();
                 std::getline(std::cin, genre);
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
                 typewrite("You choose to create a playlist centered around a particular artist, showcasing their hits from the 2000s.\n");
                 cout << "Which artist would you like to focus your playlist on? (e.g., Britney Spears, Eminem, Beyonce): ";
-                string artist;
                 std::cin.ignore();
                 std::getline(std::cin, artist);
                 break;
@@ -340,19 +338,23 @@ void Decades::challenge(Player &player) {
         std::cin >> num_songs;
         while (true) {
             if (num_songs >=1 && num_songs <= 20) {
-                typewrite("Great! Let's start adding songs to your playlist.\n");
+                if (multiple_choice == 'A' || multiple_choice == 'a') {
+                    typewrite("Great! Let's add songs to your " + genre + " playlist.\n");
+                } else {
+                    typewrite("Great! Let's add songs to your " + artist + " playlist.\n");
+                }
                 break;  
             } else {
                 typewrite("Invalid number of songs. Please enter a number between 1 and 20.\n");
-                return;
+                cin >> num_songs;
             }
-            for (int i = 0; i < num_songs; i++) {
-                string song;
-                cout << "Enter the name of song " << (i + 1) << ": ";
-                std::cin.ignore();
-                std::getline(std::cin, song);
-                playlist.push_back(song);
-            }
+        }
+        std::cin.ignore();
+        for (int i = 0; i < num_songs; i++) {
+            string song;
+            cout << "Enter the name of song " << (i + 1) << ": ";
+            std::getline(std::cin, song);
+            playlist.push_back(song);
         }
         typewrite("You have created a playlist with the following songs:\n");
         for (int i = 0; i < playlist.size(); i++) {
@@ -363,8 +365,11 @@ void Decades::challenge(Player &player) {
         } else {
             player.add_score(5);
         }
+
+        cout << endl;
         player.add_to_inventory("iPod");
-        typewrite(".....................\n"); //loading effect
+        typewrite("You obtained: iPod\n");
+        cout << endl;
     }
     if (level == 4) {
         typewrite("Challenge : Sell Records\n");
@@ -415,8 +420,10 @@ void Decades::challenge(Player &player) {
                 typewrite("Invalid choice. You decide to leave the records as they are for now.\n");
             }
         }
+        cout << endl;
         player.add_to_inventory("Vinyl Record");
-        typewrite(".....................\n"); //loading effect
+        typewrite("You obtained: Vinyl Record\n");
+        cout << endl;
     }
     if (level == 5) {
         typewrite("Challenge: Arcade Games\n");
@@ -439,7 +446,7 @@ void Decades::challenge(Player &player) {
                 cout << "|================================================|" << endl;
                 cout << "|    .-.   .-.     .--.                          |" << endl;
                 cout << "|   | OO| | OO|   / _.-' .-.   .-.  .-.   .''.   |" << endl;
-                cout << "|   |   | |   |   \\  '-. '-'   '-'  '-'   '..'  |" << endl;
+                cout << "|   |   | |   |   \\  '-. '-'   '-'  '-'   '..'   |" << endl;
                 cout << "|   '^^^' '^^^'    '--'                          |" << endl;
                 cout << "|================================================|" << endl;
                 typewrite("You play Pac-Man and win 60 tickets!\n");
@@ -465,7 +472,7 @@ void Decades::challenge(Player &player) {
                 cout << "    (`\"`  \"  `\"`)" << endl;
                 cout << "     \\         /" << endl;
                 cout << "      \\  ___  /" << endl;
-                cout << "    '.___.'" << endl;
+                cout << "       '.___.'" << endl;
                 typewrite("You play Defender and win 40 tickets!\n");
                 tickets += 40;
                 quarters -= 2;
@@ -500,23 +507,48 @@ void Decades::challenge(Player &player) {
             }
         }
         typewrite("You have used all your quarters and earned a total of " + to_string(tickets) + " tickets!\n");
+        string prize;
         if (tickets >= 100) {
             typewrite("Congratulations! You have enough tickets to redeem a big prize!\n");
             player.add_score(10);
             player.add_to_inventory("Arcade Prize"); 
+            typewrite("Choose a prize to redeem!\n");
+            cout << "A) RC Car\n";
+            cout << "B) Action Figure\n";
+            cout << "C) Headphones\n";
+            char prize_choice;
+            while (true) {
+                std::cin >> prize_choice;
+                if (prize_choice == 'A' || prize_choice == 'a') {
+                    prize = "RC Car";
+                    break;
+                } else if (prize_choice == 'B' || prize_choice == 'b') {
+                    prize = "Action Figure";
+                    break;
+                } else if (prize_choice == 'C' || prize_choice == 'c') {
+                    prize = "Headphones";
+                    break;
+                }
+            }
         } else {
             typewrite("You didn't earn enough tickets for a big prize, but you had fun at the arcade!\n");
             player.add_score(5);
         } 
         typewrite("As you leave the arcade, you turn your walkman on and walk home\n");
+
         player.add_to_inventory("Walkman"); 
-        typewrite(".....................\n"); //loading effect
+        cout << endl;
+        typewrite("You obtained: Walkman\n");
+        if (tickets >= 100) {
+            typewrite("You obtained: " + prize + "\n");
+        }
+        cout << endl;
     }
     if (level == 6) {
         typewrite("Challenge: The Power of the Airwaves\n");
-        typewrite("You work at a local radio station in New Orleans during the vibrant 1970s.\n");
+        typewrite("You are a new program director at a local radio station in New Orleans.\n");
         typewrite("The station is known for playing hits and highlighting national news.\n");
-        typewrite("You are a new program director, and your goal is to make decisions that will positively impact the community and boost the station's popularity.\n");
+        typewrite("Your goal is to make decisions that will positively impact the community and boost the station's popularity.\n");
 
         cout << "What change would you put on air?\n";
         cout << "A) Play local musicians and community voices\n";
@@ -528,14 +560,18 @@ void Decades::challenge(Player &player) {
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("Your decision to highlight local talent and voices connecting deeply with the community.\n");
                 player.add_score(10);
+                break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
                 typewrite("While playing national hits attracts some listeners, it fails to create a unique identity for the station.\n");
                 player.subtract_score(5); 
+                break;
             } else if (multiple_choice == 'C' || multiple_choice == 'c') {
                 typewrite("Allowing listeners to call in creates an engaging and interactive experience, building a loyal audience.\n");
                 player.add_score(5);
+                break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
+                cin >> multiple_choice;
             }
         }
         typewrite("Just before the show ends, breaking news comes in not yet verified.\n");
@@ -934,7 +970,7 @@ void Decades::minigame(Player &player) {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }   
         }
-        typewrite(".....................\n");
+        cout << endl;
     }
     if (level == 2) {
         typewrite("Minigame: Tech Timeline Quiz\n");
@@ -960,7 +996,7 @@ void Decades::minigame(Player &player) {
                 ;
             }
         }
-        typewrite(".....................\n");
+        cout << endl;
     }
     if (level == 3)  {
         typewrite("Minigame: 2000s Song guessing Game\n");
@@ -974,7 +1010,7 @@ void Decades::minigame(Player &player) {
         typewrite(" - Correct on third try (clue 2): 5 points\n");
         typewrite(" - Correct on fourth try (clue 3): 3 points\n");
         typewrite(" - Incorrect after all clues: -5 points\n");
-        typewrite(".....................\n");
+        cout << endl;
         struct Song {
             string title;
             string artist;
@@ -1027,16 +1063,13 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Incorrect guess.\n");
-                if (i < clues.size() - 1) {
-                    typewrite("Here's another clue:\n");
-                }
             }
         }
         if (!guessed_correctly) {
             typewrite("Sorry, you've used all your clues. The correct answer was \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
             player.subtract_score(5);
         }
-        typewrite(".....................\n");
+        cout << endl;
     }
     if (level == 4){
         typewrite("Minigame: 90s Mix Tapes\n");
@@ -1132,7 +1165,8 @@ void Decades::minigame(Player &player) {
             typewrite("You did not create a mix with the correct genre and exceeded the time limit.\n");
             player.subtract_score(10);
         }
-        typewrite(".....................\n");
+        cin.ignore();
+        cout << endl;
     }
     if (level == 5) {
         typewrite("Minigame: Arcade Trivia\n");
@@ -1152,6 +1186,7 @@ void Decades::minigame(Player &player) {
                 break;
             }
         }
+        cout << endl;
     }
     if (level == 6) {
         typewrite("Minigame: Word Scramble - 70s Edition\n");

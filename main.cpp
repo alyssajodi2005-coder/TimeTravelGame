@@ -43,9 +43,11 @@ int main() {
     cout << "-------------------------------------" << endl;
     typewrite("     Make choices, solve puzzles     \n");
     typewrite("          and explore decades        \n");
-
+    cout << "-------------------------------------" << endl;
+    cout << endl;
     cout << "Enter username: ";
     getline(cin, userName);
+    cout << endl;
     ShowIntro();
     Continue();
     clearScreen();
