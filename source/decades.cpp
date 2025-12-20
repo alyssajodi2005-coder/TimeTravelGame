@@ -216,6 +216,7 @@ void Decades::challenge(Player &player) {
     cout << "A) Turn off your cellphone.\n";
     cout << "B) Time block your study seesion with small breaks for social media.\n";
     cout << "C) Keep your phone on silent but within reach.\n";
+    cin.ignore();
     while (true) {
         std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
@@ -933,6 +934,7 @@ void Decades::minigame(Player &player) {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }   
         }
+        typewrite(".....................\n");
     }
     if (level == 2) {
         typewrite("Minigame: Tech Timeline Quiz\n");
@@ -941,7 +943,9 @@ void Decades::minigame(Player &player) {
         cout << "B) 2007" << endl;
         cout << "C) 2009" << endl;
         char answer;
+        
         while(true) {
+            cin.ignore(1000, '\n');
             std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
@@ -953,13 +957,24 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
+                ;
             }
         }
+        typewrite(".....................\n");
     }
     if (level == 3)  {
         typewrite("Minigame: 2000s Song guessing Game\n");
         /* Example structure for songs. I learned how to use struct form when i searched
         up " c++ simpler way to group data together other than a class" and i found out about structs*/
+        typewrite("Guess the song title based on the lyric snippet and clues provided.\n");
+        typewrite("You have 4 chances to guess the correct song title.\n");
+        typewrite("The point system is as follows:\n");
+        typewrite(" - Correct on first try (lyric snippet): 20 points\n");
+        typewrite(" - Correct on second try (clue 1): 10 points\n");
+        typewrite(" - Correct on third try (clue 2): 5 points\n");
+        typewrite(" - Correct on fourth try (clue 3): 3 points\n");
+        typewrite(" - Incorrect after all clues: -5 points\n");
+        typewrite(".....................\n");
         struct Song {
             string title;
             string artist;
@@ -1021,6 +1036,7 @@ void Decades::minigame(Player &player) {
             typewrite("Sorry, you've used all your clues. The correct answer was \"" + selected_song.title + "\" by " + selected_song.artist + ".\n");
             player.subtract_score(5);
         }
+        typewrite(".....................\n");
     }
     if (level == 4){
         typewrite("Minigame: 90s Mix Tapes\n");
@@ -1048,7 +1064,7 @@ void Decades::minigame(Player &player) {
             {"Waterfalls", "TLC", "R&B", 4},
             {"Livin' on a Prayer", "Bon Jovi", "Rock", 5},
             {"Gangsta's Paradise", "Coolio", "Hip-Hop", 5},
-            {"California Love", "2Pac", "Hip-Hop", 6},
+            {"Juicy", "Notorious B.I.G.", "Hip-Hop", 5},
             {"Vogue", "Madonna", "Pop", 5},
             {"Don't Speak", "No Doubt", "Rock", 4},
             {"Smells like teen spirit", "Nirvana", "Rock", 5},
@@ -1116,6 +1132,7 @@ void Decades::minigame(Player &player) {
             typewrite("You did not create a mix with the correct genre and exceeded the time limit.\n");
             player.subtract_score(10);
         }
+        typewrite(".....................\n");
     }
     if (level == 5) {
         typewrite("Minigame: Arcade Trivia\n");
@@ -1182,6 +1199,7 @@ void Decades::minigame(Player &player) {
         else {
             typewrite("Sorry you did not unscramble the word correctly. The correct word was " + words.at(random_index) + "\n");
         } 
+        typewrite(".....................\n");
     }
     if (level == 7) {
         typewrite("Minigame: 1960s Fact Checking quiz\n");
@@ -1267,6 +1285,7 @@ void Decades::minigame(Player &player) {
         else {
             typewrite("Unfortunately, you got more questions wrong than correct.\n");
         }
+        typewrite(".....................\n");
 
           
     }
@@ -1330,6 +1349,8 @@ void Decades::minigame(Player &player) {
             } else {
                 typewrite("Incorrect. The correct time was " + correctTimes.at(i) + ".\n");
             }
+
+            typewrite(".....................\n");
         }
     }
     if (level == 9) {
@@ -1518,6 +1539,7 @@ void Decades::minigame(Player &player) {
             typewrite("The decrypted message was: DAWN\n");
             player.subtract_score(5);
         }
+        typewrite(".....................\n");
     }
     if (level == 10) {
         typewrite("Challenge: Error Hunt\n");
@@ -1617,5 +1639,38 @@ void Decades::minigame(Player &player) {
         
         typewrite(".....................\n");
     }
-    
+    if (level == 11) {
+        typewrite("Minigame: 1920s Jazz Lyrics Challenge\n");
+        cout << "You will be given a series of lyrics from popular jazz songs of the 1920s." << endl;
+        cout << "Your task is to identify the song title based on the lyrics provided." << endl;
+        cout << "For each correct answer, you will earn points!" << endl;
+        cout << "Let's get started!\n" << endl;
+        struct JazzSong {
+            string title;
+            string lyric_snippet;
+        };
+        vector<JazzSong> jazzSongs = {
+            {"Ain't Misbehavin'", "I don't stay out late, don't care to go"},
+            {"Charleston", "Everybody's doing the Charleston"},
+            {"Stardust", "And now the purple dusk of twilight time"},
+            {"Black Bottom", "Do the Black Bottom, do the Black Bottom"},
+            {"Sweet Georgia Brown", "Sweet Georgia Brown, you're the queen of my heart"}
+        };
+        int scorePerCorrect = 5;
+        for (size_t i = 0; i < jazzSongs.size(); i++) {
+            typewrite("Lyric Snippet: \"" + jazzSongs.at(i).lyric_snippet + "\"\n");
+            typewrite("Your guess for the song title: ");
+            string userGuess;
+            std::getline(std::cin, userGuess);
+            if (lowerCase(userGuess) == lowerCase(jazzSongs.at(i).title)) {
+                typewrite("Correct! The song is \"" + jazzSongs.at(i).title + "\".\n");
+                player.add_score(scorePerCorrect);
+            } else {
+                typewrite("Incorrect. The correct answer was \"" + jazzSongs.at(i).title + "\".\n");
+            }
+        }
+        typewrite("\nMinigame Complete!\n");
+
+        typewrite(".....................\n");
+    }
 }
