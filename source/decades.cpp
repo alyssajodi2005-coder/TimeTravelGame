@@ -216,6 +216,7 @@ void Decades::challenge(Player &player) {
     cout << "A) Turn off your cellphone.\n";
     cout << "B) Time block your study seesion with small breaks for social media.\n";
     cout << "C) Keep your phone on silent but within reach.\n";
+    cin.ignore();
     while (true) {
         std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
@@ -942,6 +943,7 @@ void Decades::minigame(Player &player) {
         cout << "B) 2007" << endl;
         cout << "C) 2009" << endl;
         char answer;
+        cin.ignore();
         while(true) {
             std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
@@ -962,6 +964,16 @@ void Decades::minigame(Player &player) {
         typewrite("Minigame: 2000s Song guessing Game\n");
         /* Example structure for songs. I learned how to use struct form when i searched
         up " c++ simpler way to group data together other than a class" and i found out about structs*/
+        typewrite("Guess the song title based on the lyric snippet and clues provided.\n");
+        typewrite("You have 4 chances to guess the correct song title.\n");
+        typewrite("The point system is as follows:\n");
+        typewrite(" - Correct on first try (lyric snippet): 20 points\n");
+        typewrite(" - Correct on second try (clue 1): 10 points\n");
+        typewrite(" - Correct on third try (clue 2): 5 points\n");
+        typewrite(" - Correct on fourth try (clue 3): 3 points\n");
+        typewrite(" - Incorrect after all clues: -5 points\n");
+        cout << endl;
+        typewrite(".....................\n");
         struct Song {
             string title;
             string artist;
