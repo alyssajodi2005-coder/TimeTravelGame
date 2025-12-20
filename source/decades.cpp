@@ -943,8 +943,9 @@ void Decades::minigame(Player &player) {
         cout << "B) 2007" << endl;
         cout << "C) 2009" << endl;
         char answer;
-        cin.ignore();
+        
         while(true) {
+            cin.ignore(1000, '\n');
             std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
@@ -956,6 +957,7 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
+                ;
             }
         }
         typewrite(".....................\n");
