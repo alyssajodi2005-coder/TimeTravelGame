@@ -974,7 +974,6 @@ void Decades::minigame(Player &player) {
         typewrite(" - Correct on third try (clue 2): 5 points\n");
         typewrite(" - Correct on fourth try (clue 3): 3 points\n");
         typewrite(" - Incorrect after all clues: -5 points\n");
-        cout << endl;
         typewrite(".....................\n");
         struct Song {
             string title;
@@ -1065,7 +1064,7 @@ void Decades::minigame(Player &player) {
             {"Waterfalls", "TLC", "R&B", 4},
             {"Livin' on a Prayer", "Bon Jovi", "Rock", 5},
             {"Gangsta's Paradise", "Coolio", "Hip-Hop", 5},
-            {"California Love", "2Pac", "Hip-Hop", 6},
+            {"Juicy", "Notorious B.I.G.", "Hip-Hop", 5},
             {"Vogue", "Madonna", "Pop", 5},
             {"Don't Speak", "No Doubt", "Rock", 4},
             {"Smells like teen spirit", "Nirvana", "Rock", 5},
