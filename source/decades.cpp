@@ -52,7 +52,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
         typewrite("You head up to a conference floor. The floor is packed with people, loud chatter fills the room,\n");
         typewrite("whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
-        typewrite("New app Instagram and Snapchat recently released and are completely changing how people connect worldwide.\n");
+        typewrite("New apps Instagram and Snapchat have recently released and are completely changing how people connect worldwide.\n");
         typewrite("A group of young programmers storm out of a meeting, clearly frustrated, one even crying.\n");
         typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"You're up, time to pitch!\"\n");
         cout << endl;
@@ -64,7 +64,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("The summer streets of New York City are lively and loud as usual. \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
         typewrite("There is a rise of social media platforms like YouTube and Facebook and gadgets like the iPod.\n");
-        typewrite("The decade is also refered to as the Y2K era, the name comes from the computer crisis that occurred in the year 2000,\n");
+        typewrite("The Y2K name comes from the computer crisis that occurred in the year 2000,\n");
         typewrite("when computer systems misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
         cout << endl;
     }
@@ -92,7 +92,7 @@ void Decades::showDecadeIntro(Player &player) {
         cout << endl;
     }
     if (level == 6) {
-        typewrite("✌🏾DECADE 1970's --> The Airwaves");
+        typewrite("✌🏾DECADE 1970's --> The Airwaves\n");
         typewrite("Date: November 21, 1975 || Time: 7 AM || Location: New Orleans, LA\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("You step into the vibrant world of the 1970s, groundbreaking music, and significant social change.\n");
@@ -103,7 +103,7 @@ void Decades::showDecadeIntro(Player &player) {
         cout << endl;
     }
     if (level == 7) {
-        typewrite("🏛DECADE 1960's --> Revolution ");
+        typewrite("🏛DECADE 1960's --> Revolution\n");
         typewrite("Date: July 20, 1969 || Time: 8:17 PM || Location: Washington, D.C. \n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("A time of social change, cultural revolutions, and historic milestones.\n");
@@ -114,7 +114,7 @@ void Decades::showDecadeIntro(Player &player) {
         cout << endl;
     }
     if (level == 8) {
-        typewrite("📺DECADE 1950's --> Television Takes Over ");
+        typewrite("📺DECADE 1950's --> Television Takes Over\n");
         typewrite("Date: August 15, 1955 || Time: 6:00 PM || Location: Lakewood,CA\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("In the suburbs of Lakewood people are thriving off post-war prosperity, \n");
@@ -124,30 +124,30 @@ void Decades::showDecadeIntro(Player &player) {
         cout << endl;
     }
     if (level == 9) {
-        typewrite("📻DECADE 1940's --> War and Radio ");
-        typewrite("Date: July 4, 1944 || Time: 9:00 AM || Location: Jackson, MS \n");
+        typewrite("📻DECADE 1940's --> War and Radio\n");
+        typewrite("Date: July 4, 1944 || Time: 9:00 AM || Location: Jackson, MS\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("During the 1940s, the world is engulfed in the turmoil of World War II.\n");
         typewrite("Radio serves as the most important source of news during the war bringing in updates and spreading propaganda.\n");
-        typewrite("This form of media was less for entertainment and more for information and surviavl.\n");
+        typewrite("This form of media was less for entertainment and more for information and survival.\n");
         //source https://historyrise.com/the-radio-in-wwii-propaganda-how-airwaves-won-minds/?utm_source=copilot.com#the-radio-in-wwii-propaganda-how-airwaves-shaped-public-opinion-influenced-minds-and-changed-warfare-forever
         typewrite("Radios were heavly used in war tactics for communitation, messages were often encoded and decoded using ");
         typewrite("devices like the Enigma machine to prevent enemy interception.\n");
         cout << endl;
     }
     if (level == 10) {
-        typewrite("💰DECADE 1930's --> Trying Times ");
-        typewrite("Date: March 30, 1935 || Time: 10:00 AM || Location: Memphis, TN \n");
+        typewrite("💰DECADE 1930's --> Trying Times\n");
+        typewrite("Date: March 30, 1935 || Time: 10:00 AM || Location: Memphis, TN\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("The 1930s are quiet and challenging times, marked by the Great Depression.\n");
-        typewrite("People rely on radio broadcasts for news, entertainment, and escapism from the harsh realities of daily life.\n");
+        typewrite("People rely on radio broadcasts for news, entertainment, an escape from the harsh realities of the world.\n");
         typewrite("News papers captivate audiences, providing a temporary relief from economic hardships.\n");
         typewrite("In a time with little certainty about the future, media provides reassurance.\n");
         cout << endl;
     }
     if (level == 11) {
-        typewrite("🎷DECADE 1920's --> Roaring Twenties ");
-        typewrite("Date: May 6, 1928 || Time: 9:43 PM  || Location: Manhattan, NY \n");
+        typewrite("🎷DECADE 1920's --> Roaring Twenties\n");
+        typewrite("Date: May 6, 1928 || Time: 9:43 PM  || Location: Manhattan, NY\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("The 1920s, often referred to as the Roaring Twenties, is a decade of economic prosperity and a vibrant culture.\n");
         typewrite("Jazz music, flapper style, and speakeasies define the social scene.\n");
@@ -156,7 +156,7 @@ void Decades::showDecadeIntro(Player &player) {
         cout << endl;
     }
     if (level == 12) {
-        typewrite("📚DECADE 2020's --> Back to the Future ");
+        typewrite("📚DECADE 2020's --> Back to the Future\n");
         typewrite("Date: April 15, 2024 || Time: 9:42 AM || Location: NYU College Campus\n");
         cout <<"---------------------------------------------------------------------------------------------------------------------" << endl;
         typewrite("Back on campus in the library and you finish up the conclusion for your paper on how technology has shaped society.\n");
@@ -197,7 +197,7 @@ void Decades::challenge(Player &player) {
                     break;
                 } else if (multiple_choice == 'C' || multiple_choice == 'c') {
                     typewrite("By ignoring the post, you avoided contributing to misinformation.\n");
-                    typewrite("However, this was a missed opportunity to educate yourself and others on social media credibility and the global issue.\n");
+                    typewrite("However, this was a missed opportunity to educate yourself and others on the global issue.\n");
                     player.add_score(5);
                     break;
                 } else {
@@ -263,7 +263,7 @@ void Decades::challenge(Player &player) {
                 player.add_score(10);
                 break;
             } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-                typewrite("The investors were unimpressed and uninterested in your background and experience and wished to hear more about the app itself.\n");
+                typewrite("The investors were unimpressed and uninterested in your background and experience and wanted to hear more about the app.\n");
                 player.subtract_score(10);
                 break;
             } else {
@@ -271,12 +271,12 @@ void Decades::challenge(Player &player) {
             }
         }
         typewrite("An investor asks \"How much funding would your app need for startup costs?\"\n");
-        double funding;
+        int funding;
         cout << "Enter the amount of funding you are requesting: ";
         std::cin >> funding;
         typewrite("The room goes quiet. Investors whisper and exchange glances...This number could make or break your future.\n");
         while (true) {
-            if (funding < 10000) {
+            if (funding < 5000) {
                 typewrite("The investor appreciates your modest request and sees it as a sign of confidence in your app's potential.\n");
                 player.add_score(10);
                 if (multiple_choice == 'B' || multiple_choice == 'b') {
@@ -285,11 +285,11 @@ void Decades::challenge(Player &player) {
                     player.add_to_inventory("Contract");
                 }
                 break;
-            } else if (funding >= 10000 && funding <= 20000) {
+            } else if (funding >= 5000 && funding <= 10000) {
                 typewrite("The investor considers your request reasonable and is willing to discuss further.\n");
                 player.add_score(5);
                 break;
-            } else if(funding > 20000){
+            } else if(funding > 10000){
                 typewrite("The investor's jaws dropped and they are taken aback by the high funding request. \n");
                 typewrite("An investor says \"Thank you for your honesty, but this amount is too high. Thank you for your time.\"\n");
                 player.subtract_score(10);
@@ -306,6 +306,7 @@ void Decades::challenge(Player &player) {
             typewrite("You obtained: Contract\n");
         }
         cout << endl;
+        cin.ignore(); // clear input buffer
     }
     if (level == 3) {
         vector<string> playlist;
@@ -316,7 +317,6 @@ void Decades::challenge(Player &player) {
         string genre;
         string artist;
         while (true) {
-            std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("You decide to create a playlist based on a specific genre, capturing the essence of the 2000s music scene.\n");
                 cout << "What genre of music would you like to make your playlist? (e.g., Pop, Rock, Hip-Hop): ";
@@ -331,12 +331,13 @@ void Decades::challenge(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A or B.\n");
+                cin >> multiple_choice;
             }
         }
         cout << "How many songs would you like to add to your playlist?(1-20) ";
         int num_songs;
-        std::cin >> num_songs;
         while (true) {
+            std::cin >> num_songs;
             if (num_songs >=1 && num_songs <= 20) {
                 if (multiple_choice == 'A' || multiple_choice == 'a') {
                     typewrite("Great! Let's add songs to your " + genre + " playlist.\n");
@@ -346,7 +347,6 @@ void Decades::challenge(Player &player) {
                 break;  
             } else {
                 typewrite("Invalid number of songs. Please enter a number between 1 and 20.\n");
-                cin >> num_songs;
             }
         }
         std::cin.ignore();
@@ -401,6 +401,7 @@ void Decades::challenge(Player &player) {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }
         }
+        cout << endl;
         typewrite("To make the store experience better for customers you decide to reorganize the records.\n");
         typewrite("Would you like to organize the records by genre or by artist?\n");
         cout << "Enter 'G' for genre or 'A' for artist: ";
@@ -627,13 +628,13 @@ void Decades::challenge(Player &player) {
         while (true) {
             std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
-                event_choice = "Civil Rights Movement";
+                event_choice = "Civil Rights";
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
                 event_choice = "US moon landing";
                 break;
             } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-                event_choice = "Richard Nixon's inauguration";
+                event_choice = "Nixon's inauguration";
                 break;
             } else if (multiple_choice == 'D' || multiple_choice == 'd') {
                 event_choice = "The ARPANET";
@@ -651,46 +652,46 @@ void Decades::challenge(Player &player) {
         cout << endl;
         cout << endl;
         typewrite("+--------------------------------------+\n");
-        typewrite("|              DAILY TIMES              |\n");
-        typewrite("|             July 20, 1969             |\n");
+        typewrite("|              DAILY TIMES             |\n");
+        typewrite("|             July 20, 1969            |\n");
         typewrite("+--------------------------------------+\n");
 
-        typewrite("| HEADLINE:                             |\n");
-        typewrite("|         " + event_choice + "          |\n");
+        typewrite("|                                      |\n");
+        typewrite("          " + event_choice + "           \n");
         typewrite("|                                      |\n");
 
         if (event_choice == "Civil Rights Movement") {
-            typewrite("| The Fair Housing Act is passed,       |\n");
-            typewrite("| providing equal housing opportunity   |\n");
-            typewrite("| regardless of race, or religion.      |\n");
+            typewrite("| The Fair Housing Act is passed,      |\n");
+            typewrite("| providing equal housing opportunity  |\n");
+            typewrite("| regardless of race, or religion.     |\n");
             // source: https://www.history.com/topics/civil-rights-movement
 
         } else if (event_choice == "US moon landing") {
-            typewrite("| On July 20, 1969, American astronauts |\n");
-            typewrite("| Neil Armstrong and Buzz Aldrin become |\n");
-            typewrite("| the first humans to land on the Moon. |\n");
+            typewrite("| On July 20, 1969, American astronauts|\n");
+            typewrite("| Neil Armstrong and Buzz Aldrin become|\n");
+            typewrite("| the first humans to land on the Moon.|\n");
             typewrite("| \"One small step for man, one giant   |\n");
             typewrite("| leap for mankind.\"                   |\n");
             // source: https://www.history.com/articles/moon-landing-1969
 
         } else if (event_choice == "Richard Nixon's inauguration") {
-            typewrite("| Richard Nixon is inaugurated as the   |\n");
-            typewrite("| 37th President of the United States,  |\n");
-            typewrite("| promising to restore law and order    |\n");
-            typewrite("| during a time of social unrest.       |\n");
+            typewrite("| Richard Nixon is inaugurated as the  |\n");
+            typewrite("| 37th President of the United States, |\n");
+            typewrite("| promising to restore law and order   |\n");
+            typewrite("| during a time of social unrest.      |\n");
             // source: https://www.history.com/this-day-in-history/january-20/richard-nixon-takes-office
 
         } else if (event_choice == "The ARPANET") {
-            typewrite("| ARPANET is introduced as the first    |\n");
-            typewrite("| computer communication network,       |\n");
-            typewrite("| laying the foundation for the modern  |\n");
-            typewrite("| internet.                             |\n");
+            typewrite("| ARPANET is introduced as the first   |\n");
+            typewrite("| computer communication network,      |\n");
+            typewrite("| laying the foundation for the modern |\n");
+            typewrite("| internet.                            |\n");
             // source: https://www.techtarget.com/searchnetworking/definition/ARPANET
 
         } else if (event_choice == "Vietnam War") {
-            typewrite("| The Vietnam War intensifies as        |\n");
-            typewrite("| protests break out across the nation  |\n");
-            typewrite("| and the public debates U.S.           |\n");
+            typewrite("| The Vietnam War intensifies as       |\n");
+            typewrite("| protests break out across the nation |\n");
+            typewrite("| and the public debates U.S.          |\n");
             typewrite("| involvement overseas.                |\n");
             // source: https://www.history.com/articles/vietnam-war-history
         }
@@ -705,7 +706,7 @@ void Decades::challenge(Player &player) {
 
     }  
     if (level == 8) {
-        cout << "o                   o\n";
+        cout << "    o                   o\n";
         cout << "    \\               __/\n";
         cout << "     \\___          /\n";
         cout << "         \\__    __/\n";
@@ -734,7 +735,7 @@ void Decades::challenge(Player &player) {
         cout << " 3) Gunsmoke\n";
         cout << " 4) Leave It to Beaver\n";
         cout << " 5) The Ed Sullivan Show\n";
-        cout << " 6) Singin' in the Rain )\n";
+        cout << " 6) Singin' in the Rain \n";
         cout << " 7) Peter Pan\n";
         cout << " 8) Cheyenne\n";
         cout << " 9) Lady and the Tramp\n";
@@ -754,11 +755,11 @@ void Decades::challenge(Player &player) {
             }
         }
 
-        //FINISH]
 
-
+        cout << endl;
         player.add_to_inventory("TV Remote");
-        typewrite(".....................\n"); //loading effect
+        typewrite("You obtained: TV Remote\n");
+        cout << endl;
 
     } 
     if (level == 9) {
@@ -788,17 +789,21 @@ void Decades::challenge(Player &player) {
         string answer;
         cin.ignore();
         getline(cin, answer);
+        answer = lowerCase(answer);
 
-        if (answer == "DAWN" || answer == "dawn" || answer == "Dawn") {
+        if (answer == "dawn") {
             typewrite("\nCorrect! \n");
             player.add_score(10);
         } else {
             typewrite("\nIncorrect.\n");
-            typewrite("The correct word was: DAWN\n");
+            typewrite("The correct word was: dawn\n");
             player.subtract_score(5);
         }
+
+        cout << endl;
         player.add_to_inventory("Cipher Decoder");
-        typewrite(".....................\n"); //loading effect
+        typewrite("You obtained: Cipher Decoder\n");
+        cout << endl;
     }
     if (level == 10) {
         typewrite("Challenge: Headline Pressure\n");
@@ -827,47 +832,53 @@ void Decades::challenge(Player &player) {
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }
-    }
-    typewrite("Your words travel across the country by print and radio.\n");
-    typewrite("In difficult times, information can either bring hope or deepen fear.\n");
-
-    typewrite("You roll a blank sheet into the typewriter and start typing.\n");
-    if (lv10multiple_choice == 'A' || lv10multiple_choice == 'a') {
-        typewrite("'Hope on the Horizon: New Deal = New Jobs?'\n");
-    } else if (lv10multiple_choice == 'B' || lv10multiple_choice == 'b') {
-        typewrite("'Banks Continue to Fail: National Crisis'\n");
-    } else if (lv10multiple_choice == 'C' || lv10multiple_choice == 'c') {
-        typewrite("'Bread Lines Grow as Families Struggle'\n");
-    }
-    typewrite("Your editor shouts across the room:\n");
-    typewrite("\"Use these words on cover: HOPE, WORK, TOMORROW\"\n");
-    typewrite("You must type a short message using all three words to go on the cover:\n");
-    typewrite("Type a short message in all caps (5-40 characters):\n");
-    string message;
-    cin.ignore();
-    getline(cin, message);
-    while (true) {
-        if (message.length() >= 5 && message.length() <= 40 &&
-            message.find("HOPE") != string::npos &&
-            message.find("WORK") != string::npos &&
-            message.find("TOMORROW") != string::npos) {
-            typewrite("You type your message onto the paper:\n");
-            typewrite("\"" + message + "\"\n");
-            typewrite("The editor nods. \"That'll do.\"\n");
-            player.add_score(10);
-            break;
-        } else {
-            typewrite("Not quite right. Make sure your message is 5-40 characters and includes HOPE, WORK, and TOMORROW.\n");
-            typewrite("Type a short message (5-40 characters):\n");
-            getline(cin, message);
         }
-    }
+        typewrite("Your words travel across the country by print and radio.\n");
+        typewrite("In difficult times, information can either bring hope or deepen fear.\n");
 
-    typewrite("In the 1930s, typewriters turn thoughts into history.\n");
-    typewrite("There is no delete key. No algorithm only paper and ink.\n");
+        typewrite("You roll a blank sheet into the typewriter and start typing.\n");
+        if (lv10multiple_choice == 'A' || lv10multiple_choice == 'a') {
+            typewrite("'Hope on the Horizon: New Deal = New Jobs?'\n");
+        } else if (lv10multiple_choice == 'B' || lv10multiple_choice == 'b') {
+            typewrite("'Banks Continue to Fail: National Crisis'\n");
+        } else if (lv10multiple_choice == 'C' || lv10multiple_choice == 'c') {
+            typewrite("'Bread Lines Grow as Families Struggle'\n");
+        }
+        typewrite("Your editor shouts across the room:\n");
+        typewrite("\"Use these words on cover: HOPE, WORK, TOMORROW\"\n");
+        typewrite("Type a short message using all three words (5-40 characters):\n");
 
-    player.add_to_inventory("Typewriter");
-    typewrite(".....................\n"); //loading effect
+        string message;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        while (true) {
+            getline(cin, message);
+            lowerCase(message);
+
+            if (message.length() >= 5 && message.length() <= 40 &&
+                message.find("hope") != string::npos &&
+                message.find("work") != string::npos &&
+                message.find("tomorrow") != string::npos) {
+                typewrite("You type your message onto the paper:\n");
+                typewrite("\"" + message + "\"\n");
+                typewrite("The editor nods. \"That'll do.\"\n");
+                player.add_score(10);
+                break;
+
+            } else {
+                typewrite("Not quite right.\n");
+                typewrite("Make sure your message includes the words HOPE, WORK, and TOMORROW.\n");
+                typewrite("Try again:\n");
+            }
+        }
+
+        typewrite("In the 1930s, typewriters turn thoughts into history.\n");
+        typewrite("There is no delete key. No algorithm only paper and ink.\n");
+        cout << endl;
+        player.add_to_inventory("Typewriter");
+        typewrite("You obtained: Typewriter\n");
+        cout << endl;
+        
 
     }
     if (level == 11) {
@@ -878,7 +889,7 @@ void Decades::challenge(Player &player) {
         typewrite("With a crumpled map in your hand you make your way around Lower Manhattan:\n\n");
 
         cout << "==============================\n";
-        cout << "   LOWER MANHATTAN — 1926\n";
+        cout << "   LOWER MANHATTAN - 1926\n";
         cout << "==============================\n\n";
 
         cout << "[1] Bakery\n";
@@ -924,13 +935,14 @@ void Decades::challenge(Player &player) {
 
         cin.ignore();
         string password;
-        typewrite("Hint: A book by F. Scott Fitzgerald — \"The Great ______\"\n");
+        typewrite("Hint: A book by F. Scott Fitzgerald - \"The Great ______\"\n");
         cout << "Enter the password: ";
         getline(cin, password);
+        lowerCase(password);
 
-        if (password == "Gatsby" || password == "gatsby") {
-            typewrite("\nThe man nods.\n");
-            typewrite("Music swells from behind the door.\n");
+        if (password == "gatsby") {
+            typewrite("\nThe man nods and opens the door.\n");
+            typewrite("Music buzzes behind the door.\n");
             typewrite("You've found the speakeasy.\n\n");
 
             typewrite("Inside, flappers dance and jazz fills the air.\n");
@@ -944,7 +956,11 @@ void Decades::challenge(Player &player) {
             typewrite("\"Wrong password. Come back when you know it.\"\n");
             player.subtract_score(5);
         }
-        typewrite("In the 1920s, speakeasies were hidden havens of music and rebellion.\n");
+        
+        cout << endl;
+        player.add_to_inventory("Speakeasy Matchbook");
+        typewrite("You obtained: Speakeasy Matchbook\n");
+        cout << endl;
     }
     
 }
@@ -974,6 +990,7 @@ void Decades::minigame(Player &player) {
             }   
         }
         cout << endl;
+        cin.ignore();
     }
     if (level == 2) {
         typewrite("Minigame: Tech Timeline Quiz\n");
@@ -984,7 +1001,6 @@ void Decades::minigame(Player &player) {
         char answer;
         
         while(true) {
-            cin.ignore(1000, '\n');
             std::cin >> answer;
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
@@ -1000,6 +1016,7 @@ void Decades::minigame(Player &player) {
             }
         }
         cout << endl;
+        cin.ignore();
     }
     if (level == 3)  {
         typewrite("Minigame: 2000s Song guessing Game\n");
@@ -1071,8 +1088,7 @@ void Decades::minigame(Player &player) {
             player.subtract_score(5);
         }
         cout << endl;
-
-        cin.ignore();
+        
     }
     if (level == 4){
         typewrite("Minigame: 90s Mix Tapes\n");
@@ -1190,6 +1206,7 @@ void Decades::minigame(Player &player) {
             }
         }
         cout << endl;
+        cin.ignore();
     }
     if (level == 6) {
         typewrite("Minigame: Word Scramble - 70s Edition\n");
@@ -1243,7 +1260,8 @@ void Decades::minigame(Player &player) {
     if (level == 7) {
         typewrite("Minigame: 1960s Fact Checking quiz\n");
 
-        cout << "You will be given a series of facts about the 1960s, and have to decide if it is True of False, points will be awarded or deducted based on answers." << endl;
+        cout << "You will be given a series of facts about the 1960s, and have to decide if it is True of False" << endl;
+        cout << "Points will be awarded or deducted based on answers." << endl;
 
         struct Fact{
             string statement;
@@ -1294,7 +1312,7 @@ void Decades::minigame(Player &player) {
                 rand_question = rand() % 4;
             }
             questionDone.at(rand_event).at(rand_question) = true;
-            cout << "This is your question " << allEvents.at(rand_event).at(rand_question).statement << " type true or false" << endl;
+            cout << "This is your question: " << allEvents.at(rand_event).at(rand_question).statement << " type true or false" << endl;
             string answer;
             std::cin.ignore();
             while(true){
@@ -1324,14 +1342,16 @@ void Decades::minigame(Player &player) {
         else {
             typewrite("Unfortunately, you got more questions wrong than correct.\n");
         }
-        typewrite(".....................\n");
-
+        
+        
+        cout << endl;
+        cin.ignore();
           
     }
     if (level == 8){
         typewrite("Minigame: 1950's TV Schedule Memory Game\n");
-        cout << "You will be shown 3-5 shows with their air time. You will have some time to study the Schedule." << endl;
-        cout << "The schedule will then be erased, and you will have to recall which shows aired at what time." << endl;
+        typewrite("You will be shown 3-5 shows with their air time. You will have some time to study the Schedule.\n");
+        typewrite("The schedule will then be erased, and you will have to recall which shows aired at what time.\n");
 
 
         cout << "TONIGHT'S SCHEDULE - Study this carefully!" << endl;
@@ -1341,8 +1361,10 @@ void Decades::minigame(Player &player) {
         cout << "Maverick - 9:00 PM" << endl;
         cout << "\nMemorizing time: ";
 
+
+
         const auto startTime = chrono::steady_clock::now();
-        int study_duration = 10;
+        int study_duration = 30;
         while (true) {
             auto currentTime = chrono::steady_clock::now();
 
@@ -1389,11 +1411,13 @@ void Decades::minigame(Player &player) {
                 typewrite("Incorrect. The correct time was " + correctTimes.at(i) + ".\n");
             }
 
-            typewrite(".....................\n");
+            cout << endl;
         }
+
+        cout << endl;   
     }
     if (level == 9) {
-        typewrite("Challenge: Decryption\n");
+        typewrite("Minigame: Decryption\n");
         typewrite("Intelligence has intercepted multiple codebooks from various sources.\n");
         typewrite("Only ONE is currently being used by your Army General.\n");
         typewrite("The others are outdated codes, enemy ciphers, or deliberate decoys.\n");
@@ -1578,10 +1602,11 @@ void Decades::minigame(Player &player) {
             typewrite("The decrypted message was: DAWN\n");
             player.subtract_score(5);
         }
-        typewrite(".....................\n");
+        
+        cout << endl;
     }
     if (level == 10) {
-        typewrite("Challenge: Error Hunt\n");
+        typewrite("Minigame: Error Hunt\n");
         typewrite("It's 1930, and you're the chief proofreader at The Daily Tribune.\n");
         typewrite("The typesetter has just delivered tonight's front page proof.\n");
         typewrite("You have 10 minutes before the paper goes to print!\n\n");
@@ -1676,7 +1701,8 @@ void Decades::minigame(Player &player) {
         typewrite("Just careful eyes and steady hands.\n");
         typewrite("Every word mattered.\n");
         
-        typewrite(".....................\n");
+        cout << endl;
+        cin.ignore();
     }
     if (level == 11) {
         typewrite("Minigame: 1920s Jazz Lyrics Challenge\n");
@@ -1710,6 +1736,6 @@ void Decades::minigame(Player &player) {
         }
         typewrite("\nMinigame Complete!\n");
 
-        typewrite(".....................\n");
+        cout << endl;
     }
 }

@@ -27,7 +27,7 @@ void TimeMachine::TimeTravel() {
         cout << " |  --___--  |" << endl;
         cout << " |___________|" << endl;
          
-        usleep(1500000); //1.5 second delay
+        usleep(1200000); //1.2 second delay
         clearScreen();
 
         //frame 2
@@ -47,7 +47,7 @@ void TimeMachine::TimeTravel() {
         cout << " |  --___--  |" << endl;
         cout << " |___________|" << endl;
 
-        usleep(1500000); //1.5 second delay
+        usleep(1200000); //1.2 second delay
         clearScreen();
 
         //frame 3
@@ -67,7 +67,7 @@ void TimeMachine::TimeTravel() {
         cout << " |  --___--  |" << endl;
         cout << " |___________|" << endl;
 
-        usleep(1500000); //1.5 second delay
+        usleep(1200000); //1.2 second delay
         clearScreen();
 
         //frame 4
@@ -87,7 +87,7 @@ void TimeMachine::TimeTravel() {
         cout << " |  --___--  |" << endl;
         cout << " |___________|" << endl;
 
-        usleep(1500000); //1.5 second delay
+        usleep(1200000); //1.2 second delay
         clearScreen();
 
         //frame 5
@@ -107,7 +107,7 @@ void TimeMachine::TimeTravel() {
         cout << " |  --___--  |" << endl;
         cout << " |___________|" << endl;
 
-        usleep(1500000); //1.5 second delay
+        usleep(1200000); //1.2 second delay
         clearScreen();
 
 

@@ -18,7 +18,7 @@ void ShowIntro() {
     cout << "* HOW TO PLAY *" << endl;
     cout << "1. You will be placed different decades." << endl;
     cout << "2. Each decade gives you choices and challenges." << endl;
-    cout << "3. Pick the best options and win minigames to survive and earn points." << endl;
+    cout << "3. Pick the best options and win minigames to earn points." << endl;
     cout << "4. Choices affect your final score." << endl;
     //finish explain points, money, food, etc
 
@@ -60,14 +60,13 @@ int main() {
 
 
     const int max_level = 12;
-    while (currentdecade.GetLevel() <= max_level) {
+    while (currentdecade.GetLevel() < max_level) {
         timeMachine.TimeTravel(); // Time travel effect, check machine energy
         userCharacter.GetInfo(); // show player info
         userCharacter.print_inventory(); // show starting inventory
         currentdecade.showDecadeIntro(userCharacter); // show decade intro
         currentdecade.challenge(userCharacter); // decade challenge
         currentdecade.minigame(userCharacter); // decade minigame
-        cin.ignore();
         Continue();
         clearScreen();
         if (currentdecade.GetLevel() < max_level){
@@ -75,6 +74,8 @@ int main() {
             userCharacter.travel_to_decade(currentdecade); // travel to next decade
         }
     }
+    currentdecade.showDecadeIntro(userCharacter); // show final decade intro
+    typewrite("Thank you for playing!\n");
 
     
 
