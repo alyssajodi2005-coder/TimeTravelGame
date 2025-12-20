@@ -52,7 +52,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("The environment is filled with excitement and panic as entrepreneurs pitch their ideas to investors.\n");
         typewrite("You head up to a conference floor. The floor is packed with people, loud chatter fills the room,\n");
         typewrite("whiteboards overflow with ideas, and everyone believes the next big thing is just one pitch away.\n");
-        typewrite("New app Instagram and Snapchat recently released and are completely changing how people connect worldwide\n");
+        typewrite("New app Instagram and Snapchat recently released and are completely changing how people connect worldwide.\n");
         typewrite("A group of young programmers storm out of a meeting, clearly frustrated, one even crying.\n");
         typewrite("You feel and tap on your shoulder as a frantic man in a suit says, \"You're up, time to pitch!\"\n");
         cout << endl;
@@ -246,7 +246,7 @@ void Decades::challenge(Player &player) {
         cout << "Who is your target audience? (ex. teens, kids, college students, etc.): " << endl;
         getline(std::cin, lv2inp2);
         typewrite("Investors hear tons of ideas everyday, so you need to stand out.\n");
-        typewrite("\"Hello my name is " + player.get_name() + ", I have created a " + lv2inp1 + " app and my app is targeted to " + lv2inp2 + ".\"\n");
+        typewrite("\"Hello my name is " + player.get_name() + ", I have created a " + lv2inp1 + " app for " + lv2inp2 + ".\"\n");
         cout << "To grab their attention, do you:" << endl;
         cout << "A) Focus on the features and design of the app." << endl;
         cout << "B) Highlight the market potential, revenue model, and user benefits." << endl;
@@ -280,7 +280,7 @@ void Decades::challenge(Player &player) {
                 typewrite("The investor appreciates your modest request and sees it as a sign of confidence in your app's potential.\n");
                 player.add_score(10);
                 if (multiple_choice == 'B' || multiple_choice == 'b') {
-                    typewrite("Combined with your strong pitch, the investor is eager to support your venture.\n");
+                    typewrite("Combined with your strong pitch, the investors are eager to support your venture.\n");
                     player.add_score(10);
                     player.add_to_inventory("Contract");
                 }
@@ -603,12 +603,13 @@ void Decades::challenge(Player &player) {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
             }
         }
-        typewrite("You realize how much power a single voice can have.\n");
-        typewrite("In the 1970s, radio connected neighborhoods, shaped culture, and spread ideas.\n");
-        typewrite("Technology may change — but influence always remains.\n");
 
+        typewrite("In the 1970s, radio connected neighborhoods, shaped culture, and spread ideas.\n");
+        typewrite("Technology may change - but influence always remains.\n");
+        cout << endl;
         player.add_to_inventory("Portable Radio");
-        typewrite(".....................\n"); //loading effect
+        typewrite("You obtained: Portable Radio\n");
+        cout << endl;
     }
     if (level == 7) {
         typewrite("Challenge: Historic Milestones\n");
@@ -624,7 +625,6 @@ void Decades::challenge(Player &player) {
         char multiple_choice;
         string event_choice;
         while (true) {
-            std::cin.ignore();
             std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 event_choice = "Civil Rights Movement";
@@ -698,7 +698,10 @@ void Decades::challenge(Player &player) {
         typewrite("|                                      |\n");
         typewrite("+--------------------------------------+\n\n");
 
-        //FINISH
+        cout << endl;
+        player.add_to_inventory("Vintage Camera");
+        typewrite("You obtained: Vintage Camera\n");
+        cout << endl;
 
     }  
     if (level == 8) {
@@ -1002,14 +1005,14 @@ void Decades::minigame(Player &player) {
         typewrite("Minigame: 2000s Song guessing Game\n");
         /* Example structure for songs. I learned how to use struct form when i searched
         up " c++ simpler way to group data together other than a class" and i found out about structs*/
-        typewrite("Guess the song title based on the lyric snippet and clues provided.\n");
-        typewrite("You have 4 chances to guess the correct song title.\n");
-        typewrite("The point system is as follows:\n");
-        typewrite(" - Correct on first try (lyric snippet): 20 points\n");
-        typewrite(" - Correct on second try (clue 1): 10 points\n");
-        typewrite(" - Correct on third try (clue 2): 5 points\n");
-        typewrite(" - Correct on fourth try (clue 3): 3 points\n");
-        typewrite(" - Incorrect after all clues: -5 points\n");
+        cout <<"Guess the song title based on the lyric snippet and clues provided." << endl;
+        cout << "You have 4 chances to guess the correct song title." << endl;
+        cout << "The point system is as follows:" << endl;
+        cout << " - Correct on first try (lyric snippet): 20 points" << endl;
+        cout << " - Correct on second try (clue 1): 10 points" << endl;
+        cout << " - Correct on third try (clue 2): 5 points" << endl;
+        cout << " - Correct on fourth try (clue 3): 3 points" << endl;
+        cout << " - Incorrect after all clues: -5 points" << endl;
         cout << endl;
         struct Song {
             string title;
@@ -1030,8 +1033,6 @@ void Decades::minigame(Player &player) {
         Song selected_song = songs[random_index];
         bool guessed_correctly = false;
         vector<string> clues = {selected_song.lyric_snippet, selected_song.clue1, selected_song.clue2, selected_song.clue3};
-
-        std::cin.ignore();
 
         for (int i = 0; i < clues.size(); i++) {
             if (i == 0) {
@@ -1070,6 +1071,8 @@ void Decades::minigame(Player &player) {
             player.subtract_score(5);
         }
         cout << endl;
+
+        cin.ignore();
     }
     if (level == 4){
         typewrite("Minigame: 90s Mix Tapes\n");
@@ -1110,7 +1113,7 @@ void Decades::minigame(Player &player) {
         vector <musicTrack> new_tracks;
         for (size_t i = 0; i < tracks.size(); i++) {
             const musicTrack& track = tracks.at(i);
-            typewrite("Title: " + track.title + ", Artist: " + track.artist + ", Genre: " + track.genre + ", Duration: " + to_string(track.duration) + " minutes\n");
+            cout << "Title: " << track.title << ", Artist: " << track.artist << ", Genre: " << track.genre << ", Duration: " << to_string(track.duration) << " minutes " << endl;
         }
         std::cin.ignore();
         while (true) {
@@ -1165,7 +1168,7 @@ void Decades::minigame(Player &player) {
             typewrite("You did not create a mix with the correct genre and exceeded the time limit.\n");
             player.subtract_score(10);
         }
-        cin.ignore();
+
         cout << endl;
     }
     if (level == 5) {
@@ -1234,7 +1237,8 @@ void Decades::minigame(Player &player) {
         else {
             typewrite("Sorry you did not unscramble the word correctly. The correct word was " + words.at(random_index) + "\n");
         } 
-        typewrite(".....................\n");
+        cout << endl;
+    
     }
     if (level == 7) {
         typewrite("Minigame: 1960s Fact Checking quiz\n");

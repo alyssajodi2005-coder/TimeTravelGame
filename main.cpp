@@ -49,6 +49,7 @@ int main() {
     getline(cin, userName);
     cout << endl;
     ShowIntro();
+    cout << endl;
     Continue();
     clearScreen();
 
