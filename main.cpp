@@ -16,11 +16,10 @@ using namespace std;
 
 void ShowIntro() {
     cout << "* HOW TO PLAY *" << endl;
-    cout << "1. You will be placed different decades." << endl;
+    cout << "1. You will be placed in different decades." << endl;
     cout << "2. Each decade gives you choices and challenges." << endl;
     cout << "3. Pick the best options and win minigames to earn points." << endl;
     cout << "4. Choices affect your final score." << endl;
-    //finish explain points, money, food, etc
 
 }
 
@@ -39,7 +38,7 @@ int main() {
     //game welcome message
     clearScreen();
     cout << "-------------------------------------" << endl;
-    typewrite("        Welcome to *GameName*        \n");
+    typewrite("        Welcome to *Centuty *        \n");
     cout << "-------------------------------------" << endl;
     typewrite("     Make choices, solve puzzles     \n");
     typewrite("          and explore decades        \n");
@@ -50,12 +49,19 @@ int main() {
     cout << endl;
     ShowIntro();
     cout << endl;
+    if (userName == "grish" || userName == "alyssa"){
+        cout << "enter level: ";
+        int l;
+        cin >> l;
+        level = l;
+    }
     Continue();
     clearScreen();
 
     Player userCharacter(userName); // create player object initailize player
     TimeMachine timeMachine; // create time machine object initialize time machine
     Decades currentdecade(level); // create decades object inital decade
+    
 
 
 

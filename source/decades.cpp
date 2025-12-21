@@ -5,6 +5,7 @@
 #include <vector>
 #include <cctype>
 #include <chrono>
+#include <thread>
 using namespace std;
 #include "../headers/decades.h"
 #include "../headers/typewrite.h"
@@ -64,8 +65,8 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("The summer streets of New York City are lively and loud as usual. \n");
         typewrite("You can hear the sounds of construction, fire trucks, car horns, and Rap music, through your headphones.\n");
         typewrite("There is a rise of social media platforms like YouTube and Facebook and gadgets like the iPod.\n");
-        typewrite("The Y2K name comes from the computer crisis that occurred in the year 2000,\n");
-        typewrite("when computer systems misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
+        typewrite("The Y2K name comes from the computer crisis that occurred in the year 2000, when computer systems\n ");
+        typewrite("misinterpreted \"00\" as 1900 instead of 2000 causing bugs and system failures.\n");
         cout << endl;
     }
     if (level == 4) {
@@ -131,7 +132,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("Radio serves as the most important source of news during the war bringing in updates and spreading propaganda.\n");
         typewrite("This form of media was less for entertainment and more for information and survival.\n");
         //source https://historyrise.com/the-radio-in-wwii-propaganda-how-airwaves-won-minds/?utm_source=copilot.com#the-radio-in-wwii-propaganda-how-airwaves-shaped-public-opinion-influenced-minds-and-changed-warfare-forever
-        typewrite("Radios were heavly used in war tactics for communitation, messages were often encoded and decoded using ");
+        typewrite("Radios were heavly used in war tactics for communitation, messages were often encoded and decoded using\n");
         typewrite("devices like the Enigma machine to prevent enemy interception.\n");
         cout << endl;
     }
@@ -316,25 +317,25 @@ void Decades::challenge(Player &player) {
         cout << "B) Artist" << endl;
         string genre;
         string artist;
+        
         while (true) {
+            cin >> multiple_choice ;
+            cin.ignore();
             if (multiple_choice == 'A' || multiple_choice == 'a') {
                 typewrite("You decide to create a playlist based on a specific genre, capturing the essence of the 2000s music scene.\n");
                 cout << "What genre of music would you like to make your playlist? (e.g., Pop, Rock, Hip-Hop): ";
-                std::cin.ignore();
                 std::getline(std::cin, genre);
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
                 typewrite("You choose to create a playlist centered around a particular artist, showcasing their hits from the 2000s.\n");
-                cout << "Which artist would you like to focus your playlist on? (e.g., Britney Spears, Eminem, Beyonce): ";
-                std::cin.ignore();
+                cout << "Which artist would you like to focus your playlist on? (e.g., Britney Spears, Eminem, Beyonce): " << endl;
                 std::getline(std::cin, artist);
                 break;
             } else {
                 typewrite("Invalid choice. Please select A or B.\n");
-                cin >> multiple_choice;
             }
         }
-        cout << "How many songs would you like to add to your playlist?(1-20) ";
+        cout << "How many songs would you like to add to your playlist?(1-20): ";
         int num_songs;
         while (true) {
             std::cin >> num_songs;
@@ -575,6 +576,7 @@ void Decades::challenge(Player &player) {
                 cin >> multiple_choice;
             }
         }
+        cout << endl;
         typewrite("Just before the show ends, breaking news comes in not yet verified.\n");
 
         cout << "Do you:\n";
@@ -620,7 +622,7 @@ void Decades::challenge(Player &player) {
         cout << "Which event would you like to headline on the cover of your next issue? " << endl;
         cout << "A) Civil Rights Movement" << endl;
         cout << "B) US moon landing" << endl;
-        cout << "C) Richard Nixon's inauguration" << endl;
+        cout << "C) Nixon's inauguration" << endl;
         cout << "D) The ARPANET" << endl;
         cout << "E) Vietnam War" << endl;
         char multiple_choice;
@@ -674,7 +676,7 @@ void Decades::challenge(Player &player) {
             typewrite("| leap for mankind.\"                   |\n");
             // source: https://www.history.com/articles/moon-landing-1969
 
-        } else if (event_choice == "Richard Nixon's inauguration") {
+        } else if (event_choice == "Nixon's inauguration") {
             typewrite("| Richard Nixon is inaugurated as the  |\n");
             typewrite("| 37th President of the United States, |\n");
             typewrite("| promising to restore law and order   |\n");
@@ -744,17 +746,61 @@ void Decades::challenge(Player &player) {
         cout << "choose a channel to watch (1-10): ";
 
         int channel;
+
         while (true) {
-            std::cin >> channel;
-            if (channel >= 1 && channel <= 10) {
-                typewrite("You tune into channel " + to_string(channel) + " and enjoy the show!\n");
-                player.add_score(5);
+            cin >> channel;
+
+            if (channel == 1) {
+                typewrite("\"Lucy, you got some explaining to do!\"\n");
+                typewrite("Laughter fills the room.\n");
                 break;
-            } else {
-                typewrite("Invalid channel. Please select a channel between 1 and 10.\n");
+            }
+            else if (channel == 2) {
+                typewrite("A Gambler, poker tables, and the wild wild West.\n");
+                break;
+            }
+            else if (channel == 3) {
+                typewrite("Law, order, and hard choices on the frontier.\n");
+                break;
+            }
+            else if (channel == 4) {
+                typewrite("Beaver learns another life lesson.\n");
+                break;
+            }
+            else if (channel == 5) {
+                typewrite("The curtain rises. Applause erupts.\n");
+                break;
+            }
+            else if (channel == 6) {
+                typewrite("Rain pours as Gene Kelly dances joyfully down the street.\n");
+                break;
+            }
+            else if (channel == 7) {
+                typewrite("Neverland awaits with pirates, fairies, and adventure.\n");
+                break;
+            }
+            else if (channel == 8) {
+                typewrite("Justice, danger, and freedom define the Western frontier.\n");
+                break;
+            }
+            else if (channel == 9) {
+                typewrite("A romantic spaghetti dinner under the moonlight.\n");
+                break;
+            }
+            else if (channel == 10) {
+                typewrite("Glass slippers sparkle as the clock ticks toward midnight.\n");
+                break;
+            }
+            else {
+                typewrite("Static...Please choose a number between 1 and 10.\n");
             }
         }
-
+        
+        player.add_score(10);
+        cout << endl;
+        typewrite("Suddenly, the screen shifts.\n");
+        typewrite("The black and white image bursts into color.\n");
+        typewrite("Colored TV transformed stories, making them feel more real than ever before.\n");
 
         cout << endl;
         player.add_to_inventory("TV Remote");
@@ -787,7 +833,6 @@ void Decades::challenge(Player &player) {
         typewrite("Enter the decrypted word: ");
 
         string answer;
-        cin.ignore();
         getline(cin, answer);
         answer = lowerCase(answer);
 
@@ -845,7 +890,7 @@ void Decades::challenge(Player &player) {
             typewrite("'Bread Lines Grow as Families Struggle'\n");
         }
         typewrite("Your editor shouts across the room:\n");
-        typewrite("\"Use these words on cover: HOPE, WORK, TOMORROW\"\n");
+        typewrite("\"Use these words on the cover hope, work, and tomorrow\"\n");
         typewrite("Type a short message using all three words (5-40 characters):\n");
 
         string message;
@@ -999,9 +1044,15 @@ void Decades::minigame(Player &player) {
         cout << "B) 2007" << endl;
         cout << "C) 2009" << endl;
         char answer;
-        
         while(true) {
             std::cin >> answer;
+            /* learned these member functions here: https://www.geeksforgeeks.org/cpp/cin-in-c/ */
+            if (cin.fail()) {
+                cin.clear();
+                cin.ignore();
+                continue;
+            }
+            
             if (answer == 'B' || answer == 'b') {
                 typewrite("Correct! The first iPhone was released in 2007.\n");
                 player.add_score(10);
@@ -1012,10 +1063,9 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
-                ;
+                
             }
         }
-        cout << endl;
         cin.ignore();
     }
     if (level == 3)  {
@@ -1098,7 +1148,7 @@ void Decades::minigame(Player &player) {
         srand(static_cast<unsigned int>(time(0)));
         string selected_mix = mix[rand() % mix.size()];
         int minutes_needed = rand() % 20 + 5; // Random duration between 30 and 120 minutes
-        cout << "Your friend asks you to create a " << selected_mix << " mix tape for their road trip." << endl;
+        cout << "Your friend asks you to create a " << selected_mix << " tape for their road trip." << endl;
         cout << "You have " << minutes_needed << " minutes to fill the tape." << endl;
         typewrite("Select songs to add to the mix tape:\n");
         struct musicTrack {
@@ -1246,7 +1296,7 @@ void Decades::minigame(Player &player) {
         const auto time_passed = duration.count();
 
         if (lowerCase(userInput) == words.at(random_index) && time_passed <= 60){
-            typewrite("Congrats! You unscrambled the word and did so in " + to_string(time_passed) + "seconds! \n");
+            typewrite("Congrats! You unscrambled the word and did so in " + to_string(time_passed) + " seconds! \n");
         }
         else if (lowerCase(userInput) == words.at(random_index) && time_passed > 60){
             typewrite("You unscrambled the word but took too long!  \n");
@@ -1260,8 +1310,8 @@ void Decades::minigame(Player &player) {
     if (level == 7) {
         typewrite("Minigame: 1960s Fact Checking quiz\n");
 
-        cout << "You will be given a series of facts about the 1960s, and have to decide if it is True of False" << endl;
-        cout << "Points will be awarded or deducted based on answers." << endl;
+        typewrite("You will be given a series of facts about the 1960s, and have to decide if it is True of False\n");
+        typewrite("Points will be awarded or deducted based on answers.\n");
 
         struct Fact{
             string statement;
@@ -1293,7 +1343,7 @@ void Decades::minigame(Player &player) {
         
         int num;
         while(true){
-            typewrite("How many questions would you like to answer? (max 12 questions)");
+            typewrite("How many questions would you like to answer? (max 12 questions): \n");
             cin >> num;
             if (num > 0 && num < 13){
                 break;
@@ -1354,17 +1404,15 @@ void Decades::minigame(Player &player) {
         typewrite("The schedule will then be erased, and you will have to recall which shows aired at what time.\n");
 
 
-        cout << "TONIGHT'S SCHEDULE - Study this carefully!" << endl;
-        cout << "I Love Lucy - 7:00 PM" << endl;
-        cout << "Gunsmoke - 8:00 PM" << endl;
-        cout << "The Ed Sullivan Show - 8:30 PM" << endl;
-        cout << "Maverick - 9:00 PM" << endl;
-        cout << "\nMemorizing time: ";
-
-
+        typewrite("TONIGHT'S SCHEDULE - Study this carefully!\n");
+        typewrite("I Love Lucy - 7:00 PM\n");
+        typewrite("Gunsmoke - 8:00 PM\n");
+        typewrite("The Ed Sullivan Show - 8:30 PM\n");
+        typewrite("Maverick - 9:00 PM\n");
+        typewrite("\nMemorizing time: ");
 
         const auto startTime = chrono::steady_clock::now();
-        int study_duration = 30;
+        int study_duration = 15;
         while (true) {
             auto currentTime = chrono::steady_clock::now();
 
@@ -1379,16 +1427,17 @@ void Decades::minigame(Player &player) {
             because i wanted it to keep on changing as the loop ran so it would be better if it kept overriding it
             i also learned that you should use flush so that the countdown could be displayed instantaneous
             instead of the countdown being not accurate*/
-            cout << "Time Remainng : " << seconds << " seconds\r" << flush;
+            cout << "Time Remainng : " << seconds << " seconds\r" << flush; 
+            cout << "\x1b[2K";
+
+            /* https://stackoverflow.com/questions/61919292/c-how-do-i-erase-a-line-from-the-console */
+            
+            std::this_thread::sleep_for(std::chrono::seconds(1));
+            /* i searched "How to slow down program because i wanted the while loop to run every second so that it
+            is more accurate showing every second and i got this function:"*/
 
         }
-        /* I searched " is there a clear function in c++ that clears the console ouput for the user"
-        and the ai overview gave me this code.*/
-        #if defined(_WIN32) | defined(_WIN64)
-            std::system("cls");
-        #else
-            std::system("clear");
-        #endif
+        clearScreen();
         typewrite("Now, please recall the air times for the following shows:\n");
         vector<string> shows = {"I Love Lucy", "Gunsmoke", "The Ed Sullivan Show", "Maverick"};
         vector<string> correctTimes = {"7:00 PM", "8:00 PM", "8:30 PM", "9:00 PM"};
