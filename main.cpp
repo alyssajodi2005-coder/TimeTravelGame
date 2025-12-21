@@ -38,7 +38,7 @@ int main() {
     //game welcome message
     clearScreen();
     cout << "-------------------------------------" << endl;
-    typewrite("        Welcome to *Centuty *        \n");
+    typewrite("   Welcome to Change the Century        \n");
     cout << "-------------------------------------" << endl;
     typewrite("     Make choices, solve puzzles     \n");
     typewrite("          and explore decades        \n");
