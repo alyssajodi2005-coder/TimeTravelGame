@@ -1,5 +1,4 @@
-# TimeTravelGame
-# Time Travel Game - Git Quick Reference
+# TimeTravelGame -Change the Century
 
 Alyssa Johnson
 Grish Kadel
