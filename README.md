@@ -1,4 +1,4 @@
 # TimeTravelGame -Change the Century
 
-Alyssa Johnson
+Alyssa Johnson,
 Grish Kadel
