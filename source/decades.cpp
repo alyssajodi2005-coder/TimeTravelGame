@@ -6,6 +6,7 @@
 #include <cctype>
 #include <chrono>
 #include <thread>
+#include <limits>
 using namespace std;
 #include "../headers/decades.h"
 #include "../headers/typewrite.h"
@@ -1054,17 +1055,17 @@ void Decades::minigame(Player &player) {
         cout << "B) 2007" << endl;
         cout << "C) 2009" << endl;
         char answer;
-        while(true) {
-            std::cin >> answer;
-            /* learned these member functions here: https://www.geeksforgeeks.org/cpp/cin-in-c/ */
+        while(true){
+            cin >> answer;
+            /*learned these member functions here: https://www.geeksforgeeks.org/cpp/cin-in-c/ */
             if (cin.fail()) {
                 cin.clear();
-                cin.ignore();
+                cin.ignore(1000, '\n');
                 continue;
             }
-            
+            cin.ignore(1000, '\n');
             if (answer == 'B' || answer == 'b') {
-                typewrite("Correct! The first iPhone was released in 2007.\n");
+                typewrite("Correct! The first iPhone was released in 2007.");
                 player.add_score(10);
                 break;
             } else if (answer == 'A' || answer == 'a' || answer == 'C' || answer == 'c') {
@@ -1073,10 +1074,10 @@ void Decades::minigame(Player &player) {
                 break;
             } else {
                 typewrite("Invalid choice. Please select A, B, or C.\n");
-                
             }
         }
-        cin.ignore();
+        
+        cout << endl;
     }
     if (level == 3)  {
         typewrite("Minigame: 2000s Song guessing Game\n");
