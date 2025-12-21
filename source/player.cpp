@@ -69,8 +69,8 @@ bool Player::has_item(string const &item) {
     if (inventory.size() == 0){
         return false;
     }
-    for (auto const& i :inventory){
-        if (i == item){
+    for (size_t i = 0; i < inventory.size(); i++) {
+        if (inventory.at(i) == item){
             return true;
         }
     }
