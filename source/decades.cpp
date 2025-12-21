@@ -164,6 +164,7 @@ void Decades::showDecadeIntro(Player &player) {
         typewrite("Your journey through time highlights the impact all the different forms technology has had on daily life.\n");
         cout << "\n--- SOURCES & ARTIFACTS COLLECTED ---\n";
         player.print_inventory();
+        typewrite("\nYour final score is: " + to_string(player.get_score()) + " points!\n");
         cout << endl;
     }
 
@@ -622,26 +623,37 @@ void Decades::challenge(Player &player) {
         cout << "Which event would you like to headline on the cover of your next issue? " << endl;
         cout << "A) Civil Rights Movement" << endl;
         cout << "B) US moon landing" << endl;
-        cout << "C) Nixon's inauguration" << endl;
+        cout << "C) Nixon inauguration" << endl;
         cout << "D) The ARPANET" << endl;
         cout << "E) Vietnam War" << endl;
         char multiple_choice;
+        string event_choicefmt;
         string event_choice;
         while (true) {
             std::cin >> multiple_choice;
             if (multiple_choice == 'A' || multiple_choice == 'a') {
-                event_choice = "Civil Rights";
+                event_choicefmt = "|        Civil Rights Movement         |";
+                            //     +--------------------------------------+
+                event_choice = "Civil Rights Movement";
                 break;
             } else if (multiple_choice == 'B' || multiple_choice == 'b') {
+                event_choicefmt = "|           US moon landing            |";
+                            //     +--------------------------------------+
                 event_choice = "US moon landing";
                 break;
             } else if (multiple_choice == 'C' || multiple_choice == 'c') {
-                event_choice = "Nixon's inauguration";
+                event_choicefmt = "|         Nixon inauguration           |";
+                            //     +--------------------------------------+
+                event_choice = "Nixon inauguration";
                 break;
             } else if (multiple_choice == 'D' || multiple_choice == 'd') {
-                event_choice = "The ARPANET";
+                event_choicefmt = "|               ARPANET                |";
+                            //     +--------------------------------------+
+                event_choice = "ARPANET";
                 break;
             } else if (multiple_choice == 'E' || multiple_choice == 'e') {
+                event_choicefmt = "|             Vietnam War              |";
+                            //     +--------------------------------------+
                 event_choice = "Vietnam War";
                 break;
             } else {
@@ -659,7 +671,7 @@ void Decades::challenge(Player &player) {
         typewrite("+--------------------------------------+\n");
 
         typewrite("|                                      |\n");
-        typewrite("          " + event_choice + "           \n");
+        typewrite(event_choicefmt+ "\n");
         typewrite("|                                      |\n");
 
         if (event_choice == "Civil Rights Movement") {
@@ -676,18 +688,16 @@ void Decades::challenge(Player &player) {
             typewrite("| leap for mankind.\"                   |\n");
             // source: https://www.history.com/articles/moon-landing-1969
 
-        } else if (event_choice == "Nixon's inauguration") {
+        } else if (event_choice == "Nixon inauguration") {
             typewrite("| Richard Nixon is inaugurated as the  |\n");
             typewrite("| 37th President of the United States, |\n");
             typewrite("| promising to restore law and order   |\n");
             typewrite("| during a time of social unrest.      |\n");
             // source: https://www.history.com/this-day-in-history/january-20/richard-nixon-takes-office
 
-        } else if (event_choice == "The ARPANET") {
+        } else if (event_choice == "ARPANET") {
             typewrite("| ARPANET is introduced as the first   |\n");
-            typewrite("| computer communication network,      |\n");
-            typewrite("| laying the foundation for the modern |\n");
-            typewrite("| internet.                            |\n");
+            typewrite("| computer communication network.      |\n");
             // source: https://www.techtarget.com/searchnetworking/definition/ARPANET
 
         } else if (event_choice == "Vietnam War") {
@@ -983,7 +993,7 @@ void Decades::challenge(Player &player) {
         typewrite("Hint: A book by F. Scott Fitzgerald - \"The Great ______\"\n");
         cout << "Enter the password: ";
         getline(cin, password);
-        lowerCase(password);
+        password = lowerCase(password);
 
         if (password == "gatsby") {
             typewrite("\nThe man nods and opens the door.\n");
